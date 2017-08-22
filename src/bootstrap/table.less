@@ -1,0 +1,35 @@
+// Table
+
+.table {
+    &:extend(.oui-table);
+    > thead {
+        &:extend(.oui-table__headers);
+        > tr {
+            > th {
+                &:extend(.oui-table__header);
+                border-top: 0 !important;
+            }
+        }
+    }
+    > tbody {
+        &:extend(.oui-table__body);
+
+        > tr {
+            &:extend(.oui-table__row);
+
+            > th, > td {
+                &:extend(.oui-table__cell);
+
+                font-weight: normal;
+                border-top: 0 !important;
+            }
+        }
+    }
+
+    td, th {
+        &.min-width {
+            width: 1px;
+            white-space: nowrap;
+        }
+    }
+}

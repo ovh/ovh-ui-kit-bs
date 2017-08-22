@@ -1,0 +1,61 @@
+.wizard-title {
+    &:extend(.oui-modal__title);
+
+    margin-bottom: 0;
+}
+
+.modal {
+    .helpTrigger {
+        background-color: #54a89b;
+        cursor: pointer;
+        display: block;
+        height: 73px;
+        left: ~"calc(100% + 1px)";
+        position: absolute;
+        top: 20px;
+        width: 30px;
+        transition: left .35s;
+        -moz-transition: left .35s;
+        -webkit-transition: left .35s;
+        -ms-transition: left .35s;
+        -o-transition: left .35s;
+
+        &.open {
+            left: ~"calc(100% + 232px)";
+        }
+    }
+
+    .help4wizards {
+        background-color: #f7f7f7;
+        border: 1px solid #c6c6c8;
+        border-top-right-radius: 6px;
+        font-size: 90%;
+        left: 100%;
+        margin-left: -236px;
+        margin-top: 1px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 5px 20px 5px 10px;
+        position: absolute;
+        top: 0;
+        width: 235px;
+        z-index: -1;
+        transition: margin-left .35s, height .35s;
+        -moz-transition: margin-left .35s, height .35s;
+        -webkit-transition: margin-left .35s, height .35s;
+        -ms-transition: margin-left .35s, height .35s;
+        -o-transition: margin-left .35s, height .35s;
+
+        &.open {
+            margin-left: -4px;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+        }
+
+        h4 {
+            font-size: 1.6rem;
+        }
+    }
+}

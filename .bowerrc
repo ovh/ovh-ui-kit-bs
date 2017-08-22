@@ -1,0 +1,6 @@
+{
+    "cwd": "./",
+    "scripts": {
+        "preinstall": "npm start"
+    }
+}

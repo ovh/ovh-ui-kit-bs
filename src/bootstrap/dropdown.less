@@ -1,0 +1,79 @@
+@ovh-bs3-ui-kit-dropdown-color: @oui-color-rhino;
+@ovh-bs3-ui-kit-dropdown-hover-bg-color: @oui-color-jungle;
+@ovh-bs3-ui-kit-dropdown-hover-color: #fff;
+@ovh-bs3-ui-kit-dropdown-y-space: 4px;
+@ovh-bs3-ui-kit-dropdown-icon-width: 30px;
+@ovh-bs3-ui-kit-dropdown-icon-space: 2px;
+
+.dropdown-menu {
+    margin: 0;
+    min-width: 230px;
+    padding: 0;
+
+    li {
+        position: relative;
+        display: flex;
+        padding: 0 0 @ovh-bs3-ui-kit-dropdown-y-space 0;
+        align-items: center;
+        color: @ovh-bs3-ui-kit-dropdown-color;
+
+        &.dropdown-divider {
+            border-top: 1px solid @oui-color-nurse;
+            padding-top: 4px;
+
+            &::before {
+                top: 1px;
+            }
+        }
+
+        &:nth-child(1) {
+            padding-top: @ovh-bs3-ui-kit-dropdown-y-space;
+        }
+
+        &:nth-last-child(1) {
+            padding-bottom: @ovh-bs3-ui-kit-dropdown-y-space;
+        }
+
+        &::before {
+            content: " ";
+            width: @ovh-bs3-ui-kit-dropdown-icon-width;
+            height: 100%;
+            display: block;
+            background-color: @oui-color-concrete;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        i {
+            width: @ovh-bs3-ui-kit-dropdown-icon-width;
+            text-align: center;
+
+            &.oui-icon {
+                font-size: 1.3rem;
+                color: @ovh-bs3-ui-kit-dropdown-color;
+            }
+        }
+
+        a, button {
+            flex: 1;
+            padding: 0.5rem 2rem 0.5rem 0.5rem;
+            margin-left: calc(@ovh-bs3-ui-kit-dropdown-icon-width + @ovh-bs3-ui-kit-dropdown-icon-space);
+            width: 100%;
+            color: @ovh-bs3-ui-kit-dropdown-color;
+            text-align: left;
+            white-space: normal;
+
+            &:hover, &:focus, &:active {
+                background-color: @ovh-bs3-ui-kit-dropdown-hover-bg-color;
+                color: @ovh-bs3-ui-kit-dropdown-hover-color;
+                text-decoration: none;
+            }
+        }
+
+        i+a, i+button {
+            margin-left: @ovh-bs3-ui-kit-dropdown-icon-space;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+// Buttons
+
+.btn.btn-default {
+    &:hover {
+        &:extend(.oui-button_secondary:hover);
+    }
+
+    &:active {
+        &:extend(.oui-button_secondary:active);
+    }
+
+    &:focus {
+        &:extend(.oui-button_secondary:focus);
+    }
+
+    &:disabled {
+        &:extend(.oui-button_secondary:disabled);
+    }
+
+    background-color: #fff;
+}
+
+.btn.btn-primary {
+    &:disabled {
+        border-color: #dedede;
+        &:extend(.oui-button_primary:disabled);
+    }
+}
