@@ -1,7 +1,7 @@
 {
     "name": "ovh-ui-kit-bs",
     "version": "0.0.1",
-    "description": "A LESS stylekit for the OVH brand.",
+    "description": "A LESS stylekit for the OVH managers.",
     "author": "OVH SAS",
     "license": "BSD-3-Clause",
     "main": "src/ovh-ui-kit-bs.less",
@@ -13,10 +13,10 @@
         "copy:icons": "cpx \"node_modules/ovh-ui-kit/dist/icons/*\" \"dist/icons\"",
         "copy:glyphicons": "cpx \"node_modules/bootstrap/fonts/*\" \"dist/fonts\"",
         "less": "npm run less:oui && npm run less:bs",
-        "less:bs": "lessc --remcalc --clean-css \"src/ovh-ui-kit-bs.less\" \"dist/ovh-ui-kit-bs.css\"",
-        "less:oui": "lessc --remcalc --clean-css \"src/ovh-ui-kit.less\" \"dist/ovh-ui-kit.css\"",
+        "less:bs": "lessc --remcalc \"src/ovh-ui-kit-bs.less\" \"dist/ovh-ui-kit-bs.css\"",
+        "less:oui": "lessc --remcalc \"src/ovh-ui-kit.less\" \"dist/ovh-ui-kit.css\"",
         "postinstall": "npm run build",
-        "start": "npm install"
+        "start": "npm run build"
     },
     "devDependencies": {
         "bootstrap": "^3.3.7",

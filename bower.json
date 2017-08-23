@@ -1,11 +1,8 @@
 {
     "name": "ovh-ui-kit-bs",
     "version": "0.0.1",
-    "description": "A LESS stylekit for the OVH brand.",
+    "description": "A LESS stylekit for the OVH managers.",
     "author": "OVH SAS",
     "license": "BSD-3-Clause",
-    "main": "src/ovh-ui-kit-bs.less",
-    "devDependencies": {
-        "ovh-ui-kit": "git+https://github.com/ovh-ux/ovh-ui-kit.git#oui-tile"
-    }
+    "main": "src/ovh-ui-kit-bs.less"
 }
