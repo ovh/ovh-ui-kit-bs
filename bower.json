@@ -1,7 +1,7 @@
 {
     "name": "ovh-ui-kit-bs",
     "version": "0.0.1",
-    "description": "A LESS stylekit for the OVH managers.",
+    "description": "A bootstrap theme for the OVH managers, based on ovh-ui-kit.",
     "author": "OVH SAS",
     "license": "BSD-3-Clause",
     "main": "src/ovh-ui-kit-bs.less"

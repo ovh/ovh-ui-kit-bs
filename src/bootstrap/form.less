@@ -7,8 +7,6 @@
 @oui-icon-position-right: rem-calc(5);
 
 label {
-    /*&:extend(.oui-label);*/
-
     &.required::after {
         content: "*";
         color: @state-danger-text;
@@ -26,7 +24,7 @@ legend {
     box-shadow: none;
 }
 
-// Inputs / Textarea
+// Inputs, Textarea
 input.form-control,
 textarea.form-control {
     &:extend(.oui-input);
