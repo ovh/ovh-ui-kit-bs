@@ -1,6 +1,6 @@
 {
     "cwd": "./",
     "scripts": {
-        "preinstall": "npm start"
+        "postinstall": "npm start"
     }
 }

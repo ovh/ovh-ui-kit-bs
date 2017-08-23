@@ -1,4 +1,34 @@
-// Vendors
-@import "../node_modules/ovh-ui-kit/packages/oui/stylekit.less";
-@import "../node_modules/bootstrap/less/bootstrap.less";
+@rem-base: rem-base(10px);
 
+// Vendors
+// Must import the CSS file for some :extend() on our LESS files
+@import (less) "../dist/ovh-ui-kit.css";
+@import "../node_modules/bootstrap/less/bootstrap";
+
+// Utils
+@import "./utils/_settings";
+
+// Overrides
+@import "./bootstrap/alert";
+@import "./bootstrap/button";
+@import "./bootstrap/dropdown";
+@import "./bootstrap/form";
+@import "./bootstrap/icon";
+@import "./bootstrap/input-groups";
+@import "./bootstrap/labels";
+@import "./bootstrap/list";
+@import "./bootstrap/modal";
+@import "./bootstrap/progressbar";
+@import "./bootstrap/table";
+@import "./bootstrap/tile";
+@import "./bootstrap/typography";
+@import "./bootstrap/wizard";
+
+/* @todo : temporaire */
+.popover {
+    position: fixed;
+}
+
+.font-weight-bold, dt, strong, b, label {
+  font-weight: 600;
+}

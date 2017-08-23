@@ -1,0 +1,62 @@
+.input-group {
+    &:extend(.oui-input-group);
+
+    width: auto;
+    margin-bottom: 0;
+
+    .form-control {
+        &:extend(.oui-input-group > .oui-input);
+
+        width: auto;
+
+        &:first-child {
+            &:extend(.oui-input-group > .oui-input:first-child);
+        }
+
+        &:last-child {
+            &:extend(.oui-input-group > .oui-input:last-child);
+        }
+    }
+
+    &-addon,
+    &-btn {
+        &:extend(.oui-input-group > .oui-button);
+
+        &:first-child {
+            &:extend(.oui-input-group > .oui-button:first-child);
+        }
+
+        &:last-child {
+            &:extend(.oui-input-group > .oui-button:last-child);
+        }
+    }
+
+    &-addon,
+    &-btn .btn {
+        &:extend(.oui-button);
+
+        width: auto;
+        min-width: 0;
+        margin-bottom: 0;
+        padding: .5rem 1rem;
+    }
+
+    &-addon { cursor: default; }
+
+    &-btn { 
+        width: auto;
+        padding: 0;
+        border: 0;
+
+        .btn {
+            min-width: 0;
+            min-height: 3.6rem;
+            border: 1px solid @oui-color-silver;
+            background: inherit;
+
+            &:focus {
+                &:extend(.oui-input-group > .oui-button:focus);
+            }
+        }
+    }
+}

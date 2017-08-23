@@ -1,19 +1,18 @@
 // Table
-
 .table {
     &:extend(.oui-table);
+
     > thead {
-        &:extend(.oui-table__headers);
         > tr {
             > th {
                 &:extend(.oui-table__header);
+
                 border-top: 0 !important;
             }
         }
     }
-    > tbody {
-        &:extend(.oui-table__body);
 
+    > tbody {
         > tr {
             &:extend(.oui-table__row);
 

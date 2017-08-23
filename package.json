@@ -8,8 +8,13 @@
     "scripts": {
         "build": "npm run clean && npm run less && npm run copy",
         "clean": "rimraf dist",
-        "copy": "cpx \"node_modules/ovh-ui-kit/dist/icons/*\" \"dist/icons\"",
-        "less": "lessc --remcalc --clean-css \"src/ovh-ui-kit-bs.less\" \"dist/ovh-ui-kit-bs.css\"",
+        "copy": "npm run copy:fonts && npm run copy:icons && npm run copy:glyphicons",
+        "copy:fonts": "cpx \"node_modules/ovh-ui-kit/packages/oui-typography/fonts/**/*\" \"dist/fonts\"",
+        "copy:icons": "cpx \"node_modules/ovh-ui-kit/dist/icons/*\" \"dist/icons\"",
+        "copy:glyphicons": "cpx \"node_modules/bootstrap/fonts/*\" \"dist/fonts\"",
+        "less": "npm run less:oui && npm run less:bs",
+        "less:bs": "lessc --remcalc --clean-css \"src/ovh-ui-kit-bs.less\" \"dist/ovh-ui-kit-bs.css\"",
+        "less:oui": "lessc --remcalc --clean-css \"src/ovh-ui-kit.less\" \"dist/ovh-ui-kit.css\"",
         "postinstall": "npm run build",
         "start": "npm install"
     },
@@ -19,7 +24,7 @@
         "cpx": "^1.5.0",
         "less": "^2.7.2",
         "less-plugin-clean-css": "^1.5.1",
-        "ovh-ui-kit": "git+https://github.com/ovh-ux/ovh-ui-kit.git#v1.0.0-alpha.13",
+        "ovh-ui-kit": "git+https://github.com/ovh-ux/ovh-ui-kit.git#oui-tile",
         "rimraf": "^2.6.1"
     }
 }

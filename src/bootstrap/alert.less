@@ -1,9 +1,7 @@
+@import '@{oui-path}/oui-message/_normalize';
+@import '@{oui-path}/oui-message/_mixins';
+
 // Alert
-
-// @import '../../../../../bower_components/ovh-ui-kit/packages/oui-message/_normalize';
-// @import '../../../../../bower_components/ovh-ui-kit/packages/oui-message/_mixins';
-
-
 .alert {
     &:extend(.oui-message);
     &:extend(.oui-message_no-icon);
@@ -11,7 +9,6 @@
 
     display: table;
     width: 100%;
-
     max-width: 100%;
 
     &::before {
@@ -28,10 +25,10 @@
     &.alert-info {
         &:extend(.oui-message_info);
         &:extend(.oui-message_no-icon);
+        &:extend(.oui-message_no-border);
 
         &::before {
           &:extend(.oui-icon);
-          &:extend(.oui-icon-info_circle);
           &:extend(.oui-icon_bicolor);
           &:extend(.oui-icon.oui-icon-info_circle::before);
 
@@ -42,10 +39,10 @@
     &.alert-success {
         &:extend(.oui-message_success);
         &:extend(.oui-message_no-icon);
+        &:extend(.oui-message_no-border);
 
         &::before {
           &:extend(.oui-icon);
-          &:extend(.oui-icon-success_circle);
           &:extend(.oui-icon_bicolor);
           &:extend(.oui-icon.oui-icon-success_circle::before);
 
@@ -56,10 +53,10 @@
     &.alert-warning {
         &:extend(.oui-message_warning);
         &:extend(.oui-message_no-icon);
+        &:extend(.oui-message_no-border);
 
         &::before {
           &:extend(.oui-icon);
-          &:extend(.oui-icon-warning_circle);
           &:extend(.oui-icon_bicolor);
           &:extend(.oui-icon.oui-icon-warning_circle::before);
 
@@ -70,10 +67,10 @@
     &.alert-danger {
         &:extend(.oui-message_error);
         &:extend(.oui-message_no-icon);
+        &:extend(.oui-message_no-border);
 
         &::before {
           &:extend(.oui-icon);
-          &:extend(.oui-icon-error_circle);
           &:extend(.oui-icon_bicolor);
           &:extend(.oui-icon.oui-icon-error_circle::before);
 

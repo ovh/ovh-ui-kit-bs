@@ -1,3 +1,11 @@
+@import '@{oui-path}/oui-input/_variables';
+@import '@{oui-path}/oui-select/_variables';
+
+@oui-input-font-size: rem-calc(14);
+@oui-select-font-size: rem-calc(14);
+@oui-select-icon-size: rem-calc(10);
+@oui-icon-position-right: rem-calc(5);
+
 label {
     /*&:extend(.oui-label);*/
 
@@ -12,4 +20,154 @@ legend {
     font-size: 1.4rem;
     font-weight: 600;
     margin-bottom: .5em;
+}
+
+.form-control {
+    box-shadow: none;
+}
+
+// Inputs / Textarea
+input.form-control,
+textarea.form-control {
+    &:extend(.oui-input);
+
+    margin-bottom: 0;
+    font-size: @oui-input-font-size;
+
+    &:focus,
+    &:active {
+        &:extend(.oui-input:focus);
+    }
+
+    &:disabled,
+    &[disabled] {
+        &:extend(.oui-input:disabled);
+    }
+
+    &:read-only,
+    &[readonly] {
+        &:extend(.oui-input:read-only);
+    }
+
+    &.disabled { opacity: 1; }
+
+    .has-success & {
+        &:extend(input.form-control);
+
+        &:focus,
+        &:active {
+            &:extend(input.form-control:focus);
+        }
+    }
+
+    .has-warning & {
+        &:extend(.oui-input_warning:not(:disabled));
+
+        &:focus,
+        &:active {
+            &:extend(.oui-input_warning:not(:disabled):focus);
+        }
+    }
+
+    .has-error & {
+        &:extend(.oui-input_error:not(:disabled));
+
+        &:focus,
+        &:active {
+            &:extend(.oui-input_error:not(:disabled):focus);
+        }
+    }
+}
+
+// Select
+select.form-control {
+    &:extend(.oui-select);
+    &:extend(.oui-select__input);
+
+    margin-bottom: 0;
+    font-size: @oui-input-font-size;
+
+    -webkit-appearance: none;
+       -moz-appearance: none;
+        -ms-appearance: none;
+            appearance: none;
+
+    #oui > .select__background();
+
+    &:focus,
+    &:active {
+        &:extend(.oui-select__input:focus);
+
+        #oui > .select__background(@oui-input-border-color-focus);
+    }
+
+    &:disabled,
+    &[disabled] {
+        &:extend(.oui-select__input:disabled);
+    }
+
+    &[multiple] {
+        height: auto;
+        background-image: none;
+    }
+
+    &.disabled { opacity: 1; }
+
+    .has-success & {
+        &,
+        &:hover,
+        &:active,
+        &:focus {
+            &:extend(select.form-control);
+        }
+
+        &:focus,
+        &:active {
+            &:extend(select.form-control:focus);
+        }
+    }
+
+    .has-warning & {
+        &,
+        &:hover,
+        &:active,
+        &:focus {
+            &:extend(.oui-select_warning .oui-select__input);
+
+            #oui > .select__background(@oui-color-warning-dark);
+        }
+
+        &:focus,
+        &:active {
+            &:extend(.oui-select_warning .oui-select__input:focus);
+        }
+    }
+
+    .has-error & {
+        &,
+        &:hover,
+        &:active,
+        &:focus {
+            &:extend(.oui-select_error .oui-select__input);
+
+            #oui > .select__background(@oui-color-error-dark);
+        }
+
+        &:focus,
+        &:active {
+            &:extend(.oui-select_error .oui-select__input:focus);
+        }
+    }
+}
+
+// Mixins
+#oui {
+    .select__background(@color: @oui-icon-color) {
+        @fill: escape(@color);
+
+        background-image: url('data:image/svg+xml;utf8,<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve"><path fill="@{fill}" d="M32,51.2c-1.7,0-3.3-0.7-4.5-1.9L1.9,23.8c-2.5-2.5-2.5-6.6,0-9.1s6.6-2.5,9.1,0l21,21.1l21-21.1c2.5-2.5,6.6-2.5,9.1,0 c2.5,2.5,2.5,6.6,0,9.1L36.5,49.3C35.3,50.5,33.7,51.2,32,51.2z"/></svg>');
+        background-repeat: no-repeat;
+        background-position: right @oui-icon-position-right center;
+        background-size: @oui-select-icon-size;
+    }
 }
