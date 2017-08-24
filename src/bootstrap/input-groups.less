@@ -39,24 +39,23 @@
         min-width: 0;
         margin-bottom: 0;
         padding: .5rem 1rem;
+        font-size: @oui-button-font-size;
+        color: @text-color;
+        background: @oui-input-group-button-hollow-background-color;
     }
 
-    &-addon { cursor: default; }
+    &-addon {
+        border-color: @oui-color-silver;
+        cursor: default;
+    }
 
-    &-btn { 
+    &-btn {
         width: auto;
         padding: 0;
         border: 0;
 
-        .btn {
-            min-width: 0;
-            min-height: 3.6rem;
-            border: 1px solid @oui-color-silver;
-            background: inherit;
+        .btn { border: 1px solid @oui-color-silver; }
 
-            &:focus {
-                &:extend(.oui-input-group > .oui-button:focus);
-            }
-        }
+        .btn-default { background: @oui-input-group-button-hollow-background-color; }
     }
 }
