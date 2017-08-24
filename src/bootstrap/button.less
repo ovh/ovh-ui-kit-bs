@@ -3,6 +3,9 @@
     &:extend(.oui-button);
 
     min-width: 0;
+    max-width: 100%;
+    line-height: @line-height-base;
+    font-size: @oui-button-font-size;
 
     &:focus {
         &:extend(.oui-button:focus);
@@ -22,7 +25,7 @@
         vertical-align: middle;
     }
 
-    &.btn-default {
+    &-default {
         &:hover {
             &:extend(.oui-button_secondary:hover);
         }
@@ -43,7 +46,7 @@
         background-color: @oui-button-hollow-background-color;
     }
 
-    &.btn-primary {
+    &-primary {
         &:disabled,
         &.disabled {
             &:extend(.oui-button_primary:disabled);
@@ -52,10 +55,10 @@
         }
     }
 
-    &.btn-success,
-    &.btn-info,
-    &.btn-warning,
-    &.btn-danger {
+    &-success,
+    &-info,
+    &-warning,
+    &-danger {
         &:disabled,
         &.disabled {
             &:extend(.oui-button_primary:disabled);
@@ -64,7 +67,7 @@
         }
     }
 
-    &.btn-link {
+    &-link {
         &:extend(.oui-button_link);
 
         &:hover,
@@ -79,4 +82,10 @@
             color: @btn-link-disabled-color;
         }
     }
+
+    &-xs { font-size: rem-calc(12); }
+
+    &-sm { font-size: rem-calc(14); }
+
+    &-lg { font-size: @oui-button-font-size; }
 }

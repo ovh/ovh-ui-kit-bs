@@ -35,6 +35,9 @@
 
 @font-family-sans-serif:  @oui-global-base-font-family;
 
+//** Unit-less `line-height` for use in components like buttons.
+@line-height-base:        @oui-global-base-line-height;
+
 
 //== Iconography
 //
@@ -54,8 +57,8 @@
 @padding-large-vertical:    rem-calc(6);
 @padding-large-horizontal:  rem-calc(30);
 
-@padding-small-vertical:    rem-calc(6);
-@padding-small-horizontal:  rem-calc(13);
+@padding-small-vertical:    rem-calc(3);
+@padding-small-horizontal:  rem-calc(6);
 
 @padding-xs-vertical:       rem-calc(1);
 @padding-xs-horizontal:     rem-calc(5);
@@ -64,7 +67,7 @@
 
 @border-radius-base:        @oui-global-base-radius;
 @border-radius-large:       @oui-global-base-radius-medium;
-@border-radius-small:       rem-calc(1);
+@border-radius-small:       @oui-global-base-radius;
 
 
 //== Tables
@@ -76,7 +79,7 @@
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
-@btn-font-weight:                600;
+@btn-font-weight:                @oui-font-semibold;
 
 @btn-default-color:              @oui-button-font-color;
 @btn-default-bg:                 @oui-button-hollow-background-color;
@@ -230,14 +233,14 @@
 @modal-title-padding:         @oui-modal-body-padding-no-icon;
 
 //** Modal content border color
-@modal-content-border-color:                   rgba(0,0,0,.2);
+@modal-content-border-color:                   none;
 
 
 //== Alerts
 //
 //## Define alert colors, border radius, and padding.
 
-@alert-link-font-weight:      600;
+@alert-link-font-weight:      @oui-font-semibold;
 
 
 //== Progress bars
@@ -269,7 +272,7 @@
 //
 //##
 
-@badge-font-weight:           600;
+@badge-font-weight:           @oui-font-semibold;
 
 
 //== Breadcrumbs
