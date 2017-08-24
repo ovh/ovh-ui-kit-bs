@@ -1,14 +1,27 @@
-.modal-header {
-    &:extend(.oui-modal__header);
-    border: 0 none;
-    padding: 0;
-}
+.modal {
+    &-content { border: none; }
 
-.modal-body {
-    padding-top: 0;
-}
+    &-header {
+        &:extend(.oui-modal__header);
 
-.modal-footer {
-    padding-top: 0;
-    border-top: 0;
+        border: 0 none;
+        padding: 0;
+
+        .close {
+            &:extend(.oui-icon);
+            &:extend(.oui-modal__close-button);
+
+            margin-top: 0;
+            opacity: 1;
+
+            &:before {
+                &:extend(.oui-icon.oui-icon-close_thin::before);
+            }
+        }
+    }
+
+    &-footer {
+        padding-top: 0;
+        border-top: 0;
+    }
 }

@@ -21,6 +21,13 @@
 //** Global text color on `<body>`.
 @text-color:            @oui-color-zodiac;
 
+//** Global textual link color.
+@link-color:            @oui-link-font-color;
+//** Link hover color set via `darken()` function.
+@link-hover-color:      @oui-link-font-color_hover;
+//** Link hover decoration.
+@link-hover-decoration: @oui-link-text-decoration;
+
 
 //== Typography
 //
@@ -41,11 +48,23 @@
 //
 //## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
 
+@padding-base-vertical:     rem-calc(6);
+@padding-base-horizontal:   rem-calc(13);
+
+@padding-large-vertical:    rem-calc(6);
+@padding-large-horizontal:  rem-calc(30);
+
+@padding-small-vertical:    rem-calc(6);
+@padding-small-horizontal:  rem-calc(13);
+
+@padding-xs-vertical:       rem-calc(1);
+@padding-xs-horizontal:     rem-calc(5);
+
 @line-height-small:         @oui-global-base-line-height;
 
 @border-radius-base:        @oui-global-base-radius;
 @border-radius-large:       @oui-global-base-radius-medium;
-@border-radius-small:       @oui-global-base-radius;
+@border-radius-small:       rem-calc(1);
 
 
 //== Tables
@@ -67,7 +86,28 @@
 @btn-primary-bg:                 @oui-button-filled-background-color;
 @btn-primary-border:             @oui-button-filled-background-color;
 
+@btn-success-color:              @text-color;
+@btn-success-bg:                 @state-success-border;
+@btn-success-border:             @state-success-border;
 
+@btn-info-color:                 @text-color;
+@btn-info-bg:                    @state-info-border;
+@btn-info-border:                @state-info-border;
+
+@btn-warning-color:              @text-color;
+@btn-warning-bg:                 @state-warning-border;
+@btn-warning-border:             @state-warning-border;
+
+@btn-danger-color:               @text-color;
+@btn-danger-bg:                  @state-danger-border;
+@btn-danger-border:              @state-danger-border;
+
+@btn-link-disabled-color:        @oui-button-hollow-font-color_disabled;
+
+// Allows for customizing button radius independently from global border radius
+@btn-border-radius-base:         @border-radius-base;
+@btn-border-radius-large:        @border-radius-base;
+@btn-border-radius-small:        @border-radius-small;
 //== Forms
 //
 //##
@@ -130,6 +170,22 @@
 //
 //## Define colors for form feedback states and, by default, alerts.
 
+@state-success-text:             @oui-color-success-dark;
+@state-success-bg:               @oui-color-success-fade;
+@state-success-border:           @oui-color-success-medium;
+
+@state-info-text:                @oui-color-fiord;
+@state-info-bg:                  @oui-color-info-fade;
+@state-info-border:              @oui-color-info-light;
+
+@state-warning-text:             @oui-color-warning-dark;
+@state-warning-bg:               @oui-color-warning-fade;
+@state-warning-border:           @oui-color-warning-light;
+
+@state-danger-text:              @oui-color-error-dark;
+@state-danger-bg:                @oui-color-error-fade;
+@state-danger-border:            @oui-color-error-light;
+
 
 //== Tooltips
 //
@@ -151,10 +207,13 @@
 //##
 
 //** Padding applied to the modal body
-@modal-inner-padding:         2rem;
+@modal-inner-padding:         @oui-modal-body-padding-no-icon;
 
 //** Padding applied to the modal title
-@modal-title-padding:         2rem;
+@modal-title-padding:         @oui-modal-body-padding-no-icon;
+
+//** Modal content border color
+@modal-content-border-color:                   rgba(0,0,0,.2);
 
 
 //== Alerts

@@ -37,24 +37,30 @@ textarea.form-control {
         &:extend(.oui-input:focus);
     }
 
-    &:disabled,
-    &[disabled] {
+    &:disabled {
         &:extend(.oui-input:disabled);
     }
 
-    &:read-only,
-    &[readonly] {
+    &:read-only {
         &:extend(.oui-input:read-only);
     }
 
     &.disabled { opacity: 1; }
 
     .has-success & {
-        &:extend(input.form-control);
+        &:extend(.oui-input_warning:not(:disabled));
+
+        border-color: @state-success-border;
+        background-color: @state-success-bg;
+        color: @state-success-text;
 
         &:focus,
         &:active {
-            &:extend(input.form-control:focus);
+            &:extend(.oui-input_warning:not(:disabled):focus);
+
+            border-color: @state-success-border;
+            background-color: @state-success-bg;
+            color: @state-success-text;
         }
     }
 
@@ -99,8 +105,7 @@ select.form-control {
         #oui > .select__background(@oui-input-border-color-focus);
     }
 
-    &:disabled,
-    &[disabled] {
+    &:disabled {
         &:extend(.oui-select__input:disabled);
     }
 
@@ -116,12 +121,22 @@ select.form-control {
         &:hover,
         &:active,
         &:focus {
-            &:extend(select.form-control);
+            &:extend(.oui-select_warning .oui-select__input);
+
+            #oui > .select__background(@oui-color-warning-dark);
+
+            border-color: @state-success-border;
+            background-color: @state-success-bg;
+            color: @state-success-text;
         }
 
         &:focus,
         &:active {
-            &:extend(select.form-control:focus);
+            &:extend(.oui-select_warning .oui-select__input:focus);
+
+            border-color: @state-success-border;
+            background-color: @state-success-bg;
+            color: @state-success-text;
         }
     }
 
