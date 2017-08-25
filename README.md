@@ -37,6 +37,10 @@ Those dependencies will be installed automatically by npm:
 ```less
 @import "./node_modules/ovh-ui-kit-bs/src/ovh-ui-kit-bs";
 
+// Paths of dependencies
+@bs-path: "./node_modules/bootstrap";
+@oui-path: "./node_modules/ovh-ui-kit";
+
 // Bootstrap fonts
 @icon-font-path: "./node_modules/ovh-ui-kit-bs/dist/fonts/";
 
