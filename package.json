@@ -27,6 +27,8 @@
     "less": "^2.7.2",
     "less-plugin-clean-css": "^1.5.1",
     "ovh-ui-kit": "git+https://github.com/ovh-ux/ovh-ui-kit.git#oui-tile",
-    "rimraf": "^2.6.1"
+    "rimraf": "^2.6.1",
+    "stylelint": "^8.0.0",
+    "stylelint-config-ovh": "^0.1.0"
   }
 }
