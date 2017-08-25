@@ -1,10 +1,14 @@
 @import '@{oui-path}/packages/oui-input/_variables';
 @import '@{oui-path}/packages/oui-select/_variables';
 
+@oui-icon-position-right: rem-calc(5);
+@oui-icon-selector: oui-icon;
+
 @oui-input-font-size: rem-calc(14);
+
 @oui-select-font-size: rem-calc(14);
 @oui-select-icon-size: rem-calc(10);
-@oui-icon-position-right: rem-calc(5);
+@oui-select-selector: oui-select;
 
 label {
     &.required::after {
@@ -27,86 +31,67 @@ legend {
 // Inputs, Textarea
 input.form-control,
 textarea.form-control {
-    &:extend(.oui-input);
+    #oui > .input-normalize();
+    #oui > .input-base();
 
     margin-bottom: 0;
     font-size: rem-calc(16);
 
-    &:focus,
-    &:active {
-        &:extend(.oui-input:focus);
-    }
-
-    &:disabled {
-        &:extend(.oui-input:disabled);
-    }
-
-    &:read-only {
-        &:extend(.oui-input:read-only);
-    }
-
+    &:disabled,
     &.disabled { opacity: 1; }
 
     .has-success & {
-        &:extend(.oui-input_warning:not(:disabled));
-
-        border-color: @state-success-border;
-        background-color: @state-success-bg;
-        color: @state-success-text;
-
-        &:focus,
-        &:active {
-            &:extend(.oui-input_warning:not(:disabled):focus);
-
-            border-color: @state-success-border;
-            background-color: @state-success-bg;
-            color: @state-success-text;
-        }
+        #oui > .input-variant(@state-success-text, @state-success-bg, @state-success-border);
     }
 
     .has-warning & {
-        &:extend(.oui-input_warning:not(:disabled));
-
-        &:focus,
-        &:active {
-            &:extend(.oui-input_warning:not(:disabled):focus);
-        }
+        #oui > .input-variant(@state-warning-text, @state-warning-bg, @state-warning-border);
     }
 
     .has-error & {
-        &:extend(.oui-input_error:not(:disabled));
-
-        &:focus,
-        &:active {
-            &:extend(.oui-input_error:not(:disabled):focus);
-        }
+        #oui > .input-variant(@state-danger-text, @state-danger-bg, @state-danger-border);
     }
 }
 
 // Select
 select.form-control {
-    &:extend(.oui-select);
-    &:extend(.oui-select__input);
+    #oui > .select-normalize();
+    #oui > .select-background();
 
-    margin-bottom: 0;
+    line-height: rem-calc(34);
+    height: ~"calc(@{oui-select-font-size} * 2.25)";
+    min-height: rem-calc(36);
+    padding: 0 rem-calc(20) 0 @oui-select-padding;
     font-size: rem-calc(16);
+    font-weight: @oui-select-font-weight;
+    color: @oui-select-font-color;
+    border: 1px solid @oui-select-border-color;
+    background-color: #fff;
+    cursor: pointer;
 
     -webkit-appearance: none;
        -moz-appearance: none;
         -ms-appearance: none;
             appearance: none;
 
-    #oui > .select__background();
-
     &:focus,
     &:active {
-        &:extend(.oui-select__input:focus);
+        #oui > .select-background(@oui-input-border-color-focus);
 
-        #oui > .select__background(@oui-input-border-color-focus);
+        border: 1px solid @oui-input-border-color-focus;
+        outline: none;
+        box-shadow: inset 1px 1px 2px 0 fade(@oui-input-border-color-focus, 50%), 0 0 3px 0 rgba(0, 0, 0, 0.35);
+        background-color: @oui-input-background-color-focus;
     }
 
     &:disabled {
-        &:extend(.oui-select__input:disabled);
+        #oui > .select-background(@oui-input-font-color-disabled);
+
+        border-color: @oui-input-background-color-disabled;
+        background-color: @oui-color-concrete;
+        color: @oui-input-font-color-disabled;
+        text-shadow: none;
+        cursor: not-allowed;
     }
 
     &[multiple] {
@@ -117,70 +102,71 @@ select.form-control {
     &.disabled { opacity: 1; }
 
     .has-success & {
-        &,
-        &:hover,
-        &:active,
-        &:focus {
-            &:extend(.oui-select_warning .oui-select__input);
-
-            #oui > .select__background(@oui-color-warning-dark);
-
-            border-color: @state-success-border;
-            background-color: @state-success-bg;
-            color: @state-success-text;
-        }
-
-        &:focus,
-        &:active {
-            &:extend(.oui-select_warning .oui-select__input:focus);
-
-            border-color: @state-success-border;
-            background-color: @state-success-bg;
-            color: @state-success-text;
-        }
+        #oui > .select-variant(@state-success-text, @state-success-bg, @state-success-border);
     }
 
     .has-warning & {
-        &,
-        &:hover,
-        &:active,
-        &:focus {
-            &:extend(.oui-select_warning .oui-select__input);
-
-            #oui > .select__background(@oui-color-warning-dark);
-        }
-
-        &:focus,
-        &:active {
-            &:extend(.oui-select_warning .oui-select__input:focus);
-        }
+        #oui > .select-variant(@state-warning-text, @state-warning-bg, @state-warning-border);
     }
 
     .has-error & {
-        &,
-        &:hover,
-        &:active,
-        &:focus {
-            &:extend(.oui-select_error .oui-select__input);
-
-            #oui > .select__background(@oui-color-error-dark);
-        }
-
-        &:focus,
-        &:active {
-            &:extend(.oui-select_error .oui-select__input:focus);
-        }
+        #oui > .select-variant(@state-danger-text, @state-danger-bg, @state-danger-border);
     }
 }
 
 // Mixins
 #oui {
-    .select__background(@color: @oui-icon-color) {
+    .input-variant(@status-font-color, @status-background-color, @status-border-color) {
+        &:not(:disabled),
+        &:not(:disabled):hover,
+        &:not(:disabled):active,
+        &:not(:disabled):focus {
+            font-weight: 400;
+            color: @status-font-color;
+            border-color: @status-border-color;
+            background-color: @status-background-color;
+        }
+
+        &:not(:disabled):focus { box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.35); }
+
+        &::selection {
+            color: #fff;
+            background: @status-font-color;
+        }
+
+        &::-moz-selection {
+            color: #fff;
+            background: @status-font-color;
+        }
+
+        &::-webkit-selection {
+            color: #fff;
+            background: @status-font-color;
+        }
+    }
+
+    .select-background(@color: @oui-icon-color) {
         @fill: escape(@color);
 
         background-image: url('data:image/svg+xml;utf8,<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve"><path fill="@{fill}" d="M32,51.2c-1.7,0-3.3-0.7-4.5-1.9L1.9,23.8c-2.5-2.5-2.5-6.6,0-9.1s6.6-2.5,9.1,0l21,21.1l21-21.1c2.5-2.5,6.6-2.5,9.1,0 c2.5,2.5,2.5,6.6,0,9.1L36.5,49.3C35.3,50.5,33.7,51.2,32,51.2z"/></svg>');
         background-repeat: no-repeat;
         background-position: right @oui-icon-position-right center;
         background-size: @oui-select-icon-size;
+    }
+
+    .select-variant(@status-font-color, @status-background-color, @status-border-color) {
+        #oui > .select-background(@status-font-color);
+
+        &:not(:disabled),
+        &:not(:disabled):hover,
+        &:not(:disabled):active,
+        &:not(:disabled):focus {
+            font-weight: 400;
+            color: @status-font-color;
+            border-color: @status-border-color;
+            background-color: @status-background-color;
+        }
+
+        &:not(:disabled):focus { box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.35); }
     }
 }

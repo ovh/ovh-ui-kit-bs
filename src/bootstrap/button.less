@@ -26,7 +26,11 @@
         padding-right: @padding-base-horizontal;
 
         &:focus,
-        &:hover { background: @oui-button-hollow-background-color; }
+        &:hover,
+        &:hover:focus {
+            outline: none;
+            background: @oui-button-hollow-background-color;
+        }
 
         &.disabled {
             color: @oui-button-hollow-font-color_disabled;
@@ -53,24 +57,24 @@
         }
     }
 
-    &-success {
-        .button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
+    &-primary  {
+        #oui > .button-variant(@btn-success-color; @oui-button-filled-background-color; @oui-button-filled-background-color_hover; @oui-button-filled-background-color);
     }
 
     &-success {
-        .button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
+        #oui > .button-variant(@btn-success-color; @btn-success-bg; darken(@btn-success-bg, 10%); @btn-success-border);
     }
 
     &-info {
-        .button-variant(@btn-info-color; @btn-info-bg; @btn-info-border);
+        #oui > .button-variant(@btn-info-color; @btn-info-bg; darken(@btn-info-bg, 10%); @btn-info-border);
     }
 
     &-warning {
-        .button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
+        #oui > .button-variant(@btn-warning-color; @btn-warning-bg; darken(@btn-warning-bg, 10%); @btn-warning-border);
     }
 
     &-danger {
-        .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+        #oui > .button-variant(@btn-danger-color; @btn-danger-bg; darken(@btn-danger-bg, 10%); @btn-danger-border);
     }
 
 
@@ -85,6 +89,11 @@
             color: @oui-button-hollow-font-color_disabled;
             background: none;
         }
+
+        &:active:focus,
+        &.active:focus {
+            outline: none;
+        }
     }
 
     // Button Sizes
@@ -98,5 +107,36 @@
 
     &-lg {
         .button-size(@padding-large-vertical; @padding-large-horizontal; @oui-button-font-size; @line-height-base; @btn-border-radius-base);
+    }
+}
+
+// Mixins
+#oui {
+    .button-variant(
+        @font-color,
+        @background-color,
+        @background-color-hover,
+        @border-color
+    ) {
+        color: @font-color;
+        background-color: @background-color;
+
+        &:active,
+        &.active,
+        &:active:focus,
+        &.active:focus,
+        &:focus,
+        &.focus,
+        &:hover,
+        &:hover:focus {
+            outline: none;
+            background-color: @background-color-hover;
+        }
+
+        &:focus,
+        &.focus { box-shadow: 0 0 3px 1px fade(@background-color, 60%); }
+
+        &:active,
+        &.active { box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, 0.33333333); }
     }
 }
