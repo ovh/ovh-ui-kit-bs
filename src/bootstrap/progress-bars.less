@@ -1,0 +1,63 @@
+// Progress
+.progress {
+    #oui > .progress-base();
+
+    position: relative;
+    box-shadow: none;
+    background: @progress-bar-bg;
+
+    // Variations
+    &-info { background: @progress-bar-info-bg; }
+
+    &-success { background: @progress-bar-success-bg; }
+
+    &-warning { background: @progress-bar-warning-bg; }
+
+    &-danger { background: @progress-bar-danger-bg; }
+
+    &-bar {
+        #oui > .progress-bar-base(@oui-progress-height);
+
+        box-shadow: none;
+        background: @progress-bar-fg;
+
+        // Variations
+        &-info {
+            #oui > .progress-bar(@progress-bar-info-fg, @progress-bar-info-text);
+        }
+
+        &-success {
+            #oui > .progress-bar(@progress-bar-success-fg, @progress-bar-success-text);
+        }
+
+        &-warning {
+            #oui > .progress-bar(@progress-bar-warning-fg, @progress-bar-warning-text);
+        }
+
+        &-danger {
+            #oui > .progress-bar(@progress-bar-danger-fg, @progress-bar-danger-text);
+        }
+
+        & > span {
+            #oui > .progress-bar-label();
+            white-space: nowrap;
+        }
+    }
+
+    // Label
+    &-bar-label {
+        #oui > .progress-bar-label();
+    }
+
+    // Striped bars
+    &-striped,
+    &-bar-striped {
+        #oui > .progress-indeterminate();
+
+        animation: none;
+
+        &.active {
+            animation: animate-stripes 1s linear infinite;
+        }
+    }
+}

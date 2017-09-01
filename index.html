@@ -115,13 +115,13 @@
                 <!-- Button Tags -->
                 <section id="btn-tags" class="col-lg-6">
                     <p>
-                        <a href="#" class="btn btn-default">Default</a>
-                        <a href="#" class="btn btn-primary">Primary</a>
-                        <a href="#" class="btn btn-success">Success</a>
-                        <a href="#" class="btn btn-info">Info</a>
-                        <a href="#" class="btn btn-warning">Warning</a>
-                        <a href="#" class="btn btn-danger">Danger</a>
-                        <a href="#" class="btn btn-link">Link</a>
+                        <button type="button" class="btn btn-default">Default</button>
+                        <button type="button" class="btn btn-primary">Primary</button>
+                        <button type="button" class="btn btn-success">Success</button>
+                        <button type="button" class="btn btn-info">Info</button>
+                        <button type="button" class="btn btn-warning">Warning</button>
+                        <button type="button" class="btn btn-danger">Danger</button>
+                        <button type="button" class="btn btn-link">Link</button>
                     </p>
                     <p>
                         <a href="#" class="btn btn-default disabled">Default</a>
@@ -133,7 +133,7 @@
                         <a href="#" class="btn btn-link disabled">Link</a>
                     </p>
                     <div style="margin-bottom: 15px;">
-                        <div class="btn-toolbar" style="margin: 0;">
+                        <div class="btn-toolbar">
                             <div class="btn-group">
                                 <a href="#" class="btn btn-default">Default</a>
                                 <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -213,11 +213,12 @@
                 <!-- Button Sizes -->
                 <section id="btn-sizes" class="col-lg-6">
                     <p><a href="#" class="btn btn-default btn-lg btn-block">Block level button</a></p>
+                    <p><a href="#" class="btn btn-primary btn-lg btn-block">Block level button</a></p>
                     <div style="margin-bottom: 15px;">
                         <div class="btn-group btn-group-justified">
-                            <a href="#" class="btn btn-default">Left</a>
-                            <a href="#" class="btn btn-default">Middle</a>
-                            <a href="#" class="btn btn-default">Right</a>
+                            <a href="#" class="btn btn-success">Left</a>
+                            <a href="#" class="btn btn-warning">Middle</a>
+                            <a href="#" class="btn btn-danger">Right</a>
                         </div>
                     </div>
                     <div style="margin-bottom: 15px;">
@@ -262,6 +263,7 @@
 
             </div>
         </section>
+        <!-- /Buttons -->
 
 
         <!-- Form -->
@@ -746,6 +748,76 @@
             </table>
             <!-- /Table States -->
 
+            <!-- Table Actions -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Filename</th>
+                        <th>Id</th>
+                        <th>Size</th>
+                        <th>Creation</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>abc</td>
+                        <td>1</td>
+                        <td>123 KB</td>
+                        <td>Sun Mar 19 19:53:24 2017</td>
+                        <td class="table-action">
+                            <button type="button" class="btn btn-default btn-lg">More...</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>abc</td>
+                        <td data-title="Id" class="oui-table__cell">2</td>
+                        <td data-title="Size" class="oui-table__cell">123 KB</td>
+                        <td data-title="Creation" class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
+                        <td class="table-action">
+                            <button type="button" class="btn btn-default btn-lg">More...</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>abc</td>
+                        <td>3</td>
+                        <td>123 KB</td>
+                        <td>Sun Mar 19 19:53:24 2017</td>
+                        <td class="table-action">
+                            <button type="button" class="btn btn-default btn-lg">More...</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>abc</td>
+                        <td>4</td>
+                        <td>123 KB</td>
+                        <td>Sun Mar 19 19:53:24 2017</td>
+                        <td class="table-action">
+                            <button type="button" class="btn btn-default btn-lg">More...</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>abc</td>
+                        <td>5</td>
+                        <td>123 KB</td>
+                        <td>Sun Mar 19 19:53:24 2017</td>
+                        <td class="table-action">
+                            <button type="button" class="btn btn-default btn-lg">More...</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>abc</td>
+                        <td>6</td>
+                        <td>123 KB</td>
+                        <td>Sun Mar 19 19:53:24 2017</td>
+                        <td class="table-action">
+                            <button type="button" class="btn btn-default btn-lg">More...</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- /Table Actions -->
+
         </section>
         <!-- /Tables -->
 
@@ -901,27 +973,55 @@
                             <span class="progress-bar-label">60%</span>
                         </div>
                     </div>
-                    <div class="progress">
+                    <div class="progress progress-info">
+                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                            <span class="progress-bar-label">20%</span>
+                        </div>
+                    </div>
+                    <div class="progress progress-success">
                         <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
                             style="width: 40%">
                             <span class="progress-bar-label">40%</span>
                         </div>
                     </div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                            <span class="progress-bar-label">20%</span>
-                        </div>
-                    </div>
-                    <div class="progress">
+                    <div class="progress progress-warning">
                         <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
                             style="width: 60%">
                             <span class="progress-bar-label">60%</span>
                         </div>
                     </div>
-                    <div class="progress">
+                    <div class="progress progress-danger">
                         <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
                             style="width: 80%">
                             <span class="progress-bar-label">80%</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"
+                            style="width: 30%">
+                            <span class="progress-bar-label">30%</span>
+                        </div>
+                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"
+                            style="width: 15%">
+                            <span class="progress-bar-label">15%</span>
+                        </div>
+                    </div>
+                    <div class="progress progress-info progress-striped">
+                        <span class="sr-only">Indeterminate</span>
+                    </div>
+                    <div class="progress progress-warning progress-striped active">
+                        <span class="sr-only">Indeterminate</span>
+                    </div>
+                    <div class="progress progress-success">
+                        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                            style="width: 40%">
+                            <span class="sr-only">40%</span>
+                        </div>
+                    </div>
+                    <div class="progress progress-warning">
+                        <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                            style="width: 60%">
+                            <span class="sr-only">60%</span>
                         </div>
                     </div>
                 </section>

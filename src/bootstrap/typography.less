@@ -1,23 +1,10 @@
-h1 {
-    &:extend(.oui-header_1);
+.ovh-ui-kit-bs-typography-headers(@index: length(@oui-header-font-sizes)) when(@index > 0) {
+    .ovh-ui-kit-bs-typography-headers(@index - 1);
+
+    h@{index} {
+        font-weight: extract(@oui-header-font-weights, @index);
+        margin: extract(@oui-header-margins, @index);
+    }
 }
 
-h2 {
-    &:extend(.oui-header_2);
-}
-
-h3 {
-    &:extend(.oui-header_3);
-}
-
-h4 {
-    &:extend(.oui-header_4);
-}
-
-h5 {
-    &:extend(.oui-header_5);
-}
-
-h6 {
-    &:extend(.oui-header_6);
-}
+.ovh-ui-kit-bs-typography-headers();
