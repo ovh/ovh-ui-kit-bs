@@ -7,8 +7,6 @@
     .form-control {
         &:extend(.oui-input-group > .oui-input);
 
-        width: auto;
-
         &:first-child {
             &:extend(.oui-input-group > .oui-input:first-child);
         }
@@ -35,7 +33,6 @@
     &-btn .btn {
         &:extend(.oui-button);
 
-        width: auto;
         min-width: 0;
         margin-bottom: 0;
         padding: .5rem 1rem;
@@ -50,12 +47,13 @@
     }
 
     &-btn {
-        width: auto;
         padding: 0;
         border: 0;
 
         .btn { border: 1px solid @oui-color-silver; }
 
         .btn-default { background: @oui-input-group-button-hollow-background-color; }
+        .btn-danger { background: @oui-color-error-medium; }
+        .btn-success { background: @oui-color-success-medium; }
     }
 }
