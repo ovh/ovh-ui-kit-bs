@@ -32,10 +32,11 @@
             background: @oui-button-hollow-background-color;
         }
 
+        &:disabled,
         &.disabled {
-            color: @oui-button-hollow-font-color_disabled;
-            border-color: @oui-button-hollow-border-color_disabled;
-            background-color: @oui-button-hollow-background-color_disabled;
+            color: @oui-button-hollow-font-color_disabled !important;
+            border-color: @oui-button-hollow-border-color_disabled !important;
+            background-color: @oui-button-hollow-background-color_disabled !important;
             cursor: not-allowed;
         }
     }
@@ -50,9 +51,10 @@
         padding-left: @padding-base-horizontal;
         padding-right: @padding-base-horizontal;
 
+        &:disabled,
         &.disabled {
-            color: @oui-button-filled-font-color_disabled;
-            background-color: @oui-button-filled-background-color_disabled;
+            color: @oui-button-filled-font-color_disabled !important;
+            background-color: @oui-button-filled-background-color_disabled !important;
             cursor: not-allowed;
         }
     }
@@ -84,6 +86,7 @@
 
         padding: @padding-base-vertical @padding-base-horizontal;
 
+        &:disabled,
         &.disabled {
             text-decoration: underline;
             color: @oui-button-hollow-font-color_disabled;
