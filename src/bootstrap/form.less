@@ -34,24 +34,20 @@ textarea.form-control {
     margin-bottom: 0;
     font-size: rem-calc(16);
 
+    // States
     &:disabled,
     &.disabled { opacity: 1; }
 
     .has-success & {
-        #oui > .input-variant(@state-success-text, @state-success-bg, @state-success-border);
+        #oui > .input-variant(@state-success-text; @state-success-bg; @state-success-border);
     }
 
     .has-warning & {
-        #oui > .input-variant(@state-warning-text, @state-warning-bg, @state-warning-border);
+        #oui > .input-variant(@state-warning-text; @state-warning-bg; @state-warning-border);
     }
 
     .has-error & {
-        #oui > .input-variant(@state-danger-text, @state-danger-bg, @state-danger-border);
-    }
-
-    &.input-lg {
-        font-size: rem-calc(18);
-        min-height: rem-calc(49);
+        #oui > .input-variant(@state-danger-text; @state-danger-bg; @state-danger-border);
     }
 }
 
@@ -103,18 +99,36 @@ select.form-control {
         background-image: none;
     }
 
+    // States
     &.disabled { opacity: 1; }
 
     .has-success & {
-        #oui > .select-variant(@state-success-text, @state-success-bg, @state-success-border);
+        #oui > .select-variant(@state-success-text; @state-success-bg; @state-success-border);
     }
 
     .has-warning & {
-        #oui > .select-variant(@state-warning-text, @state-warning-bg, @state-warning-border);
+        #oui > .select-variant(@state-warning-text; @state-warning-bg; @state-warning-border);
     }
 
     .has-error & {
-        #oui > .select-variant(@state-danger-text, @state-danger-bg, @state-danger-border);
+        #oui > .select-variant(@state-danger-text; @state-danger-bg; @state-danger-border);
+    }
+}
+
+// Sizing
+input.form-control,
+textarea.form-control,
+select.form-control {
+    &.input-lg {
+        .input-size(@input-height-large; @padding-large-vertical; @oui-input-padding; rem-calc(18); @line-height-large; @input-border-radius-large);
+
+        min-height: @input-height-large;
+    }
+
+    &.input-sm {
+        .input-size(@input-height-small; @padding-small-vertical; @oui-input-padding; rem-calc(14); @line-height-small; @input-border-radius-small);
+
+        min-height: @input-height-small;
     }
 }
 

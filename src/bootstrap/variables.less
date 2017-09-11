@@ -35,12 +35,12 @@
 
 @font-family-sans-serif:  @oui-global-base-font-family;
 
-@font-size-h1: rem-calc(46);
-@font-size-h2: rem-calc(36);
-@font-size-h3: rem-calc(32);
-@font-size-h4: rem-calc(28);
-@font-size-h5: rem-calc(20);
-@font-size-h6: rem-calc(18);
+@font-size-h1:            4.6rem;
+@font-size-h2:            3.6rem;
+@font-size-h3:            3.2rem;
+@font-size-h4:            2.8rem;
+@font-size-h5:            2.0rem;
+@font-size-h6:            1.8rem;
 
 //** Unit-less `line-height` for use in components like buttons.
 @line-height-base:        @oui-global-base-line-height;
@@ -57,6 +57,18 @@
 //== Components
 //
 //## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+
+@padding-base-vertical:     .6rem;
+@padding-base-horizontal:   1.3rem;
+
+@padding-large-vertical:    1rem;
+@padding-large-horizontal:  1.6rem;
+
+@padding-small-vertical:    .3rem;
+@padding-small-horizontal:  .6rem;
+
+@padding-xs-vertical:       .1rem;
+@padding-xs-horizontal:     .6rem;
 
 @line-height-small:         @oui-global-base-line-height;
 
@@ -106,9 +118,32 @@
 @btn-border-radius-base:         @border-radius-base;
 @btn-border-radius-large:        @border-radius-base;
 @btn-border-radius-small:        @border-radius-small;
+
+
 //== Forms
 //
 //##
+
+// TODO: Rename `@input-border-radius` to `@input-border-radius-base` in v4
+//** Default `.form-control` border radius
+// This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
+@input-border-radius:            @border-radius-base;
+//** Large `.form-control` border radius
+@input-border-radius-large:      @border-radius-base;
+//** Small `.form-control` border radius
+@input-border-radius-small:      @border-radius-small;
+
+//** Default `.form-control` height
+@input-height-base:              3.6rem;
+//** Large `.form-control` height
+@input-height-large:             4.6rem;
+//** Small `.form-control` height
+@input-height-small:             2.9rem;
+
+//** Background color for textual input addons
+@input-group-addon-bg:           #fff;
+//** Border color for textual input addons
+@input-group-addon-border-color: @oui-color-silver;
 
 
 //== Dropdowns

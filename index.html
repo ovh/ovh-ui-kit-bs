@@ -429,6 +429,40 @@
             </div>
             <!-- /Textareas -->
 
+            <!-- Sizing -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="control-label">Input sizing</label>
+                        <input class="form-control input-lg" type="text" placeholder=".input-lg">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Default input">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control input-sm" type="text" placeholder=".input-sm">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="control-label">Select sizing</label>
+                        <select class="form-control input-lg">
+                            <option value="">.input-lg</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control">
+                            <option value="">Default select</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control input-sm">
+                            <option value="">.input-sm</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
         </section>
         <!-- /Form Controls -->
 
@@ -460,10 +494,17 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="basic-url">Your vanity URL</label>
                         <div class="input-group">
                             <span class="input-group-addon" id="basic-addon3">https://example.com/users/</span>
                             <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="checkbox">
+                            </span>
+                            <input type="text" class="form-control" value="Checkbox">
                         </div>
                     </div>
                 </form>
@@ -521,17 +562,58 @@
                     </div>
                     <div class="form-group">
                         <div class="input-group">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-info">Info</button>
+                                <button type="button" class="btn btn-warning">Warning</button>
+                            </div>
                             <input class="form-control" aria-label="Text input with multiple buttons">
                             <div class="input-group-btn">
-                                <button type="button" class="btn btn-info" aria-label="Help">
-                                    <span class="glyphicon glyphicon-question-sign"></span>
-                                </button>
-                                <button type="button" class="btn btn-default">Action</button>
+                                <button type="button" class="btn btn-success">Success</button>
+                                <button type="button" class="btn btn-danger">Danger</button>
                             </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="radio">
+                            </span>
+                            <input type="text" class="form-control" value="Radio">
                         </div>
                     </div>
                 </form>
             </div>
+
+            <div class="form-group">
+                <div class="input-group input-group-lg">
+                    <span class="input-group-addon" id="sizing-addon1">@</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default">Action</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon" id="sizing-addon2">@</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default">Action</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="input-group input-group-sm">
+                    <span class="input-group-addon" id="sizing-addon3">@</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon3">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default">Action</button>
+                    </div>
+                </div>
+            </div>
+
         </section>
         <!-- /Input Groups -->
 
@@ -766,7 +848,7 @@
                         <td>123 KB</td>
                         <td>Sun Mar 19 19:53:24 2017</td>
                         <td class="table-action">
-                            <button type="button" class="btn btn-default btn-lg">More...</button>
+                            <button type="button" class="btn btn-default">More...</button>
                         </td>
                     </tr>
                     <tr>
@@ -775,7 +857,7 @@
                         <td data-title="Size" class="oui-table__cell">123 KB</td>
                         <td data-title="Creation" class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
                         <td class="table-action">
-                            <button type="button" class="btn btn-default btn-lg">More...</button>
+                            <button type="button" class="btn btn-default">More...</button>
                         </td>
                     </tr>
                     <tr>
@@ -784,7 +866,7 @@
                         <td>123 KB</td>
                         <td>Sun Mar 19 19:53:24 2017</td>
                         <td class="table-action">
-                            <button type="button" class="btn btn-default btn-lg">More...</button>
+                            <button type="button" class="btn btn-default">More...</button>
                         </td>
                     </tr>
                     <tr>
@@ -793,7 +875,7 @@
                         <td>123 KB</td>
                         <td>Sun Mar 19 19:53:24 2017</td>
                         <td class="table-action">
-                            <button type="button" class="btn btn-default btn-lg">More...</button>
+                            <button type="button" class="btn btn-default">More...</button>
                         </td>
                     </tr>
                     <tr>
@@ -802,7 +884,7 @@
                         <td>123 KB</td>
                         <td>Sun Mar 19 19:53:24 2017</td>
                         <td class="table-action">
-                            <button type="button" class="btn btn-default btn-lg">More...</button>
+                            <button type="button" class="btn btn-default">More...</button>
                         </td>
                     </tr>
                     <tr>
@@ -811,7 +893,7 @@
                         <td>123 KB</td>
                         <td>Sun Mar 19 19:53:24 2017</td>
                         <td class="table-action">
-                            <button type="button" class="btn btn-default btn-lg">More...</button>
+                            <button type="button" class="btn btn-default">More...</button>
                         </td>
                     </tr>
                 </tbody>
