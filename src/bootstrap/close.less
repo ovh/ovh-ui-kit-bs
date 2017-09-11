@@ -1,0 +1,36 @@
+// Close
+.close {
+    #oui > .animate();
+
+    cursor: pointer;
+    min-width: @close-font-size;
+    min-height: @close-font-size;
+    line-height: 0;
+    overflow: hidden;
+    opacity: .6;
+    text-align: center;
+    font-size: @close-font-size;
+    color: @close-color;
+
+    [aria-hidden] { display: none; }
+
+    &::before {
+        #oui > .icon-normalize();
+        #oui > .icon();
+        #oui > .icon-type();
+        #oui > .icon-bicolor();
+
+        content: @oui-icon-index-close;
+        font-size: inherit;
+        color: @text-color;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        #oui > .animate();
+
+        outline: none;
+        opacity: 1;
+    }
+}
