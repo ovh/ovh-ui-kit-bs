@@ -1,59 +1,63 @@
+// Input Groups
 .input-group {
-    &:extend(.oui-input-group);
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    vertical-align: middle;
 
-    width: auto;
-    margin-bottom: 0;
-
-    .form-control {
-        &:extend(.oui-input-group > .oui-input);
-
-        &:first-child {
-            &:extend(.oui-input-group > .oui-input:first-child);
-        }
-
-        &:last-child {
-            &:extend(.oui-input-group > .oui-input:last-child);
-        }
-    }
-
+    .form-control,
     &-addon,
     &-btn {
-        &:extend(.oui-input-group > .oui-button);
+        &:first-child { border-radius: @oui-global-base-radius 0 0 @oui-global-base-radius; }
 
-        &:first-child {
-            &:extend(.oui-input-group > .oui-button:first-child);
-        }
-
-        &:last-child {
-            &:extend(.oui-input-group > .oui-button:last-child);
-        }
+        &:last-child { border-radius: 0 @oui-global-base-radius @oui-global-base-radius 0; }
     }
+
+    .form-control {
+        border-radius: 0;
+        margin: 0;
+    }
+
+    // &-addon,
+    // &-btn {
+    //     #oui > .button-hollow(@oui-input-group-button-hollow-background-color, @oui-input-group-button-hollow-padding);
+    // }
 
     &-addon,
     &-btn .btn {
-        &:extend(.oui-button);
-
         min-width: 0;
         margin-bottom: 0;
         padding: .5rem 1rem;
         font-size: @oui-button-font-size;
         color: @text-color;
-
-        &.btn-lg {
-            font-size: @oui-button-font-size + .2;
-            padding: 1rem 1.6rem;
-        }
     }
 
-    &-addon {
-        border-color: @oui-color-silver;
-        cursor: default;
-    }
+    &-addon { cursor: default; }
 
     &-btn {
         padding: 0;
         border: 0;
 
-        .btn { border: 1px solid @oui-color-silver; }
+        .btn-default {
+            &,
+            &:hover,
+            &:focus,
+            &:active { background: @oui-input-group-button-hollow-background-color; }
+        }
     }
+
+    &-btn + .form-control { border-left: none; }
+}
+
+// Sizing
+.input-group-lg > .form-control {
+    min-height: @input-height-large;
+    padding-left: @oui-input-padding;
+    padding-right: @oui-input-padding;
+}
+
+.input-group-sm > .form-control {
+    min-height: @input-height-small;
+    padding-left: @oui-input-padding;
+    padding-right: @oui-input-padding;
 }

@@ -1,75 +1,78 @@
-@import '@{oui-path}/packages/oui-message/_normalize';
-@import '@{oui-path}/packages/oui-message/_mixins';
-
 // Alert
 .alert {
-    &:extend(.oui-message);
-    &:extend(.oui-message_no-icon);
+    #oui > .message-normalize();
 
-    display: table;
     width: 100%;
     max-width: 100%;
+    min-height: 5rem;
+    line-height: 1.375;
+    display: table;
+    position: relative;
+    padding: @oui-message-no-icon-padding;
+    margin: @oui-message-margin;
+    font-size: @oui-message-font-size;
+    font-weight: @oui-message-font-weight;
+    color: @text-color;
+    border: 2px solid transparent;
+    border-radius: @border-radius-large;
+    background-color: @oui-message-background-color;
 
     &::before {
-      display: table-cell !important;
-      vertical-align: top;
-      width: 1px;
+        display: table-cell !important;
+        vertical-align: top;
+        width: 1px;
 
-      padding: @oui-message-padding !important;
-      padding-left: 0 !important;
-      padding-top: 0 !important;
-      padding-bottom: 0 !important;
+        padding: @oui-message-padding !important;
+        padding-left: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
     }
 
     &.alert-info {
-        &:extend(.oui-message_info);
-        &:extend(.oui-message_no-icon);
-
-        &::before {
-          &:extend(.oui-icon);
-          &:extend(.oui-icon_bicolor);
-          &:extend(.oui-icon.oui-icon-info_circle::before);
-
-          color: @oui-color-info-medium;
-        }
+        #oui > .alert-variant(@state-info-text, @state-info-border, @state-info-bg, @oui-message-info-icon-color, @oui-icon-index-info_circle);
     }
 
     &.alert-success {
-        &:extend(.oui-message_success);
-        &:extend(.oui-message_no-icon);
-
-        &::before {
-          &:extend(.oui-icon);
-          &:extend(.oui-icon_bicolor);
-          &:extend(.oui-icon.oui-icon-success_circle::before);
-
-          color: @oui-color-success-medium;
-        }
+        #oui > .alert-variant(@state-success-text, @state-success-border, @state-success-bg, @oui-message-success-icon-color, @oui-icon-index-success_circle);
     }
 
     &.alert-warning {
-        &:extend(.oui-message_warning);
-        &:extend(.oui-message_no-icon);
-
-        &::before {
-          &:extend(.oui-icon);
-          &:extend(.oui-icon_bicolor);
-          &:extend(.oui-icon.oui-icon-warning_circle::before);
-
-          color: @oui-color-warning-medium;
-        }
+        #oui > .alert-variant(@state-warning-text, @state-warning-border, @state-warning-bg, @oui-message-warning-icon-color, @oui-icon-index-warning_circle);
     }
 
     &.alert-danger {
-        &:extend(.oui-message_error);
-        &:extend(.oui-message_no-icon);
+        #oui > .alert-variant(@state-danger-text, @state-danger-border, @state-danger-bg, @oui-message-error-icon-color, @oui-icon-index-error_circle);
+    }
+}
+
+.alert-dismissable {
+    .close {
+        &:extend(.close);
+
+        float: none;
+        position: absolute;
+        top: .6rem;
+        right: .6rem;
+
+        &::before { display: block; }
+    }
+}
+
+// Mixins
+#oui {
+    .alert-variant(@font-color, @border-color, @background-color, @icon-color, @icon-content) {
+        color: @font-color;
+        border-color: @border-color;
+        background-color: @background-color;
 
         &::before {
-          &:extend(.oui-icon);
-          &:extend(.oui-icon_bicolor);
-          &:extend(.oui-icon.oui-icon-error_circle::before);
+            #oui > .icon-normalize();
+            #oui > .icon();
+            #oui > .icon-type();
+            #oui > .icon-bicolor();
 
-          color: @oui-color-error-medium;
+            content: @icon-content;
+            color: @icon-color;
         }
     }
 }

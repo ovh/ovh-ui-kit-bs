@@ -7,6 +7,9 @@
     max-width: 100%;
     margin-bottom: 0;
     padding: @padding-base-vertical @padding-base-horizontal;
+    white-space: normal;
+    text-overflow: initial;
+    vertical-align: middle;
 
     &:disabled,
     &.disabled {
@@ -110,7 +113,7 @@
     }
 
     &-lg {
-        .button-size(@padding-large-vertical; @padding-large-horizontal; @oui-button-font-size; @line-height-base; @btn-border-radius-base);
+        .button-size(@padding-large-vertical; @padding-large-horizontal; rem-calc(18); @line-height-base; @btn-border-radius-base);
     }
 }
 
