@@ -86,6 +86,12 @@ input[type="checkbox"] { margin: @padding-base-vertical 0 0 0; }
     display: block;
     font-size: @font-size-base;
     font-weight: @oui-font-regular;
+
+    .has-success & { color: @brand-success; }
+
+    .has-warning & { color: @brand-warning; }
+
+    .has-error & { color: @brand-danger; }
 }
 
 .checkbox,
@@ -213,12 +219,28 @@ select.form-control {
 .has-success {
   .form-control-validation(@state-success-text; @state-success-border; @state-success-bg);
 }
+
 .has-warning {
   .form-control-validation(@state-warning-text; @state-warning-border; @state-warning-bg);
 }
+
 .has-error {
   .form-control-validation(@state-danger-text; @state-danger-border; @state-danger-bg);
 }
+
+
+// Help text
+.help-block {
+    font-size: @font-size-base;
+    color: @text-color;
+
+    .has-success & { color: @brand-success; }
+
+    .has-warning & { color: @brand-warning; }
+
+    .has-error & { color: @brand-danger; }
+}
+
 
 // Inline Forms
 .form-inline {
