@@ -18,16 +18,12 @@
         margin: 0;
     }
 
-    // &-addon,
-    // &-btn {
-    //     #oui > .button-hollow(@oui-input-group-button-hollow-background-color, @oui-input-group-button-hollow-padding);
-    // }
-
     &-addon,
     &-btn .btn {
         min-width: 0;
+        min-height: @input-height-base;
         margin-bottom: 0;
-        padding: .5rem 1rem;
+        padding: 5px 10px;
         font-size: @oui-button-font-size;
         color: @text-color;
     }
@@ -47,17 +43,23 @@
     }
 
     &-btn + .form-control { border-left: none; }
-}
 
-// Sizing
-.input-group-lg > .form-control {
-    min-height: @input-height-large;
-    padding-left: @oui-input-padding;
-    padding-right: @oui-input-padding;
-}
+    // Sizing
+    &-lg > .form-control {
+        min-height: @input-height-large;
+        padding-left: @oui-input-padding;
+        padding-right: @oui-input-padding;
+    }
 
-.input-group-sm > .form-control {
-    min-height: @input-height-small;
-    padding-left: @oui-input-padding;
-    padding-right: @oui-input-padding;
+    &-lg &-addon,
+    &-lg &-btn .btn { min-height: @input-height-large; }
+
+    &-sm > .form-control {
+        min-height: @input-height-small;
+        padding-left: @oui-input-padding;
+        padding-right: @oui-input-padding;
+    }
+
+    &-sm &-addon,
+    &-sm &-btn .btn { min-height: @input-height-small; }
 }

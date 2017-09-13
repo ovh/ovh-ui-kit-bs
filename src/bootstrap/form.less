@@ -1,22 +1,25 @@
-@oui-icon-position-right: rem-calc(5);
+@oui-icon-position-right: 5px;
 @oui-icon-selector: oui-icon;
 
-@oui-input-font-size: rem-calc(14);
+@oui-input-font-size: 14px;
 
-@oui-select-font-size: rem-calc(14);
-@oui-select-icon-size: rem-calc(10);
+@oui-select-font-size: 14px;
+@oui-select-icon-size: 10px;
 @oui-select-selector: oui-select;
 
 label {
+    #oui > .label-normalize();
+    #oui > .label-base();
+
     &.required::after {
         content: "*";
         color: @state-danger-text;
-        margin-left: 4px;
+        margin-left: 5px;
     }
 }
 
 legend {
-    font-size: 1.4rem;
+    font-size: 14px;
     font-weight: @oui-font-semibold;
     margin-bottom: .5em;
 }
@@ -32,7 +35,7 @@ textarea.form-control {
     #oui > .input-base();
 
     margin-bottom: 0;
-    font-size: rem-calc(16);
+    font-size: 16px;
 
     // States
     &:disabled,
@@ -53,16 +56,22 @@ textarea.form-control {
 
 textarea.form-control { resize: vertical; }
 
+// Checkbox, Radio
+input[type="radio"],
+input[type="checkbox"] {
+    margin: @padding-base-vertical 0 0 0;
+}
+
 // Select
 select.form-control {
     #oui > .select-normalize();
     #oui > .select-background();
 
-    line-height: rem-calc(34);
+    line-height: 34px;
     height: ~"calc(@{oui-select-font-size} * 2.25)";
-    min-height: rem-calc(36);
-    padding: 0 rem-calc(20) 0 @oui-select-padding;
-    font-size: rem-calc(16);
+    min-height: 36px;
+    padding: 0 20px 0 @oui-select-padding;
+    font-size: 16px;
     font-weight: @oui-select-font-weight;
     color: @oui-select-font-color;
     border: 1px solid @oui-select-border-color;
@@ -119,16 +128,95 @@ select.form-control {
 input.form-control,
 textarea.form-control,
 select.form-control {
-    &.input-lg {
-        .input-size(@input-height-large; @padding-large-vertical; @oui-input-padding; rem-calc(18); @line-height-large; @input-border-radius-large);
+    &.input-lg,
+    .form-group-lg & {
+        .input-size(@input-height-large; @padding-large-vertical; @oui-input-padding; @font-size-large; @line-height-large; @input-border-radius-large);
 
         min-height: @input-height-large;
     }
 
-    &.input-sm {
-        .input-size(@input-height-small; @padding-small-vertical; @oui-input-padding; rem-calc(14); @line-height-small; @input-border-radius-small);
+    &.input-sm,
+    .form-group-sm & {
+        .input-size(@input-height-small; @padding-small-vertical; @oui-input-padding; @font-size-base; @line-height-small; @input-border-radius-small);
 
         min-height: @input-height-small;
+    }
+}
+
+// Feedbacks
+.form-control-feedback {
+    min-width: 50px;
+    font-size: @font-size-base;
+    color: @oui-color-silver;
+
+    &.oui-icon { font-size: @font-size-large; }
+}
+
+.has-feedback {
+    label ~ .form-control-feedback { top: calc(16px * 1.5 + 4px); }
+
+    .form-control { padding-right: calc(50px + @oui-input-padding) }
+
+    // Feedback Icon
+    #oui > .feedback-variant(@oui-color-silver, @oui-input-border-color-focus);
+
+    &.has-success {
+        #oui > .feedback-variant(@oui-color-silver, @state-success-text);
+    }
+
+    &.has-warning {
+        #oui > .feedback-variant(@oui-color-silver, @state-warning-text);
+    }
+
+    &.has-error {
+        #oui > .feedback-variant(@oui-color-silver, @state-danger-text);
+    }
+}
+
+// Inline Forms
+.form-inline {
+    label {
+        display: inline-block;
+        margin-bottom: 0;
+        vertical-align: middle;
+    }
+}
+
+// Horizontal Forms
+.form-horizontal {
+    .radio,
+    .checkbox,
+    .radio-inline,
+    .checkbox-inline {
+        padding-top: @padding-base-vertical;
+    }
+
+    .help-block { margin-bottom: 0; }
+
+    @media (min-width: @screen-sm-min) {
+        .control-label {
+            margin-bottom: 0;
+            padding-top: @padding-base-vertical;
+        }
+    }
+
+    .form-group-lg {
+        @media (min-width: @screen-sm-min) {
+            .control-label {
+                line-height: @line-height-large;
+                padding-top: calc(@padding-large-vertical + 1px); // Padding + Border
+                font-size: @font-size-large;
+            }
+        }
+    }
+
+    .form-group-sm {
+        @media (min-width: @screen-sm-min) {
+            .control-label {
+                padding-top: calc(@padding-small-vertical + 1px); // Padding + Border
+                font-size: @font-size-base;
+            }
+        }
     }
 }
 
@@ -147,7 +235,7 @@ select.form-control {
             background-color: @status-background-color;
         }
 
-        &:not(:disabled):focus { box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.35); }
+        &:not(:disabled):focus { box-shadow: 0 0 3px 0 rgba(0, 0, 0, .35); }
 
         &::selection {
             color: #fff;
@@ -189,6 +277,14 @@ select.form-control {
             background-color: @status-background-color;
         }
 
-        &:not(:disabled):focus { box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.35); }
+        &:not(:disabled):focus { box-shadow: 0 0 3px 0 rgba(0, 0, 0, .35); }
+    }
+
+    .feedback-variant(@feedback-color, @feedback-color-focus) {
+        .form-control {
+            & ~ .form-control-feedback { color: @feedback-color; }
+
+            &:focus ~ .form-control-feedback { color: @feedback-color-focus; }
+        }
     }
 }
