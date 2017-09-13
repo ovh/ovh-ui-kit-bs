@@ -520,62 +520,105 @@
 
             <h2>Checkboxes / Radios</h2>
             <div class="row" style="margin-bottom: 15px;">
-                <div class="col-lg-6">
+                <div class="col-lg-4">
 
                     <!-- Checkboxes -->
                     <div class="form-group">
-                        <div class="has-success">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" id="checkboxSuccess" value="option1"> Checkbox with success
-                                </label>
-                            </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="checkboxDefault" value="option1"> Default checkbox
+                                <span class="checkbox-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </label>
                         </div>
-                        <div class="has-warning">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" id="checkboxWarning" value="option1"> Checkbox with warning
-                                </label>
-                            </div>
+                        <div class="checkbox disabled">
+                            <label>
+                                <input type="checkbox" id="checkboxDefault" value="option1" disabled> Disabled checkbox
+                                <span class="checkbox-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </label>
                         </div>
-                        <div class="has-error">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" id="checkboxError" value="option1"> Checkbox with error
-                                </label>
-                            </div>
+                        <div class="checkbox has-success">
+                            <label>
+                                <input type="checkbox" id="checkboxSuccess" value="option1"> Checkbox with success
+                                <span class="checkbox-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </label>
                         </div>
+                        <div class="checkbox has-warning">
+                            <label>
+                                <input type="checkbox" id="checkboxWarning" value="option1"> Checkbox with warning
+                                <span class="checkbox-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </label>
+                        </div>
+                        <div class="checkbox has-error">
+                            <label>
+                                <input type="checkbox" id="checkboxError" value="option1"> Checkbox with error
+                                <span class="checkbox-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+                        </label>
                     </div>
                     <!-- /Checkboxes -->
 
+                </div>
+                <div class="col-lg-4">
+
                     <!-- Radios -->
                     <div class="form-group">
-                        <div class="has-success">
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" id="radioSuccess" value="option1"> Radio with success
-                                </label>
-                            </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" id="radioDefault" value="option1"> Default radio
+                                <span class="radio-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </label>
                         </div>
-                        <div class="has-warning">
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" id="radioWarning" value="option1"> Radio with warning
-                                </label>
-                            </div>
+                        <div class="radio disabled">
+                            <label>
+                                <input type="radio" id="radioDefault" value="option1" disabled> Disabled radio
+                                <span class="radio-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </label>
                         </div>
-                        <div class="has-error">
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" id="radioError" value="option1"> Radio with error
-                                </label>
-                            </div>
+                        <div class="radio has-success">
+                            <label>
+                                <input type="radio" id="radioSuccess" value="option1"> Radio with success
+                                <span class="radio-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </label>
                         </div>
+                        <div class="radio has-warning">
+                            <label>
+                                <input type="radio" id="radioWarning" value="option1"> Radio with warning
+                                <span class="radio-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </label>
+                        </div>
+                        <div class="radio has-error">
+                            <label>
+                                <input type="radio" id="radioError" value="option1"> Radio with error
+                                <span class="radio-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                        </label>
                     </div>
                     <!-- /Radios -->
 
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-4">
 
                     <!-- Checkboxes List -->
                     <form class="form-horizontal">
@@ -605,7 +648,7 @@
                     <!-- Radios List -->
                     <form class="form-horizontal">
                         <div class="form-group">
-                            <label class="col-sm-4 control-label">Radios List</label>
+                            <label class="col-sm-4 control-label">Radios</label>
                             <div class="col-sm-8">
                                 <div class="radio">
                                     <label>

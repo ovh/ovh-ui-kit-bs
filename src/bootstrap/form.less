@@ -7,6 +7,9 @@
 @oui-select-icon-size: 10px;
 @oui-select-selector: oui-select;
 
+@oui-checkbox-padding: calc(@oui-checkbox-size * 1.5);
+@oui-checkbox-margin: calc(-@oui-checkbox-size * 1.5);
+
 label {
     #oui > .label-normalize();
     #oui > .label-base();
@@ -58,8 +61,41 @@ textarea.form-control { resize: vertical; }
 
 // Checkbox, Radio
 input[type="radio"],
-input[type="checkbox"] {
-    margin: @padding-base-vertical 0 0 0;
+input[type="checkbox"] { margin: @padding-base-vertical 0 0 0; }
+
+.checkbox,
+.checkbox-inline,
+.radio,
+.radio-inline {
+    &.disabled { color: @oui-color-dusty; }
+}
+
+.checkbox label,
+.checkbox-inline,
+.radio label,
+.radio-inline {
+    line-height: @oui-checkbox-line-height;
+    padding-left: @oui-checkbox-padding;
+    font-size: @oui-checkbox-size;
+    font-weight: @oui-font-semibold;
+    color: inherit;
+}
+
+.checkbox-description,
+.radio-description {
+    display: block;
+    font-size: @font-size-base;
+    font-weight: @oui-font-regular;
+}
+
+.checkbox,
+.checkbox-inline {
+    input[type="checkbox"] { margin-left: @oui-checkbox-margin; }
+}
+
+.radio,
+.radio-inline {
+    input[type="radio"] { margin-left: @oui-checkbox-margin; }
 }
 
 // Select
