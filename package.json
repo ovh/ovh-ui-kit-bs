@@ -23,11 +23,17 @@
     "bootstrap": "^3.3.7",
     "bower": "^1.8.0",
     "cpx": "^1.5.0",
+    "cz-ovh-commit": "^1.0.0",
     "less": "^2.7.2",
     "less-plugin-clean-css": "^1.5.1",
     "ovh-ui-kit": "git+https://github.com/ovh-ux/ovh-ui-kit.git#v1.0.0-alpha.15",
     "rimraf": "^2.6.1",
     "stylelint": "^8.0.0",
     "stylelint-config-ovh": "^0.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-ovh-commit"
+    }
   }
 }
