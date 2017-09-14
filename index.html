@@ -272,10 +272,72 @@
                 <h1>Forms</h1>
             </div>
 
+            <div class="row" style="margin-bottom: 15px;">
+
+                <!-- Form Vertical -->
+                <section class="col-lg-6" id="form-vertical">
+                    <h2>Form Vertical</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <p class="help-block">Example block-level help text here.</p>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Remember me
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </section>
+                <!-- Form Vertical -->
+
+                <!-- Form Horizontal -->
+                <section class="col-lg-6" id="form-horizontal">
+                    <h2>Form Horizontal</h2>
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                                <p class="help-block">Example block-level help text here.</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"> Remember me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+                <!-- /Form Horizontal -->
+
+            </div>
+
             <!-- Form Inline -->
             <section id="form-inline">
-                <h3>Form Inline</h3>
-                <form class="form-inline">
+                <h2>Form Inline</h2>
+                <form class="form-inline" style="margin-bottom: 15px;">
                     <div class="form-group">
                         <label for="exampleInputName2">Name</label>
                         <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
@@ -285,6 +347,33 @@
                         <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
                     </div>
                     <button type="submit" class="btn btn-default">Send invitation</button>
+                </form>
+                <form class="form-inline" style="margin-bottom: 15px;">
+                    <div class="form-group">
+                        <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="exampleInputPassword3">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Remember me
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-default">Sign in</button>
+                </form>
+                <form class="form-inline" style="margin-bottom: 15px;">
+                    <div class="form-group">
+                        <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                        <div class="input-group">
+                            <div class="input-group-addon">$</div>
+                            <input class="form-control" id="exampleInputAmount" placeholder="Amount">
+                            <div class="input-group-addon">.00</div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Transfer cash</button>
                 </form>
             </section>
             <!-- /Form Inline -->
@@ -329,7 +418,7 @@
                 </form>
                 <!-- /Textboxes -->
 
-                <!-- Dropdowns -->
+                <!-- Selectors -->
                 <form class="col-lg-6">
                     <div class="form-group">
                         <label class="control-label" for="defaultSelect">Default select</label>
@@ -392,7 +481,7 @@
                         </select>
                     </div>
                 </form>
-                <!-- Dropdowns -->
+                <!-- Selectors -->
 
             </div>
 
@@ -429,7 +518,231 @@
             </div>
             <!-- /Textareas -->
 
+            <h2>Checkboxes / Radios</h2>
+            <div class="row" style="margin-bottom: 15px;">
+                <div class="col-lg-4">
+
+                    <!-- Checkboxes -->
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="checkboxDefault" value="option1"> Default checkbox
+                                <span class="checkbox-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </label>
+                        </div>
+                        <div class="checkbox disabled">
+                            <label>
+                                <input type="checkbox" id="checkboxDefault" value="option1" disabled> Disabled checkbox
+                                <span class="checkbox-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </label>
+                        </div>
+                        <div class="checkbox has-success">
+                            <label>
+                                <input type="checkbox" id="checkboxSuccess" value="option1"> Checkbox with success
+                                <span class="checkbox-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </label>
+                        </div>
+                        <div class="checkbox has-warning">
+                            <label>
+                                <input type="checkbox" id="checkboxWarning" value="option1"> Checkbox with warning
+                                <span class="checkbox-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </label>
+                        </div>
+                        <div class="checkbox has-error">
+                            <label>
+                                <input type="checkbox" id="checkboxError" value="option1"> Checkbox with error
+                                <span class="checkbox-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+                        </label>
+                    </div>
+                    <!-- /Checkboxes -->
+
+                </div>
+                <div class="col-lg-4">
+
+                    <!-- Radios -->
+                    <div class="form-group">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" id="radioDefault" value="option1"> Default radio
+                                <span class="radio-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </label>
+                        </div>
+                        <div class="radio disabled">
+                            <label>
+                                <input type="radio" id="radioDefault" value="option1" disabled> Disabled radio
+                                <span class="radio-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </label>
+                        </div>
+                        <div class="radio has-success">
+                            <label>
+                                <input type="radio" id="radioSuccess" value="option1"> Radio with success
+                                <span class="radio-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </label>
+                        </div>
+                        <div class="radio has-warning">
+                            <label>
+                                <input type="radio" id="radioWarning" value="option1"> Radio with warning
+                                <span class="radio-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </label>
+                        </div>
+                        <div class="radio has-error">
+                            <label>
+                                <input type="radio" id="radioError" value="option1"> Radio with error
+                                <span class="radio-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                        </label>
+                    </div>
+                    <!-- /Radios -->
+
+                </div>
+                <div class="col-lg-4">
+
+                    <!-- Checkboxes List -->
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Checkboxes</label>
+                            <div class="col-sm-8">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="checkboxListExample"> Option 1
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="checkboxListExample"> Option 2
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="checkboxListExample"> Option 3
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- /Checkboxes List -->
+
+                    <!-- Radios List -->
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Radios</label>
+                            <div class="col-sm-8">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="radioListExample"> Option 1
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="radioListExample"> Option 2
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="radioListExample"> Option 3
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- /Radios List -->
+
+                </div>
+            </div>
+
+            <h2>Help Blocks / Feedbacks</h2>
+            <div class="row" style="margin-bottom: 15px;">
+
+                <!-- Help Blocks -->
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="control-label" for="inputDefault1">Default input</label>
+                        <input type="text" class="form-control" id="inputDefault1" aria-describedby="helpBlockDefault1">
+                        <span id="helpBlockDefault1" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+                    </div>
+                    <div class="form-group has-success">
+                        <label class="control-label" for="inputSuccess1">Input with success</label>
+                        <input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlockSuccess1">
+                        <span id="helpBlockSuccess1" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+                    </div>
+                    <div class="form-group has-warning">
+                        <label class="control-label" for="inputWarning1">Input with warning</label>
+                        <input type="text" class="form-control" id="inputWarning1" aria-describedby="helpBlockWarning1">
+                        <span id="helpBlockWarning1" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+                    </div>
+                    <div class="form-group has-error">
+                        <label class="control-label" for="inputError1">Input with error</label>
+                        <input type="text" class="form-control" id="inputError1" aria-describedby="helpBlockError1">
+                        <span id="helpBlockError1" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+                    </div>
+                </div>
+                <!-- /Help Blocks -->
+
+                <!-- Feedbacks -->
+                <div class="col-lg-6">
+                    <div class="form-group has-feedback">
+                        <label class="control-label" for="inputDefault2">Default input</label>
+                        <input type="text" class="form-control" id="inputDefault2" aria-describedby="inputDefault2Status">
+                        <span class="oui-icon oui-icon-eye form-control-feedback" aria-hidden="true"></span>
+                        <span id="inputDefault2Status" class="sr-only">(default)</span>
+                    </div>
+                    <div class="form-group has-success has-feedback">
+                        <label class="control-label" for="inputSuccess2">Input with success</label>
+                        <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
+                        <span class="oui-icon oui-icon-success_circle form-control-feedback" aria-hidden="true"></span>
+                        <span id="inputSuccess2Status" class="sr-only">(success)</span>
+                    </div>
+                    <div class="form-group has-warning has-feedback">
+                        <label class="control-label" for="inputWarning2">Input with warning</label>
+                        <input type="text" class="form-control" id="inputWarning2" aria-describedby="inputWarning2Status">
+                        <span class="oui-icon oui-icon-warning_circle form-control-feedback" aria-hidden="true"></span>
+                        <span id="inputWarning2Status" class="sr-only">(warning)</span>
+                    </div>
+                    <div class="form-group has-error has-feedback">
+                        <label class="control-label" for="inputError2">Input with error</label>
+                        <input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status">
+                        <span class="oui-icon oui-icon-error_circle form-control-feedback" aria-hidden="true"></span>
+                        <span id="inputError2Status" class="sr-only">(error)</span>
+                    </div>
+                    <div class="form-group has-success has-feedback">
+                        <label class="control-label" for="inputGroupSuccess1">Input group with success</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">@</span>
+                            <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
+                        </div>
+                        <span class="oui-icon oui-icon-success_circle form-control-feedback" aria-hidden="true"></span>
+                        <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
+                    </div>
+                </div>
+                <!-- Feedbacks -->
+
+            </div>
+
             <!-- Sizing -->
+            <h2>Control Sizing</h2>
             <div class="row">
                 <div class="col-lg-6">
                     <div class="form-group">
@@ -462,6 +775,27 @@
                     </div>
                 </div>
             </div>
+            <form class="form-horizontal">
+                <div class="form-group form-group-lg">
+                    <label class="col-sm-2 control-label" for="formGroupInputLarge">Large label</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" type="text" id="formGroupInputLarge" placeholder="Large input">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="formGroupInputDefault">Default label</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" type="text" id="formGroupInputDefault" placeholder="Default input">
+                    </div>
+                </div>
+                <div class="form-group form-group-sm">
+                    <label class="col-sm-2 control-label" for="formGroupInputSmall">Small label</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" type="text" id="formGroupInputSmall" placeholder="Small input">
+                    </div>
+                </div>
+            </form>
+            <!-- /Sizing -->
 
         </section>
         <!-- /Form Controls -->
@@ -584,35 +918,102 @@
                 </form>
             </div>
 
+            <!-- Disabled -->
+            <div class="form-group">
+                <div class="input-group disabled">
+                    <span class="input-group-addon" id="input-group-disabled">@</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-describedby="input-group-disabled" disabled>
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" disabled>Action</button>
+                        <button type="button" class="btn btn-info" disabled>Info</button>
+                        <button type="button" class="btn btn-warning" disabled>Warning</button>
+                        <button type="button" class="btn btn-success" disabled>Success</button>
+                        <button type="button" class="btn btn-danger" disabled>Danger</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /Disabled -->
+
+            <!-- Sizing -->
             <div class="form-group">
                 <div class="input-group input-group-lg">
                     <span class="input-group-addon" id="sizing-addon1">@</span>
                     <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
                     <div class="input-group-btn">
                         <button type="button" class="btn btn-default">Action</button>
+                        <button type="button" class="btn btn-info">Info</button>
+                        <button type="button" class="btn btn-warning">Warning</button>
+                        <button type="button" class="btn btn-success">Success</button>
+                        <button type="button" class="btn btn-danger">Danger</button>
                     </div>
                 </div>
             </div>
-
             <div class="form-group">
                 <div class="input-group">
                     <span class="input-group-addon" id="sizing-addon2">@</span>
                     <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
                     <div class="input-group-btn">
                         <button type="button" class="btn btn-default">Action</button>
+                        <button type="button" class="btn btn-info">Info</button>
+                        <button type="button" class="btn btn-warning">Warning</button>
+                        <button type="button" class="btn btn-success">Success</button>
+                        <button type="button" class="btn btn-danger">Danger</button>
                     </div>
                 </div>
             </div>
-
             <div class="form-group">
                 <div class="input-group input-group-sm">
                     <span class="input-group-addon" id="sizing-addon3">@</span>
                     <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon3">
                     <div class="input-group-btn">
                         <button type="button" class="btn btn-default">Action</button>
+                        <button type="button" class="btn btn-info">Info</button>
+                        <button type="button" class="btn btn-warning">Warning</button>
+                        <button type="button" class="btn btn-success">Success</button>
+                        <button type="button" class="btn btn-danger">Danger</button>
                     </div>
                 </div>
             </div>
+            <div class="form-group has-success">
+                <div class="input-group input-group-lg">
+                    <span class="input-group-addon" id="sizing-addon4">@</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon4">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default">Action</button>
+                        <button type="button" class="btn btn-info">Info</button>
+                        <button type="button" class="btn btn-warning">Warning</button>
+                        <button type="button" class="btn btn-success">Success</button>
+                        <button type="button" class="btn btn-danger">Danger</button>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group has-warning">
+                <div class="input-group">
+                    <span class="input-group-addon" id="sizing-addon5">@</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon5">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default">Action</button>
+                        <button type="button" class="btn btn-info">Info</button>
+                        <button type="button" class="btn btn-warning">Warning</button>
+                        <button type="button" class="btn btn-success">Success</button>
+                        <button type="button" class="btn btn-danger">Danger</button>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group has-error">
+                <div class="input-group input-group-sm">
+                    <span class="input-group-addon" id="sizing-addon6">@</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon6">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default">Action</button>
+                        <button type="button" class="btn btn-info">Info</button>
+                        <button type="button" class="btn btn-warning">Warning</button>
+                        <button type="button" class="btn btn-success">Success</button>
+                        <button type="button" class="btn btn-danger">Danger</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /Sizing -->
 
         </section>
         <!-- /Input Groups -->
@@ -848,7 +1249,7 @@
                         <td>123 KB</td>
                         <td>Sun Mar 19 19:53:24 2017</td>
                         <td class="table-action">
-                            <button type="button" class="btn btn-default">More...</button>
+                            <button type="button" class="btn btn-default">More</button>
                         </td>
                     </tr>
                     <tr>
@@ -857,7 +1258,7 @@
                         <td data-title="Size" class="oui-table__cell">123 KB</td>
                         <td data-title="Creation" class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
                         <td class="table-action">
-                            <button type="button" class="btn btn-default">More...</button>
+                            <button type="button" class="btn btn-default">More</button>
                         </td>
                     </tr>
                     <tr>
@@ -866,7 +1267,7 @@
                         <td>123 KB</td>
                         <td>Sun Mar 19 19:53:24 2017</td>
                         <td class="table-action">
-                            <button type="button" class="btn btn-default">More...</button>
+                            <button type="button" class="btn btn-default">More</button>
                         </td>
                     </tr>
                     <tr>
@@ -875,7 +1276,7 @@
                         <td>123 KB</td>
                         <td>Sun Mar 19 19:53:24 2017</td>
                         <td class="table-action">
-                            <button type="button" class="btn btn-default">More...</button>
+                            <button type="button" class="btn btn-default">More</button>
                         </td>
                     </tr>
                     <tr>
@@ -884,7 +1285,7 @@
                         <td>123 KB</td>
                         <td>Sun Mar 19 19:53:24 2017</td>
                         <td class="table-action">
-                            <button type="button" class="btn btn-default">More...</button>
+                            <button type="button" class="btn btn-default">More</button>
                         </td>
                     </tr>
                     <tr>
@@ -893,7 +1294,7 @@
                         <td>123 KB</td>
                         <td>Sun Mar 19 19:53:24 2017</td>
                         <td class="table-action">
-                            <button type="button" class="btn btn-default">More...</button>
+                            <button type="button" class="btn btn-default">More</button>
                         </td>
                     </tr>
                 </tbody>
