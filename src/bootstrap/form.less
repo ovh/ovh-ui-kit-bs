@@ -112,7 +112,7 @@ select.form-control {
     line-height: 34px;
     height: ~"calc(@{oui-select-font-size} * 2.25)";
     min-height: 36px;
-    padding: 0 20px 0 @oui-select-padding;
+    padding: 0 @oui-input-padding;
     font-size: 16px;
     font-weight: @oui-select-font-weight;
     color: @oui-select-font-color;
@@ -325,7 +325,7 @@ select.form-control {
     .select-background(@color: @oui-icon-color) {
         @fill: escape(@color);
 
-        background-image: url('data:image/svg+xml;utf8,<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve"><path fill="@{fill}" d="M32,51.2c-1.7,0-3.3-0.7-4.5-1.9L1.9,23.8c-2.5-2.5-2.5-6.6,0-9.1s6.6-2.5,9.1,0l21,21.1l21-21.1c2.5-2.5,6.6-2.5,9.1,0 c2.5,2.5,2.5,6.6,0,9.1L36.5,49.3C35.3,50.5,33.7,51.2,32,51.2z"/></svg>');
+        background-image: url("data:image/svg+xml;utf8,<svg version=\"1.1\" id=\"Calque_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 64 64\" style=\"enable-background:new 0 0 64 64;\" xml:space=\"preserve\"><path fill=\"@{fill}\" d=\"M32,51.2c-1.7,0-3.3-0.7-4.5-1.9L1.9,23.8c-2.5-2.5-2.5-6.6,0-9.1s6.6-2.5,9.1,0l21,21.1l21-21.1c2.5-2.5,6.6-2.5,9.1,0 c2.5,2.5,2.5,6.6,0,9.1L36.5,49.3C35.3,50.5,33.7,51.2,32,51.2z\"/></svg>");
         background-repeat: no-repeat;
         background-position: right @oui-icon-position-right center;
         background-size: @oui-select-icon-size;
