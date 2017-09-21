@@ -107,7 +107,6 @@ input[type="checkbox"] { margin: @padding-base-vertical 0 0 0; }
 // Select
 select.form-control {
     #oui > .select-normalize();
-    #oui > .select-background();
 
     line-height: 34px;
     height: ~"calc(@{oui-select-font-size} * 2.25)";
@@ -120,15 +119,8 @@ select.form-control {
     background-color: #fff;
     cursor: pointer;
 
-    -webkit-appearance: none;
-       -moz-appearance: none;
-        -ms-appearance: none;
-            appearance: none;
-
     &:focus,
     &:active {
-        #oui > .select-background(@oui-input-border-color-focus);
-
         border: 1px solid @oui-input-border-color-focus;
         outline: none;
         box-shadow: inset 1px 1px 2px 0 fade(@oui-input-border-color-focus, 50%), 0 0 3px 0 rgba(0, 0, 0, 0.35);
@@ -136,8 +128,6 @@ select.form-control {
     }
 
     &:disabled {
-        #oui > .select-background(@oui-input-font-color-disabled);
-
         border-color: @oui-input-background-color-disabled;
         background-color: @oui-color-concrete;
         color: @oui-input-font-color-disabled;
@@ -249,6 +239,8 @@ select.form-control {
         margin-bottom: 0;
         vertical-align: middle;
     }
+
+    .input-group { width: auto; }
 }
 
 // Horizontal Forms
@@ -322,18 +314,7 @@ select.form-control {
         }
     }
 
-    .select-background(@color: @oui-icon-color) {
-        @fill: escape(@color);
-
-        background-image: url("data:image/svg+xml;utf8,<svg version=\"1.1\" id=\"Calque_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 64 64\" style=\"enable-background:new 0 0 64 64;\" xml:space=\"preserve\"><path fill=\"@{fill}\" d=\"M32,51.2c-1.7,0-3.3-0.7-4.5-1.9L1.9,23.8c-2.5-2.5-2.5-6.6,0-9.1s6.6-2.5,9.1,0l21,21.1l21-21.1c2.5-2.5,6.6-2.5,9.1,0 c2.5,2.5,2.5,6.6,0,9.1L36.5,49.3C35.3,50.5,33.7,51.2,32,51.2z\"/></svg>");
-        background-repeat: no-repeat;
-        background-position: right @oui-icon-position-right center;
-        background-size: @oui-select-icon-size;
-    }
-
     .select-variant(@status-font-color, @status-background-color, @status-border-color) {
-        #oui > .select-background(@status-font-color);
-
         box-shadow: none;
 
         &:not(:disabled),
