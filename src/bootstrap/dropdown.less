@@ -1,14 +1,75 @@
-@ovh-bs3-ui-kit-dropdown-color: @oui-color-rhino;
-@ovh-bs3-ui-kit-dropdown-hover-bg-color: @oui-color-jungle;
-@ovh-bs3-ui-kit-dropdown-hover-color: #fff;
-@ovh-bs3-ui-kit-dropdown-y-space: 4px;
-@ovh-bs3-ui-kit-dropdown-icon-width: 30px;
-@ovh-bs3-ui-kit-dropdown-icon-space: 2px;
+// Dropdowns
+.caret {
+    width: @oui-button-dropdown-icon-size;
+    height: @oui-button-dropdown-icon-size;
+    line-height: @oui-button-dropdown-icon-size;
+    display: inline-block;
+    margin-left: 0;
+    vertical-align: middle;
+    color: @oui-button-dropdown-icon-color;
+    font-size: @oui-button-dropdown-icon-size;
+    border: none;
+
+    &::before {
+        #oui > .icon-normalize();
+        #oui > .icon();
+        #oui > .icon-type();
+
+        content: @oui-icon-index-chevron-down;
+        font-size: inherit;
+        color: inherit;
+    }
+
+    .dropup &,
+    .navbar-fixed-bottom .dropdown & {
+        border: none;
+
+        &::before { content: @oui-icon-index-chevron-up; }
+    }
+}
 
 .dropdown-toggle {
     .oui-icon {
+        width: @oui-button-dropdown-icon-size;
+        height: @oui-button-dropdown-icon-size;
+        line-height: @oui-button-dropdown-icon-size;
+        color: @oui-button-dropdown-icon-color;
         font-size: @oui-button-dropdown-icon-size;
         vertical-align: middle;
+    }
+
+    &.btn-default {
+        &:active,
+        &:focus {
+            box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.15);
+
+            .caret,
+            .oui-icon { color: @oui-button-dropdown-icon-color_active; }
+        }
+
+        &:disabled {
+            .caret,
+            .oui-icon { color: @oui-button-dropdown-icon-color_disabled; }
+        }
+    }
+
+    .open > & {
+        .caret,
+        .oui-icon { transform: rotate(180deg); }
+    }
+
+    .open > &.btn-default {
+        &,
+        &.focus,
+        &:focus,
+        &:hover {
+            border-color: @oui-button-dropdown-border-color_active;
+            background: @oui-button-dropdown-background-color_active;
+            box-shadow: inset 1px 1px 3px 0 transparent;
+        }
+
+        .caret,
+        .oui-icon { color: @oui-button-dropdown-icon-color_active; }
     }
 }
 
@@ -20,30 +81,29 @@
     li {
         position: relative;
         display: flex;
-        padding: 0 0 @ovh-bs3-ui-kit-dropdown-y-space 0;
+        padding: 0 0 @padding-small-vertical 0;
         align-items: center;
-        color: @ovh-bs3-ui-kit-dropdown-color;
+        color: @text-color;
+
+        &.divider {
+            height: 2px;
+            margin: 0;
+            padding: 0;
+            border-top: 1px solid @oui-color-nurse;
+            background: #fff;
+        }
 
         &.dropdown-divider {
+            padding-top: @padding-small-vertical;
             border-top: 1px solid @oui-color-nurse;
-            padding-top: 4px;
-
-            &::before {
-                top: 1px;
-            }
         }
 
-        &:nth-child(1) {
-            padding-top: @ovh-bs3-ui-kit-dropdown-y-space;
-        }
-
-        &:nth-last-child(1) {
-            padding-bottom: @ovh-bs3-ui-kit-dropdown-y-space;
-        }
+        &:first-child,
+        &.divider + li { padding-top: @padding-small-vertical; }
 
         &::before {
             content: " ";
-            width: @ovh-bs3-ui-kit-dropdown-icon-width;
+            width: @grid-gutter-width;
             height: 100%;
             display: block;
             background-color: @oui-color-concrete;
@@ -53,37 +113,50 @@
             z-index: -1;
         }
 
-        i {
-            width: @ovh-bs3-ui-kit-dropdown-icon-width;
+        > i,
+        > span {
+            width: @grid-gutter-width;
             text-align: center;
 
             &.oui-icon {
                 font-size: 13px;
-                color: @ovh-bs3-ui-kit-dropdown-color;
+                color: @text-color;
             }
         }
 
-        a, button {
+        > a,
+        > button {
             flex: 1;
             padding: 5px 20px 5px 5px;
-            margin-left: calc(@ovh-bs3-ui-kit-dropdown-icon-width + @ovh-bs3-ui-kit-dropdown-icon-space);
+            margin-left: @grid-gutter-width;
             width: 100%;
-            color: @ovh-bs3-ui-kit-dropdown-color;
+            color: @text-color;
             text-align: left;
             white-space: normal;
             text-decoration: none;
             font-size: @font-size-base;
             border-radius: 0;
 
-            &:hover, &:focus, &:active {
-                background-color: @ovh-bs3-ui-kit-dropdown-hover-bg-color;
-                color: @ovh-bs3-ui-kit-dropdown-hover-color;
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: @component-active-bg;
+                color: @component-active-color;
                 text-decoration: none;
+
+                small { color: inherit; }
             }
         }
 
-        i+a, i+button {
-            margin-left: @ovh-bs3-ui-kit-dropdown-icon-space;
+        > i,
+        > span {
+            + a,
+            + button { margin-left: 0; }
+        }
+
+        small {
+            color: @oui-color-dusty;
+            white-space: pre-wrap;
         }
     }
 }
