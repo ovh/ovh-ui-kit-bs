@@ -47,6 +47,9 @@ Those dependencies will be installed automatically by npm:
 // OVH UI icons & fonts
 @oui-icon-dist-folder: "./node_modules/ovh-ui-kit-bs/dist/icons";
 @oui-font-source-sans-pro-folder: "./node_modules/ovh-ui-kit-bs/dist/fonts/source-sans-pro";
+
+// OVH Universe
+@ovh-universe-color: @brand-primary;
 ```
 
 ## Related links

@@ -1,10 +1,14 @@
 .ovh-ui-kit-bs-typography-headers(@index: length(@oui-header-font-sizes)) when(@index > 0) {
     .ovh-ui-kit-bs-typography-headers(@index - 1);
 
-    h@{index} {
+    h@{index},
+    .h@{index} {
+        line-height: @line-height-base;
         font-weight: extract(@oui-header-font-weights, @index);
         margin: extract(@oui-header-margins, @index);
     }
 }
 
 .ovh-ui-kit-bs-typography-headers();
+
+.header-underline { border-bottom: @oui-header-border-width solid @oui-header-border-color; }
