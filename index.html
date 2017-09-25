@@ -8,6 +8,10 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="dist/ovh-ui-kit-bs.css">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -254,6 +258,80 @@
         </section>
         <!-- /Buttons -->
 
+        <!-- Dropdowns -->
+        <section id="dropdowns">
+            <h1 class="header-underline">Dropdowns</h1>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="dropdown" style="margin-bottom: 15px;">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Dropdown
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropup" style="margin-bottom: 15px;">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropup
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <ul class="dropdown-menu dropdown-menu-right show" style="position: relative;">
+                        <li>
+                            <i class="oui-icon oui-icon-ovh" aria-hidden="true"></i>
+                            <a href="#">Lorem ipsum dolor sit amet</a>
+                        </li>
+                        <li>
+                            <i class="oui-icon oui-icon-eye" aria-hidden="true"></i>
+                            <a href="#">
+                                Consectetur adipisicing elit<br>
+                                <small>Quas eveniet, saepe, deserunt maiores perspiciatis praesentium adipisci.</small>
+                            </a>
+                        </li>
+                        <li class="dropdown-divider">
+                            <i class="oui-icon oui-icon-padlock-close" aria-hidden="true"></i>
+                            <a href="#">Numquam ex</a>
+                        </li>
+                        <li>
+                            <i class="oui-icon oui-icon-copy-success" aria-hidden="true"></i>
+                            <a href="#">Perferendis culpa</a>
+                        </li>
+                        <li class="dropdown-divider">
+                            <i class="oui-icon oui-icon-copy-error" aria-hidden="true"></i>
+                            <a href="#">
+                                Doloremque beatae delectus<br>
+                                <small>Fugit laboriosam quis tempora quidem, non saepe quasi quam perferendis.</small>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <ul class="dropdown-menu show" style="position: relative;">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- /Dropdowns -->
 
         <!-- Form -->
         <section id="form">
@@ -1293,15 +1371,63 @@
                     <li><a href="#tab-pane-b" data-toggle="tab">Section 2</a></li>
                     <li><a href="#tab-pane-c" data-toggle="tab">Section 3</a></li>
                     <li><a href="#tab-pane-d" data-toggle="tab">Section 4</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Plus +</a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                            <li>
+                                <a href="#">
+                                    Consectetur adipisicing elit<br>
+                                    <small>Quas eveniet, saepe, deserunt maiores perspiciatis praesentium adipisci.</small>
+                                </a>
+                            </li>
+                            <li class="dropdown-divider">
+                                <i class="fa fa-external-link"></i>
+                                <a href="#">Numquam ex</a>
+                            </li>
+                            <li><a href="#">Perferendis culpa</a></li>
+                            <li class="dropdown-divider">
+                                <a href="#">
+                                    Doloremque beatae delectus<br>
+                                    <small>Fugit laboriosam quis tempora quidem, non saepe quasi quam perferendis.</small>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
             <div class="tab-content">
-                <div class="tab-pane active domain">
+                <div class="tab-pane active" id="tab-pane-a">
+                    <h2>Section 1</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo assumenda non aspernatur qui ipsa nam facere corrupti vel! Impedit ratione natus eligendi facere eaque illo tempore, voluptatum voluptas, voluptatibus doloremque!</p>
                     <p>Beatae adipisci eum illo saepe ab ipsa dicta, aspernatur deleniti nulla iste debitis sint nisi reiciendis consectetur libero officia quae eveniet. Commodi quo a repellat atque rerum. Harum rem, impedit.</p>
                     <p>Placeat molestias perspiciatis officiis obcaecati minima, accusantium officia, asperiores maxime pariatur, earum unde omnis. Sed adipisci harum ipsam velit aut commodi ab nemo voluptatibus, porro dicta quidem nostrum aliquid dolor?</p>
                     <p>Natus atque delectus temporibus animi quasi laborum incidunt asperiores inventore dolores? Deleniti architecto tempora asperiores vero quibusdam. Fugiat enim excepturi minima animi. Dicta pariatur adipisci voluptate impedit tempore perferendis reiciendis.</p>
                     <p>Quod officiis recusandae reiciendis ipsam repellendus doloribus quibusdam voluptas repudiandae odit consectetur architecto autem, impedit natus laboriosam aliquam quaerat sunt ut qui iusto animi iure. Esse voluptates a eaque nemo.</p>
+                </div>
+                <div class="tab-pane" id="tab-pane-b">
+                    <h2>Section 2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit nesciunt voluptatem reprehenderit nulla magnam autem, deleniti veritatis illum nihil ipsum qui explicabo in rerum officiis, perferendis. Cum tenetur blanditiis sint.</p>
+                    <p>Illo totam pariatur aperiam fuga! Enim architecto repudiandae, nisi voluptates est officia, recusandae obcaecati beatae doloribus vel delectus omnis expedita nemo debitis suscipit natus assumenda! Voluptate eligendi deleniti aliquid esse?</p>
+                    <p>Suscipit, nemo, sapiente. At corporis molestias, fugit pariatur quas, iste numquam quod maxime sed doloribus minima suscipit. Repellat, reiciendis eum vitae mollitia dignissimos in. Aspernatur corporis ratione, fugiat quis ab.</p>
+                    <p>Quibusdam illo officia debitis obcaecati porro exercitationem quasi illum sed nisi. Aut nesciunt perspiciatis ab, voluptatem vitae, facere. Voluptatum nisi suscipit, modi quae eius omnis sequi in iure id! Eum?</p>
+                    <p>Adipisci rem a in odit ipsa? Unde atque harum molestias corrupti quidem, et beatae velit excepturi temporibus amet dolorum placeat suscipit quas. At in dolorem sint assumenda eveniet optio eos.</p>
+                </div>
+                <div class="tab-pane" id="tab-pane-c">
+                    <h2>Section 3</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium asperiores quasi ipsum veniam cum velit impedit ipsam officia obcaecati, accusamus modi, vitae fugiat, voluptates. Fugiat cum, omnis aliquid temporibus sed!</p>
+                    <p>Saepe qui adipisci fugiat recusandae omnis deleniti sunt optio libero, magnam dicta, consequuntur itaque quod ipsa quibusdam officia suscipit ratione autem illum nam perferendis laborum veniam similique! Omnis, quibusdam, possimus.</p>
+                    <p>Praesentium similique delectus nihil soluta ea, nulla veniam, animi iure accusamus dolor cum necessitatibus. Similique possimus ut veniam nulla alias? Saepe eveniet, facilis vitae ex necessitatibus aperiam. Tempora, debitis consectetur.</p>
+                    <p>Corrupti provident enim repellat officia voluptates sed consectetur debitis molestiae neque, voluptatibus, blanditiis aut. Perferendis id aperiam culpa, eius hic ratione reiciendis nesciunt dicta, necessitatibus impedit natus, vero sint possimus?</p>
+                    <p>Libero vitae officiis expedita nemo neque accusamus, adipisci enim cupiditate quia esse itaque atque voluptates culpa. Aliquam ea dolores voluptatem reiciendis officia autem tempora, corporis possimus ad id voluptas facilis.</p>
+                </div>
+                <div class="tab-pane" id="tab-pane-d">
+                    <h2>Section 4</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, inventore velit doloremque soluta quisquam, laboriosam incidunt quis eum mollitia, ipsum iure pariatur natus, deleniti? Quod perferendis ratione voluptas minus esse.</p>
+                    <p>Quaerat, veniam accusamus aperiam ea facilis obcaecati minus natus, animi delectus, veritatis iste velit commodi blanditiis assumenda illo. Nihil quam numquam, minus aspernatur perferendis explicabo quod amet quae fugit repellat.</p>
+                    <p>Laudantium quaerat rerum perferendis porro eum modi, dolores totam esse excepturi est aspernatur veritatis accusamus! Nobis debitis, quaerat totam quibusdam? Recusandae culpa quia libero obcaecati. Rem hic, nisi voluptates dolor!</p>
+                    <p>Laborum id molestias, eum exercitationem quasi dignissimos consequuntur accusamus perferendis. Voluptates hic ab quam, sint possimus odit sapiente, officia accusantium adipisci asperiores numquam sunt. Dolor debitis aperiam voluptatum minus iusto.</p>
+                    <p>Accusamus praesentium ea eius voluptate repudiandae, in, cumque beatae facere totam aliquid impedit laboriosam, deserunt nihil aperiam. Odio similique pariatur mollitia in placeat error! Obcaecati fugiat perferendis cum perspiciatis a!</p>
                 </div>
             </div>
         </section>
@@ -1359,19 +1485,18 @@
                 <section id="nav-tabs" class="col-lg-4">
                     <h2>Nav Tabs</h2>
                     <ul class="nav nav-tabs">
-                        <li class="active"><a href="#tab-pane-a" data-toggle="tab">Section 1</a></li>
-                        <li><a href="#tab-pane-b" data-toggle="tab">Section 2</a></li>
-                        <li><a href="#tab-pane-c" data-toggle="tab">Section 3</a></li>
+                        <li class="active"><a href="#tab-pane-a1" data-toggle="tab">Section 1</a></li>
+                        <li><a href="#tab-pane-b1" data-toggle="tab">Section 2</a></li>
+                        <li><a href="#tab-pane-c1" data-toggle="tab">Section 3</a></li>
                     </ul>
                     <div class="tab-content">
-                        <div class="tab-pane active" id="tab-pane-a">
-                            <p></p>
+                        <div class="tab-pane active" id="tab-pane-a1">
                             <p>I'm in Section A.</p>
                         </div>
-                        <div class="tab-pane" id="tab-pane-b">
+                        <div class="tab-pane" id="tab-pane-b1">
                             <p>Howdy, I'm in Section B.</p>
                         </div>
-                        <div class="tab-pane" id="tab-pane-c">
+                        <div class="tab-pane" id="tab-pane-c1">
                             <p>What up girl, this is Section C.</p>
                         </div>
                     </div>

@@ -80,6 +80,11 @@
 @border-radius-large:       @oui-global-base-radius-medium;
 @border-radius-small:       @oui-global-base-radius;
 
+//** Global color for active items (e.g., navs or dropdowns).
+@component-active-color:    #fff;
+//** Global background color for active items (e.g., navs or dropdowns).
+@component-active-bg:       @ovh-universe-color;
+
 
 //== Tables
 //
@@ -171,6 +176,11 @@
 //== Grid system
 //
 //## Define your custom responsive grid.
+
+//** Number of columns in the grid.
+@grid-columns:              12;
+//** Padding between columns. Gets divided in half for the left and right.
+@grid-gutter-width:         30px;
 
 
 //== Container sizes
@@ -283,7 +293,7 @@
 
 //** Default progress bar color
 @progress-bar-bg:             @oui-color-concrete;
-@progress-bar-fg:             @brand-primary;
+@progress-bar-fg:             @ovh-universe-color;
 @progress-bar-text:           #fff;
 //** Success progress bar color
 @progress-bar-success-bg:     @oui-progress-success-background-color;

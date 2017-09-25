@@ -1,15 +1,3 @@
-@oui-icon-position-right: 5px;
-@oui-icon-selector: oui-icon;
-
-@oui-input-font-size: 14px;
-
-@oui-select-font-size: 14px;
-@oui-select-icon-size: 10px;
-@oui-select-selector: oui-select;
-
-@oui-checkbox-padding: calc(@oui-checkbox-size * 1.5);
-@oui-checkbox-margin: calc(-@oui-checkbox-size * 1.5);
-
 label {
     #oui > .label-normalize();
     #oui > .label-base();
@@ -75,7 +63,7 @@ input[type="checkbox"] { margin: @padding-base-vertical 0 0 0; }
 .radio label,
 .radio-inline {
     line-height: @oui-checkbox-line-height;
-    padding-left: @oui-checkbox-padding;
+    padding-left: calc(@oui-checkbox-size * 1.5);
     font-size: @oui-checkbox-size;
     font-weight: @oui-font-semibold;
     color: inherit;
@@ -96,12 +84,12 @@ input[type="checkbox"] { margin: @padding-base-vertical 0 0 0; }
 
 .checkbox,
 .checkbox-inline {
-    input[type="checkbox"] { margin-left: @oui-checkbox-margin; }
+    input[type="checkbox"] { margin-left: calc(-@oui-checkbox-size * 1.5); }
 }
 
 .radio,
 .radio-inline {
-    input[type="radio"] { margin-left: @oui-checkbox-margin; }
+    input[type="radio"] { margin-left: calc(-@oui-checkbox-size * 1.5); }
 }
 
 // Select
