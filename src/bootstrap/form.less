@@ -103,6 +103,7 @@ select.form-control {
     font-size: 16px;
     font-weight: @oui-select-font-weight;
     color: @oui-select-font-color;
+    box-shadow: @oui-select-shadow;
     border: 1px solid @oui-select-border-color;
     background-color: #fff;
     cursor: pointer;
@@ -178,18 +179,18 @@ select.form-control {
     .form-control { padding-right: calc(50px + @oui-input-padding) }
 
     // Feedback Icon
-    #oui > .feedback-variant(@oui-color-silver, @oui-input-border-color-focus);
+    #oui > .feedback-variant(@oui-color-silver; @oui-input-border-color-focus);
 
     &.has-success {
-        #oui > .feedback-variant(@oui-color-silver, @state-success-text);
+        #oui > .feedback-variant(@oui-color-silver; @state-success-text);
     }
 
     &.has-warning {
-        #oui > .feedback-variant(@oui-color-silver, @state-warning-text);
+        #oui > .feedback-variant(@oui-color-silver; @state-warning-text);
     }
 
     &.has-error {
-        #oui > .feedback-variant(@oui-color-silver, @state-danger-text);
+        #oui > .feedback-variant(@oui-color-silver; @state-danger-text);
     }
 }
 
@@ -271,7 +272,11 @@ select.form-control {
 
 // Mixins
 #oui {
-    .input-variant(@status-font-color, @status-background-color, @status-border-color) {
+    .input-variant(
+        @status-font-color;
+        @status-background-color;
+        @status-border-color
+    ) {
         box-shadow: 1px 2px 0 0 rgba(18, 40, 68, 0.07) inset;
 
         &:not(:disabled),
@@ -302,8 +307,12 @@ select.form-control {
         }
     }
 
-    .select-variant(@status-font-color, @status-background-color, @status-border-color) {
-        box-shadow: none;
+    .select-variant(
+        @status-font-color;
+        @status-background-color;
+        @status-border-color
+    ) {
+        box-shadow: @oui-select-shadow;
 
         &:not(:disabled),
         &:not(:disabled):hover,
@@ -318,7 +327,10 @@ select.form-control {
         &:not(:disabled):focus { box-shadow: 0 0 3px 0 rgba(0, 0, 0, .35); }
     }
 
-    .feedback-variant(@feedback-color, @feedback-color-focus) {
+    .feedback-variant(
+        @feedback-color;
+        @feedback-color-focus
+    ) {
         .form-control-feedback { color: @feedback-color; }
 
         .form-control {
