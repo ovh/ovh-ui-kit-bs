@@ -1,6 +1,6 @@
 {
   "name": "ovh-ui-kit-bs",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "A bootstrap theme for the OVH managers, based on ovh-ui-kit.",
   "author": "OVH SAS",
   "license": "BSD-3-Clause",
@@ -12,8 +12,8 @@
     "copy:fonts": "cpx \"node_modules/ovh-ui-kit/packages/oui-typography/fonts/**/*\" \"dist/fonts\"",
     "copy:icons": "cpx \"node_modules/ovh-ui-kit/dist/icons/*\" \"dist/icons\"",
     "copy:glyphicons": "cpx \"node_modules/bootstrap/fonts/*\" \"dist/fonts\"",
-    "less": "lessc --remcalc --clean-css \"src/ovh-ui-kit-bs.less\" \"dist/ovh-ui-kit-bs.css\"",
-    "less:debug": "lessc --remcalc \"src/ovh-ui-kit-bs.less\" \"dist/ovh-ui-kit-bs.css\"",
+    "less": "lessc --remcalc --clean-css \"src/_dist.less\" \"dist/ovh-ui-kit-bs.css\"",
+    "less:debug": "lessc --remcalc \"src/_dist.less\" \"dist/ovh-ui-kit-bs.css\"",
     "start": "npm run build"
   },
   "dependencies": {
