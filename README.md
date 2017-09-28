@@ -35,11 +35,15 @@ Those dependencies will be installed automatically by npm:
 [less-plugin-remcalc](https://github.com/ovh-ux/less-plugin-remcalc) is needed to compile the LESS import.
 
 ```less
-@import "./node_modules/ovh-ui-kit-bs/src/ovh-ui-kit-bs";
+/* Required */
 
-// Paths of dependencies
+// Paths of the dependencies
 @bs-path: "./node_modules/bootstrap";
 @oui-path: "./node_modules/ovh-ui-kit";
+
+@import "./node_modules/ovh-ui-kit-bs/src/ovh-ui-kit-bs";
+
+/* Optional */
 
 // Bootstrap fonts
 @icon-font-path: "./node_modules/ovh-ui-kit-bs/dist/fonts/";
