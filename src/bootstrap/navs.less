@@ -1,11 +1,24 @@
+.nav {
+    .open > a {
+        &,
+        &:focus,
+        &:hover {
+            border-color: @oui-button-dropdown-border-color_active;
+            background: @oui-button-dropdown-background-color_active;
+        }
+    }
+}
+
 // Tabs
 .nav.nav-tabs {
-    background-color: @oui-color-concrete;
+    background-color: @oui-color-nurse;
     border-bottom: 0;
     padding-left: @grid-gutter-width;
     padding-right: @grid-gutter-width;
 
     > li {
+        margin-right: 2px;
+
         &::after {
             content: " ";
             width: 0;
@@ -16,6 +29,7 @@
         }
 
         > a {
+            margin-right: 0;
             color: @text-muted;
             cursor: pointer;
 
@@ -55,6 +69,20 @@
                     font-weight: bold;
                 }
             }
+        }
+
+        &.dropdown {
+            &::after { border-color: @oui-button-dropdown-border-color_active; }
+
+            &.open::after {
+                animation: nav-tabs-border-bounce-animation 1s linear 1 both;
+                left: 0;
+                width: 100%;
+            }
+
+            > a { border: none; }
+
+            &.open > a { font-weight: bold; }
         }
     }
 }
