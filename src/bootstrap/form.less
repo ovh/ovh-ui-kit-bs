@@ -10,7 +10,7 @@ label {
 }
 
 legend {
-    font-size: 14px;
+    font-size: @font-size-base;
     font-weight: @oui-font-semibold;
     margin-bottom: .5em;
 }
@@ -72,7 +72,7 @@ input[type="checkbox"] { margin: @padding-base-vertical 0 0 0; }
 .checkbox-description,
 .radio-description {
     display: block;
-    font-size: @font-size-base;
+    font-size: @oui-radio-description-font-size;
     font-weight: @oui-font-regular;
 
     .has-success & { color: @brand-success; }
