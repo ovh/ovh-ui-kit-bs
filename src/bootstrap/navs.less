@@ -1,10 +1,8 @@
 .nav {
+    & > li > a,
     .open > a {
-        &,
-        &:focus,
-        &:hover {
-            border-color: @oui-button-dropdown-border-color_active;
-            background: @oui-button-dropdown-background-color_active;
+        &, &:focus, &:hover {
+            background-color: transparent;
         }
     }
 }
@@ -30,7 +28,7 @@
 
         > a {
             margin-right: 0;
-            color: @text-muted;
+            color: @oui-color-zodiac;
             cursor: pointer;
 
             &:hover, &:focus {
@@ -66,14 +64,13 @@
                 &, &:hover, &:focus {
                     background-color: transparent;
                     border: 0;
+                    color: @oui-link-font-color;
                     font-weight: bold;
                 }
             }
         }
 
         &.dropdown {
-            &::after { border-color: @oui-button-dropdown-border-color_active; }
-
             &.open::after {
                 animation: nav-tabs-border-bounce-animation 1s linear 1 both;
                 left: 0;
