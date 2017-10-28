@@ -33,6 +33,7 @@
 
             &:hover, &:focus {
                 border-bottom: 0;
+                border-color: transparent;
             }
         }
 
@@ -80,6 +81,10 @@
             > a { border: none; }
 
             &.open > a { font-weight: bold; }
+        }
+
+        &.disabled > a {
+            color: @text-muted;
         }
     }
 }
