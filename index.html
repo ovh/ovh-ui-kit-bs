@@ -1450,19 +1450,19 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1</td>
+                                <th>1</th>
                                 <td>Mark</td>
                                 <td>Otto</td>
                                 <td>@mdo</td>
                             </tr>
                             <tr>
-                                <td>2</td>
+                                <th>2</th>
                                 <td>Jacob</td>
                                 <td>Thornton</td>
                                 <td>@fat</td>
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <th>3</th>
                                 <td>Larry</td>
                                 <td>the Bird</td>
                                 <td>@twitter</td>
@@ -1485,19 +1485,19 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1</td>
+                                <th>1</th>
                                 <td>Mark</td>
                                 <td>Otto</td>
                                 <td>@mdo</td>
                             </tr>
                             <tr>
-                                <td>2</td>
+                                <th>2</th>
                                 <td>Jacob</td>
                                 <td>Thornton</td>
                                 <td>@fat</td>
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <th>3</th>
                                 <td>Larry</td>
                                 <td>the Bird</td>
                                 <td>@twitter</td>
@@ -1523,7 +1523,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td rowspan="2">1</td>
+                                <th rowspan="2">1</th>
                                 <td>Mark</td>
                                 <td>Otto</td>
                                 <td>@mdo</td>
@@ -1534,13 +1534,13 @@
                                 <td>@TwBootstrap</td>
                             </tr>
                             <tr>
-                                <td>2</td>
+                                <th>2</th>
                                 <td>Jacob</td>
                                 <td>Thornton</td>
                                 <td>@fat</td>
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <th>3</th>
                                 <td colspan="2">Larry the Bird</td>
                                 <td>@twitter</td>
                             </tr>
@@ -1562,19 +1562,19 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1</td>
+                                <th>1</th>
                                 <td>Mark</td>
                                 <td>Otto</td>
                                 <td>@mdo</td>
                             </tr>
                             <tr>
-                                <td>2</td>
+                                <th>2</th>
                                 <td>Jacob</td>
                                 <td>Thornton</td>
                                 <td>@fat</td>
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <th>3</th>
                                 <td colspan="2">Larry the Bird</td>
                                 <td>@twitter</td>
                             </tr>
@@ -1597,43 +1597,43 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1</td>
+                        <th>1</th>
                         <td>Column content</td>
                         <td>Column content</td>
                         <td>Column content</td>
                     </tr>
                     <tr>
-                        <td>2</td>
+                        <th>2</th>
                         <td>Column content</td>
                         <td>Column content</td>
                         <td>Column content</td>
                     </tr>
                     <tr class="info">
-                        <td>3</td>
+                        <th>3</th>
                         <td>Column content</td>
                         <td>Column content</td>
                         <td>Column content</td>
                     </tr>
                     <tr class="success">
-                        <td>4</td>
+                        <th>4</th>
                         <td>Column content</td>
                         <td>Column content</td>
                         <td>Column content</td>
                     </tr>
                     <tr class="danger">
-                        <td>5</td>
+                        <th>5</th>
                         <td>Column content</td>
                         <td>Column content</td>
                         <td>Column content</td>
                     </tr>
                     <tr class="warning">
-                        <td>6</td>
+                        <th>6</th>
                         <td>Column content</td>
                         <td>Column content</td>
                         <td>Column content</td>
                     </tr>
                     <tr class="active">
-                        <td>7</td>
+                        <th>7</th>
                         <td>Column content</td>
                         <td>Column content</td>
                         <td>Column content</td>
@@ -1843,8 +1843,7 @@
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#tab-pane-a1" data-toggle="tab">Section 1</a></li>
                         <li><a href="#tab-pane-b1" data-toggle="tab">Section 2</a></li>
-                        <li><a href="#tab-pane-c1" data-toggle="tab">Section 3</a></li>
-                        <li class="disabled"><a href="#">Section 4</a></li>
+                        <li class="disabled"><a href="#" data-toggle="tab" disabled>Section 3</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab-pane-a1">
@@ -1991,6 +1990,113 @@
                     </div>
                 </section>
                 <!-- /Progress Bars -->
+
+            </div>
+            <div class="row">
+
+                <!-- Tooltips -->
+                <section id="tooltip" class="col-lg-6">
+                    <h2>Tooltips</h2>
+
+                    <div>
+                        <div class="tooltip left" role="tooltip" style="margin: 15px 0; position: relative; top: auto; right: auto; bottom: auto; left: auto; display: inline-block; opacity: 1; z-index: 1;">
+                            <div class="tooltip-arrow"></div>
+                            <div class="tooltip-inner"> Tooltip on the left </div>
+                        </div>
+                        <div class="tooltip top" role="tooltip" style="margin: 15px 0; position: relative; top: auto; right: auto; bottom: auto; left: auto; display: inline-block; opacity: 1; z-index: 1;">
+                            <div class="tooltip-arrow"></div>
+                            <div class="tooltip-inner"> Tooltip on the top </div>
+                        </div>
+                        <div class="tooltip bottom" role="tooltip" style="margin: 15px 0; position: relative; top: auto; right: auto; bottom: auto; left: auto; display: inline-block; opacity: 1; z-index: 1;">
+                            <div class="tooltip-arrow"></div>
+                            <div class="tooltip-inner"> Tooltip on the bottom </div>
+                        </div>
+                        <div class="tooltip right" role="tooltip" style="margin: 15px 0; position: relative; top: auto; right: auto; bottom: auto; left: auto; display: inline-block; opacity: 1; z-index: 1;">
+                            <div class="tooltip-arrow"></div>
+                            <div class="tooltip-inner"> Tooltip on the right </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        $(function () {
+                            $('[data-toggle="tooltip"]').tooltip()
+                        })
+                    </script>
+
+                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Left</button>
+                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Top</button>
+                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Bottom</button>
+                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Right</button>
+                </section>
+                <!-- /Tooltips -->
+
+                <!-- Popovers -->
+                <section id="popover" class="col-lg-6">
+                    <h2>Popovers</h2>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="popover left" style="margin: 15px 0; position: relative; top: auto; right: auto; bottom: auto; left: auto; display: block; z-index: 1;">
+                                <div class="arrow"></div>
+                                <h3 class="popover-title">Popover left</h3>
+                                <div class="popover-content">
+                                    <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="popover top" style="margin: 15px 0; position: relative; top: auto; right: auto; bottom: auto; left: auto; display: block; z-index: 1;">
+                                <div class="arrow"></div>
+                                <h3 class="popover-title">Popover top</h3>
+                                <div class="popover-content">
+                                    <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="popover right" style="margin: 15px 0; position: relative; top: auto; right: auto; bottom: auto; left: auto; display: block; z-index: 1;">
+                                <div class="arrow"></div>
+                                <h3 class="popover-title">Popover right</h3>
+                                <div class="popover-content">
+                                    <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="popover bottom" style="margin: 15px 0; position: relative; top: auto; right: auto; bottom: auto; left: auto; display: block; z-index: 1;">
+                                <div class="arrow"></div>
+                                <h3 class="popover-title">Popover bottom</h3>
+                                <div class="popover-content">
+                                    <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        $(function () {
+                            $('[data-toggle="popover"]').popover()
+                        })
+                    </script>
+
+                    <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left"
+                        data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                        Left
+                    </button>
+                    <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top"
+                        data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                        Top
+                    </button>
+                    <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom"
+                        data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                        Bottom
+                    </button>
+                    <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right"
+                        data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                        Right
+                    </button>
+                </section>
+                <!-- /Popovers -->
 
             </div>
         </section>
