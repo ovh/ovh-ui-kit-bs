@@ -23,17 +23,22 @@
         min-width: 0;
         min-height: @input-height-base;
         margin-bottom: 0;
-        padding: 5px 10px;
+        padding-left: 10px;
+        padding-right: 10px;
         font-size: @oui-button-font-size;
         color: @text-color;
     }
 
     &-addon { cursor: default; }
 
-    .disabled &-addon {
-        border-color: @oui-input-border-color-disabled;
+    &.disabled &-addon {
         background-color: @oui-input-background-color-disabled;
         color: @oui-input-font-color-disabled;
+    }
+
+    &.disabled &-addon,
+    &.disabled &-btn .btn {
+        border-color: @oui-input-border-color-disabled !important;
     }
 
     &-btn {
