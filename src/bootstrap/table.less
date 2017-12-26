@@ -1,27 +1,42 @@
 // Tables
 .table {
-    @oui-selector: oui-table;
+    @oui-selector: oui-datagrid;
+    @oui-cell-selector: oui-datagrid__cell;
+    @oui-checkbox-selector: oui-checkbox;
+    @oui-spinner-container-selector: oui-spinner__container;
 
-    #oui > .table-normalize();
-    #oui > .table-base();
+    #oui > .datagrid-normalize();
+    #oui > .datagrid-base();
 
     > thead {
         > tr {
             > th {
                 #oui > .text-ellipsis();
-                #oui > .table-cell(@oui-selector);
-                #oui > .table-header();
+                #oui > .datagrid-header(
+                    @checkbox-selector: @oui-checkbox-selector
+                );
+
+                height: @oui-datagrid-header-height;
+                vertical-align: inherit;
+                background-color: @oui-datagrid-header-background-color;
             }
         }
     }
 
     > tbody {
         > tr {
-            #oui > .table-row();
+            #oui > .datagrid-row(
+                @cell-selector: @oui-cell-selector
+            );
 
             > th, > td {
-                #oui > .table-cell(@oui-selector);
+                #oui > .datagrid-cell(
+                    @selector: @oui-selector,
+                    @spinner-container-selector: @oui-spinner-container-selector,
+                    @form-elements: @oui-datagrid-form-elements
+                );
 
+                vertical-align: inherit;
                 font-weight: normal;
                 border-top: none;
             }

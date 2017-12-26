@@ -33,7 +33,7 @@
     "cz-ovh-commit": "^1.0.0",
     "less": "^2.7.2",
     "less-plugin-clean-css": "^1.5.1",
-    "ovh-ui-kit": "git+https://github.com/ovh-ux/ovh-ui-kit.git#style/oui-navbar",
+    "ovh-ui-kit": "git+https://github.com/ovh-ux/ovh-ui-kit.git#af914a579f2dacc819123ece341a5455a59f16fa",
     "rimraf": "^2.6.1",
     "stylelint": "^8.0.0",
     "stylelint-config-ovh": "^0.1.0"
