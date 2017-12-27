@@ -6,7 +6,6 @@
     min-width: 0;
     max-width: 100%;
     margin-bottom: 0;
-    padding: @padding-base-vertical @padding-base-horizontal;
     white-space: normal;
     text-overflow: initial;
     vertical-align: middle;
@@ -24,9 +23,6 @@
     // Alternate buttons
     &-default {
         #oui > .button-hollow();
-
-        padding-left: @padding-base-horizontal;
-        padding-right: @padding-base-horizontal;
 
         &:focus,
         &:hover,
@@ -50,9 +46,6 @@
     &-warning,
     &-danger {
         #oui > .button-filled();
-
-        padding-left: @padding-base-horizontal;
-        padding-right: @padding-base-horizontal;
 
         &:disabled,
         &.disabled {
@@ -88,8 +81,6 @@
     &-link {
         #oui > .button-link(oui-icon);
 
-        padding: @padding-base-vertical @padding-base-horizontal;
-
         &:disabled,
         &.disabled {
             text-decoration: underline;
@@ -113,7 +104,7 @@
     }
 
     &-lg {
-        .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-base; @btn-border-radius-base);
+        #oui > .button-large-height();
     }
 }
 
