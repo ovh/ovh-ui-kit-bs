@@ -1,6 +1,6 @@
 {
   "name": "ovh-ui-kit-bs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A bootstrap theme for the OVH managers, based on ovh-ui-kit.",
   "author": "OVH SAS",
   "license": "BSD-3-Clause",
@@ -33,7 +33,7 @@
     "cz-ovh-commit": "^1.0.0",
     "less": "^2.7.3",
     "less-plugin-clean-css": "^1.5.1",
-    "ovh-ui-kit": "git+https://github.com/ovh-ux/ovh-ui-kit.git#v2.0.0",
+    "ovh-ui-kit": "~2.0.0",
     "rimraf": "^2.6.2",
     "stylelint": "^8.4.0",
     "stylelint-config-ovh": "^0.1.0"
