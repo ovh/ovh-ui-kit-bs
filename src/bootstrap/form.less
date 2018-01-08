@@ -55,6 +55,8 @@ input[type="checkbox"] { margin: @padding-base-vertical 0 0 0; }
 .checkbox-inline,
 .radio,
 .radio-inline {
+    color: @oui-checkbox-font-color;
+
     &.disabled { color: @oui-color-dusty; }
 }
 
@@ -195,29 +197,25 @@ select.form-control {
 }
 
 // Feedback states
-.has-success {
-  .form-control-validation(@state-success-text; @state-success-border; @state-success-bg);
-}
+.input-group-addon {
+    .has-success & { border-color: @state-success-border; }
 
-.has-warning {
-  .form-control-validation(@state-warning-text; @state-warning-border; @state-warning-bg);
-}
+    .has-warning & { border-color: @state-warning-border; }
 
-.has-error {
-  .form-control-validation(@state-danger-text; @state-danger-border; @state-danger-bg);
+    .has-error & { border-color: @state-danger-border; }
 }
 
 
 // Help text
 .help-block {
     font-size: @font-size-base;
-    color: @text-color;
+    color: @oui-color-sapphire;
 
-    .has-success & { color: @brand-success; }
+    // .has-success & { color: @brand-success; }
 
-    .has-warning & { color: @brand-warning; }
+    // .has-warning & { color: @brand-warning; }
 
-    .has-error & { color: @brand-danger; }
+    // .has-error & { color: @brand-danger; }
 }
 
 
