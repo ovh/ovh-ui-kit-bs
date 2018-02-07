@@ -6,7 +6,7 @@
     &-content { border: none; }
 
     &-header {
-        height: @oui-modal-close-button-size + @oui-modal-close-button-padding * 2;
+        height: @oui-modal-close-button-size + @oui-modal-close-button-padding-y * 2;
         padding: 0;
         position: relative;
         border: 0 none;
@@ -16,7 +16,8 @@
 
         .close {
             margin-top: 0;
-            padding: @oui-modal-close-button-padding;
+            padding: @oui-modal-close-button-padding-y @oui-modal-close-button-padding-x;
+            color: @oui-color-info-dark;
             font-size: @oui-modal-close-button-size;
             opacity: 1;
 
