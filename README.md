@@ -11,7 +11,7 @@
 ## Installation
 
 ```bash
-npm install --save-dev "https://github.com/ovh-ux/ovh-ui-kit-bs"
+npm install --save-dev ovh-ui-kit-bs
 ```
 
 ## Usage
