@@ -3,13 +3,16 @@
     border: none;
     font-size: 16px;
 
-    &-content { border: none; }
+    &-content {
+        border: none;
+        box-shadow: @oui-modal-shadow;
+    }
 
     &-header {
         height: @oui-modal-close-button-size + @oui-modal-close-button-padding-y * 2;
         padding: 0;
         position: relative;
-        border: 0 none;
+        border: none;
         border-top-right-radius: @oui-global-base-radius-medium;
         border-top-left-radius: @oui-global-base-radius-medium;
         background-color: #edefec;
@@ -17,19 +20,46 @@
         .close {
             margin-top: 0;
             padding: @oui-modal-close-button-padding-y @oui-modal-close-button-padding-x;
-            color: @oui-color-info-dark;
+            color: @oui-modal-close-button-color;
             font-size: @oui-modal-close-button-size;
             opacity: 1;
 
             &::before {
                 content: @oui-icon-index-close_thin;
                 display: block;
+                color: inherit;
             }
         }
     }
 
+    &-title {
+        margin: 0 0 0.33em;
+        color: @oui-modal-title-color;
+        font-size: rem-calc(21);
+        line-height: rem-calc(22.4);
+        letter-spacing: 0.01em;
+        font-weight: @oui-font-semibold;
+    }
+
+    &-body {
+      position: relative;
+      color: @oui-modal-body-color;
+    }
+
     &-footer {
-        padding: 0 36px 24px;
-        border-top: 0;
+        display: flex;
+        justify-content: flex-end;
+        padding: @oui-modal-footer-padding;
+        border-top: none;
+
+        .btn,
+        .oui-button {
+            margin-bottom: 0;
+        }
+
+        .btn + .btn,
+        .oui-button + .oui-button {
+            margin-left: @oui-modal-footer-button-spacing;
+        }
     }
 }

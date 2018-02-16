@@ -20,7 +20,9 @@ npm install --save-dev "https://github.com/ovh-ux/ovh-ui-kit-bs"
 
 Those dependencies will be installed automatically by npm:
 
+- [bootstrap](https://github.com/twbs/bootstrap)
 - [less-plugin-remcalc](https://github.com/ovh-ux/less-plugin-remcalc)
+- [ovh-ui-kit](https://github.com/ovh-ux/ovh-ui-kit)
 
 ### Integration
 
