@@ -29,10 +29,23 @@
 }
 
 .dropdown-toggle {
-    #oui > .button-hollow();
-    #oui > .button-dropdown(caret);
+    .oui-icon {
+        width: @oui-button-dropdown-icon-size;
+        height: @oui-button-dropdown-icon-size;
+        line-height: @oui-button-dropdown-icon-size;
+        margin: auto;
+        text-align: center;
+        color: @oui-button-dropdown-icon-color;
+        font-size: @oui-button-dropdown-icon-size;
+        vertical-align: middle;
+        cursor: pointer;
+        pointer-events: none;
 
-    .caret { height: 1rem; }
+        &::before {
+            color: inherit;
+            font-size: inherit;
+        }
+    }
 
     &.btn-default {
         &:active,
@@ -87,6 +100,7 @@
 
         // Legacy (deprecated)
         small,
+        > .fa,
         > .oui-icon { display: none; }
     }
 }
