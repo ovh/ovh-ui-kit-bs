@@ -32,6 +32,30 @@
     #oui > .button-hollow();
     #oui > .button-dropdown(caret);
 
+    .oui-icon {
+        width: ~"calc(@{oui-button-dropdown-icon-size} * 2.5)";
+        height: @oui-button-dropdown-icon-size;
+        line-height: @oui-button-dropdown-icon-size;
+        position: absolute;
+        right: 0;
+        top: 1px;
+        bottom: 1px;
+        margin: auto;
+        text-align: center;
+        color: @oui-button-dropdown-icon-color;
+        font-size: @oui-button-dropdown-icon-size;
+        vertical-align: middle;
+        cursor: pointer;
+        pointer-events: none;
+
+        &::before {
+            display: inline-block;
+            margin-right: @oui-button-dropdown-padding * 1.5;
+            color: inherit;
+            font-size: inherit;
+        }
+    }
+
     .caret { height: 1rem; }
 
     &.btn-default {
@@ -49,6 +73,21 @@
         &:hover {
             border-color: @oui-button-dropdown-border-color_active;
             background-color: @oui-button-dropdown-background-color_active;
+        }
+    }
+
+    .nav & {
+        padding-right: rem-calc(30) + @oui-button-dropdown-padding * 0.8;
+        padding-left: @oui-button-dropdown-padding;
+        border: none;
+    }
+
+    .input-group-btn & {
+        .caret,
+        .oui-icon {
+            position: static;
+
+            &::before { margin: 0; }
         }
     }
 }
@@ -87,6 +126,7 @@
 
         // Legacy (deprecated)
         small,
+        > .fa,
         > .oui-icon { display: none; }
     }
 }
