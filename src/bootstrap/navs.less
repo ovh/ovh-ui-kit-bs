@@ -37,23 +37,6 @@
             }
         }
 
-        &.tab-menu {
-            > ul > li > a {
-                cursor: pointer;
-
-                small {
-                    color: @text-muted;
-                    white-space: pre-wrap;
-                }
-
-                &:hover, &:focus {
-                    > * {
-                        color: #fff;
-                    }
-                }
-            }
-        }
-
         &.active {
             &::after {
                 animation: nav-tabs-border-bounce-animation 1000ms linear 1 both;
