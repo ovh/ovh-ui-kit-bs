@@ -1,6 +1,6 @@
 {
   "name": "ovh-ui-kit-bs",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "A bootstrap theme for the OVH managers, based on ovh-ui-kit.",
   "author": "OVH SAS",
   "license": "BSD-3-Clause",
@@ -17,7 +17,7 @@
     "clean": "rimraf dist",
     "copy": "npm run copy:fonts && npm run copy:icons && npm run copy:glyphicons",
     "copy:fonts": "cpx \"node_modules/ovh-ui-kit/packages/oui-typography/fonts/**/*.{eot,svg,ttf,woff,woff2}\" \"dist/fonts\"",
-    "copy:icons": "cpx \"node_modules/ovh-ui-kit/dist/icons/*.{eot,svg,ttf,woff,woff2}\" \"dist/icons\"",
+    "copy:icons": "cpx \"node_modules/ovh-ui-kit/dist/icons/*.{eot,svg,ttf,woff,woff2,html}\" \"dist/icons\"",
     "copy:glyphicons": "cpx \"node_modules/bootstrap/fonts/*\" \"dist/fonts\"",
     "less": "lessc --remcalc --clean-css \"src/_dist.less\" \"dist/ovh-ui-kit-bs.css\"",
     "less:debug": "lessc --remcalc \"src/_dist.less\" \"dist/ovh-ui-kit-bs.css\"",
@@ -26,7 +26,7 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "less-plugin-remcalc": "^0.0.1",
-    "ovh-ui-kit": "~2.5.0"
+    "ovh-ui-kit": "~2.6.0"
   },
   "devDependencies": {
     "bower": "^1.8.2",

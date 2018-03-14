@@ -176,7 +176,7 @@ select.form-control {
 }
 
 .has-feedback {
-    label ~ .form-control-feedback { top: calc(16px * 1.5 + 4px); }
+    label ~ .form-control-feedback { top: calc(@font-size-base * @line-height-base + 6px); }
 
     .form-control { padding-right: calc(50px + @oui-input-padding) }
 
@@ -210,12 +210,6 @@ select.form-control {
 .help-block {
     font-size: @font-size-base;
     color: @oui-color-sapphire;
-
-    // .has-success & { color: @brand-success; }
-
-    // .has-warning & { color: @brand-warning; }
-
-    // .has-error & { color: @brand-danger; }
 }
 
 
