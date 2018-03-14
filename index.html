@@ -58,6 +58,29 @@
         </section>
         <!-- /Typography -->
 
+        <!-- Icons -->
+        <section id="icons">
+            <h1 class="header-underline">Icons (OVH UI Kit)</h1>
+            <p class="text-center">
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#iconsModal">
+                    Launch Preview Modal
+                </button>
+            </p>
+
+            <!-- Modal -->
+            <div class="modal fade" id="iconsModal" tabindex="-1" role="dialog" aria-labelledby="iconsModal">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <iframe src="dist/icons/icons.html" frameborder="0" width="100%" height="640"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Icons -->
+
         <!-- Grid -->
         <section id="grid">
             <h1 class="header-underline">Grid</h1>
@@ -2243,20 +2266,20 @@
                 <section id="tooltip" class="col-lg-6">
                     <h2>Tooltips</h2>
 
-                    <div>
-                        <div class="tooltip left" role="tooltip" style="margin: 15px 0; position: relative; top: auto; right: auto; bottom: auto; left: auto; display: inline-block; opacity: 1; z-index: 1;">
+                    <div style="margin: 15px 0;">
+                        <div class="tooltip left fade in" role="tooltip" style="position: relative; display: inline-block;">
                             <div class="tooltip-arrow"></div>
                             <div class="tooltip-inner"> Tooltip on the left </div>
                         </div>
-                        <div class="tooltip top" role="tooltip" style="margin: 15px 0; position: relative; top: auto; right: auto; bottom: auto; left: auto; display: inline-block; opacity: 1; z-index: 1;">
+                        <div class="tooltip top fade in" role="tooltip" style="position: relative; display: inline-block;">
                             <div class="tooltip-arrow"></div>
                             <div class="tooltip-inner"> Tooltip on the top </div>
                         </div>
-                        <div class="tooltip bottom" role="tooltip" style="margin: 15px 0; position: relative; top: auto; right: auto; bottom: auto; left: auto; display: inline-block; opacity: 1; z-index: 1;">
+                        <div class="tooltip bottom fade in" role="tooltip" style="position: relative; display: inline-block;">
                             <div class="tooltip-arrow"></div>
                             <div class="tooltip-inner"> Tooltip on the bottom </div>
                         </div>
-                        <div class="tooltip right" role="tooltip" style="margin: 15px 0; position: relative; top: auto; right: auto; bottom: auto; left: auto; display: inline-block; opacity: 1; z-index: 1;">
+                        <div class="tooltip right fade in" role="tooltip" style="position: relative; display: inline-block;">
                             <div class="tooltip-arrow"></div>
                             <div class="tooltip-inner"> Tooltip on the right </div>
                         </div>
