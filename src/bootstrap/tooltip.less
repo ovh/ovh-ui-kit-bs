@@ -1,0 +1,38 @@
+// Tooltips
+.tooltip {
+    &.left,
+    &.top,
+    &.right,
+    &.bottom {
+        margin: 0;
+        padding: 0;
+    }
+
+    &.left { padding-right: rem-calc(10); }
+    &.top { padding-bottom: rem-calc(10); }
+    &.bottom { padding-top: rem-calc(10); }
+    &.right { padding-left: rem-calc(10); }
+
+    &.in {
+        opacity: @oui-tooltip-opacity;
+        transition-property: opacity;
+        transition-duration: @oui-tooltip-transition-duration;
+        transition-timing-function: @oui-tooltip-transition-animation;
+    }
+
+    &-arrow { display: none; }
+    &-inner {
+        #oui > .tooltip-normalize();
+
+        min-width: @oui-tooltip-min-width;
+        max-width: @oui-tooltip-max-width;
+        box-sizing: border-box;
+        padding: @oui-tooltip-padding;
+        font-size: @oui-tooltip-font-size;
+        color: @oui-tooltip-font-color;
+        box-shadow: @oui-tooltip-box-shadow;
+        border: solid 1px @oui-tooltip-border-color;
+        background-color: @oui-tooltip-background-color;
+        z-index: -1;
+    }
+}
