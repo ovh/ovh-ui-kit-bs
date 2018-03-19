@@ -24,7 +24,7 @@
     "start": "npm run build"
   },
   "dependencies": {
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^4.0.0",
     "less-plugin-remcalc": "^0.0.1",
     "ovh-ui-kit": "~2.6.0"
   },
