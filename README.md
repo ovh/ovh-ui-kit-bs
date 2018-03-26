@@ -16,28 +16,25 @@ npm install --save-dev ovh-ui-kit-bs
 
 ## Usage
 
-### Dependencies
-
-Those dependencies will be installed automatically by npm:
-
-- [bootstrap](https://github.com/twbs/bootstrap)
-- [less-plugin-remcalc](https://github.com/ovh-ux/less-plugin-remcalc)
-- [ovh-ui-kit](https://github.com/ovh-ux/ovh-ui-kit)
-
 ### Integration
 
 #### html
 
 ```html
-<link rel="stylesheet" href="./node_modules/ovh-ui-kit-bs/dist/ovh-ui-kit-bs.css">
+<link rel="stylesheet" href="./node_modules/ovh-ui-kit-bs/dist/ovh-ui-kit-bs.min.css">
 ```
 
 #### less
 
-[less-plugin-remcalc](https://github.com/ovh-ux/less-plugin-remcalc) is needed to compile the LESS import.
+Those dependencies are needed to compile the LESS import.
+
+- [Bootstrap](https://github.com/twbs/bootstrap)
+- [less-plugin-remcalc](https://github.com/ovh-ux/less-plugin-remcalc)
+- [ovh-ui-kit](https://github.com/ovh-ux/ovh-ui-kit)
 
 ```less
 /* Required */
+@rem-base: rem-base(10px);
 
 // Paths of the dependencies
 @bs-path: "./node_modules/bootstrap";
@@ -45,14 +42,16 @@ Those dependencies will be installed automatically by npm:
 
 @import "./node_modules/ovh-ui-kit-bs/src/ovh-ui-kit-bs";
 
-/* Optional */
+/* Icons & Fonts */
 
 // Bootstrap fonts
-@icon-font-path: "./node_modules/ovh-ui-kit-bs/dist/fonts/";
+@icon-font-path: "@{bs-path}/fonts/";
 
 // OVH UI icons & fonts
-@oui-icon-dist-folder: "./node_modules/ovh-ui-kit-bs/dist/icons";
-@oui-font-source-sans-pro-folder: "./node_modules/ovh-ui-kit-bs/dist/fonts/source-sans-pro";
+@oui-icon-dist-folder: "@{oui-path}/dist/icons";
+@oui-font-source-sans-pro-folder: "@{oui-path}/packages/oui-typography/fonts/source-sans-pro";
+
+/* Optional */
 
 // OVH Universe
 @ovh-universe-color: @brand-primary;

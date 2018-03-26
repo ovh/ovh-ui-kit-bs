@@ -1,21 +1,13 @@
-@rem-base: rem-base(10px);
-
-// Vendors
-@import "@{oui-path}/packages/oui/stylekit";
-@import "@{bs-path}/less/bootstrap";
-
-// Utils
-@import "./utils/_settings";
-@import "./utils/_mixins";
-@import "./utils/_normalize";
-@import "./utils/_variables";
-
 // OVH UI Kit
-// TODO: To remove when released/fixed
+@import "./oui/_mixins";
+@import "./oui/_normalize";
+@import "./oui/_variables";
+
 @import "./oui/oui-tile/tile";
 
 // Bootstrap
-@import "./bootstrap/variables";
+@import "@{bs-path}/less/bootstrap";
+@import "./bootstrap/_variables";
 
 @import "./bootstrap/alert";
 @import "./bootstrap/button";
