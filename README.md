@@ -28,7 +28,7 @@ npm install --save-dev ovh-ui-kit-bs
 
 Those dependencies are needed to compile the LESS import.
 
-- [bootstrap](https://github.com/twbs/bootstrap)
+- [Bootstrap](https://github.com/twbs/bootstrap)
 - [less-plugin-remcalc](https://github.com/ovh-ux/less-plugin-remcalc)
 - [ovh-ui-kit](https://github.com/ovh-ux/ovh-ui-kit)
 
