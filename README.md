@@ -6,7 +6,7 @@
 
 [![NPM](https://nodei.co/npm/ovh-ui-kit-bs.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/ovh-ui-kit-bs/)
 
-> A [bootstrap](https://github.com/twbs/bootstrap) theme for the OVH managers, based on [ovh-ui-kit](https://github.com/ovh-ux/ovh-ui-kit).
+> A [Bootstrap](https://github.com/twbs/bootstrap) theme for the OVH managers, based on [ovh-ui-kit](https://github.com/ovh-ux/ovh-ui-kit).
 
 ## Installation
 
