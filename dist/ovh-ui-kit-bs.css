@@ -2740,7 +2740,7 @@ input[type="search"] {
   }
 }
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 2rem;
 }
 .radio,
 .checkbox {
@@ -9746,6 +9746,7 @@ dl.dl-horizontal.dl-lg dd {
   padding-right: 30px;
 }
 .nav.nav-tabs > li {
+  margin: 0;
   margin-right: 2px;
 }
 .nav.nav-tabs > li::after {
@@ -9758,12 +9759,12 @@ dl.dl-horizontal.dl-lg dd {
 }
 .nav.nav-tabs > li > a {
   margin-right: 0;
+  border: none;
   color: #122844;
   cursor: pointer;
 }
 .nav.nav-tabs > li > a:hover,
 .nav.nav-tabs > li > a:focus {
-  border-bottom: 0;
   border-color: transparent;
 }
 .nav.nav-tabs > li.active::after {
@@ -9775,7 +9776,7 @@ dl.dl-horizontal.dl-lg dd {
 .nav.nav-tabs > li.active > a:hover,
 .nav.nav-tabs > li.active > a:focus {
   background-color: transparent;
-  border: 0;
+  border: none;
   color: #113f6d;
   font-weight: bold;
 }
@@ -9783,9 +9784,6 @@ dl.dl-horizontal.dl-lg dd {
   animation: nav-tabs-border-bounce-animation 1s linear 1 both;
   left: 0;
   width: 100%;
-}
-.nav.nav-tabs > li.dropdown > a {
-  border: none;
 }
 .nav.nav-tabs > li.dropdown.open > a {
   font-weight: bold;
@@ -10084,6 +10082,9 @@ body > .popover {
   transition-property: opacity;
   transition-duration: 250ms;
   transition-timing-function: ease-in-out;
+}
+.tooltip.pre-line {
+  white-space: pre-line;
 }
 .tooltip-arrow {
   display: none;
