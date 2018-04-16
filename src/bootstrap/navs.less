@@ -15,6 +15,7 @@
     padding-right: @grid-gutter-width;
 
     > li {
+        margin: 0;
         margin-right: 2px;
 
         &::after {
@@ -28,11 +29,11 @@
 
         > a {
             margin-right: 0;
+            border: none;
             color: @oui-color-zodiac;
             cursor: pointer;
 
             &:hover, &:focus {
-                border-bottom: 0;
                 border-color: transparent;
             }
         }
@@ -47,7 +48,7 @@
             > a {
                 &, &:hover, &:focus {
                     background-color: transparent;
-                    border: 0;
+                    border: none;
                     color: @oui-link-font-color;
                     font-weight: bold;
                 }
@@ -60,8 +61,6 @@
                 left: 0;
                 width: 100%;
             }
-
-            > a { border: none; }
 
             &.open > a { font-weight: bold; }
         }
