@@ -1,8 +1,51 @@
 .nav {
-    & > li > a,
+    > li > a,
     .open > a {
-        &, &:focus, &:hover {
-            background-color: transparent;
+        &,
+        &:focus,
+        &:hover { background-color: transparent; }
+    }
+
+    > .dropdown {
+        &.open::after {
+            animation: nav-tabs-border-bounce-animation 1s linear 1 both;
+            left: 0;
+            width: 100%;
+        }
+    }
+
+    > .dropdown > .dropdown-menu {
+        margin-top: 14px;
+
+        &::before,
+        &::after {
+            content: '';
+            height: 0;
+            width: 0;
+            position: absolute;
+            left: 22px;
+            bottom: 100%;
+            display: block;
+            pointer-events: none;
+            transform: translateX(-50%);
+            border: solid transparent;
+        }
+
+        &::before {
+            border: 10px transparent solid;
+            border-bottom-color: #bbbdbf;
+        }
+
+        &::after {
+            border: 8px transparent solid;
+            border-bottom-color: #fff;
+        }
+
+        &-right::before,
+        &-right::after {
+            left: auto;
+            right: 22px;
+            transform: translateX(50%);
         }
     }
 }
@@ -16,7 +59,7 @@
 
     > li {
         margin: 0;
-        margin-right: 2px;
+        margin-right: 4px;
 
         &::after {
             content: " ";
@@ -24,13 +67,14 @@
             display: block;
             left: 50%;
             position: relative;
-            border-bottom: 3px solid @ovh-universe-color;
+            border-bottom: 4px solid @ovh-universe-color;
         }
 
         > a {
+            padding: 8px 30px;
             margin-right: 0;
             border: none;
-            color: @oui-color-zodiac;
+            color: @oui-color-sapphire;
             cursor: pointer;
 
             &:hover, &:focus {
@@ -49,25 +93,13 @@
                 &, &:hover, &:focus {
                     background-color: transparent;
                     border: none;
-                    color: @oui-link-font-color;
-                    font-weight: bold;
+                    color: @oui-color-sapphire;
+                    font-weight: @oui-font-semibold;
                 }
             }
         }
 
-        &.dropdown {
-            &.open::after {
-                animation: nav-tabs-border-bounce-animation 1s linear 1 both;
-                left: 0;
-                width: 100%;
-            }
-
-            &.open > a { font-weight: bold; }
-        }
-
-        &.disabled > a {
-            color: @text-muted;
-        }
+        &.disabled > a { color: @text-muted; }
     }
 }
 
