@@ -1,12 +1,12 @@
-# ovh-ui-kit-bs
+# OVH UI for Bootstrap 3
 
 ![githubbanner](https://user-images.githubusercontent.com/3379410/27423240-3f944bc4-5731-11e7-87bb-3ff603aff8a7.png)
 
-[![Maintenance](https://img.shields.io/maintenance/yes/2018.svg)]() [![Chat on gitter](https://img.shields.io/gitter/room/ovh/ux.svg)](https://gitter.im/ovh/ux) [![Build Status](https://travis-ci.org/ovh-ux/ovh-ui-kit-bs.svg)](https://travis-ci.org/ovh-ux/ovh-ui-kit-bs)
-
 [![NPM](https://nodei.co/npm/ovh-ui-kit-bs.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/ovh-ui-kit-bs/)
 
-> A [Bootstrap](https://github.com/twbs/bootstrap) theme for the OVH managers, based on [ovh-ui-kit](https://github.com/ovh-ux/ovh-ui-kit).
+[![Maintenance](https://img.shields.io/maintenance/yes/2018.svg)]() [![Chat on gitter](https://img.shields.io/gitter/room/ovh/ux.svg)](https://gitter.im/ovh/ux) [![Build Status](https://travis-ci.org/ovh-ux/ovh-ui-kit-bs.svg)](https://travis-ci.org/ovh-ux/ovh-ui-kit-bs)
+
+> A [Bootstrap](https://github.com/twbs/bootstrap) theme for the OVH managers, based on [OVH UI](https://github.com/ovh-ux/ovh-ui-kit).
 
 ## Installation
 
@@ -15,6 +15,10 @@ npm install --save-dev ovh-ui-kit-bs
 ```
 
 ## Usage
+
+### Test page
+
+A test page(https://ovh-ux.github.io/ovh-ui-kit-bs/) is available [here](https://ovh-ux.github.io/ovh-ui-kit-bs/) for viewing all styles and component of our theme.
 
 ### Integration
 
@@ -57,9 +61,31 @@ Those dependencies are needed to compile the LESS import.
 @ovh-universe-color: @brand-primary;
 ```
 
-## Related links
+## Contributing
 
- * Contribute: https://github.com/ovh-ux/ovh-ux-guidelines/blob/master/.github/CONTRIBUTING.md
+Please read our [contributing guidelines](https://github.com/ovh-ux/ovh-ux-guidelines/blob/master/.github/CONTRIBUTING.md).
+
+### Install dependencies
+
+```
+make install
+```
+
+### Open the test page
+
+This command will open the test page in your default browser.
+
+```
+make dev
+```
+
+### Build `/dist` files
+
+You will need to build the dist files for the changes to be taken into account.
+
+```
+make build
+```
 
 ## License
 
