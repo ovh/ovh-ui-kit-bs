@@ -1,7 +1,127 @@
-@import './_mixins';
+// @import './_mixins';
 @import './_normalize';
+@import './_variables';
+
 
 .oui-tile {
   #oui > .tile-normalize();
-  #oui > .tile-base();
+
+  padding: @oui-tile-padding;
+  background-color: @oui-tile-background-color;
+  border: 1px solid @oui-tile-border-color;
+  border-radius: @oui-tile-border-radius;
+  box-shadow: @oui-tile-box-shadow;
+
+  &__title {
+    margin-left: @oui-tile-item-side-spacing;
+    margin-right: @oui-tile-item-side-spacing;
+    font-weight: @oui-font-semibold;
+    color: @oui-tile-title-color;
+  }
+
+  &__button {
+    margin: 0;
+    padding-left: @oui-tile-item-side-spacing;
+    padding-right: @oui-tile-item-side-spacing;
+    font-weight: @oui-font-semibold;
+    text-align: left;
+    text-decoration: none;
+  }
+
+  &__button.oui-button_link {
+    &,
+    &:hover,
+    &:focus { text-decoration: none; }
+  }
+
+  &__button.oui-button_full-width.oui-button_icon-right {
+    .oui-icon::before {
+      right: @oui-tile-item-side-spacing;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+
+    border-top: 1px solid @oui-tile-item-border-color;
+    margin: 0 @oui-tile-item-side-spacing;
+    padding: @oui-tile-item-top-spacing 0;
+
+    &:last-child {
+      border-bottom: 1px solid @oui-tile-item-border-color;
+    }
+
+    // stylelint-disable max-nesting-depth
+    &_button {
+      &:hover,
+        &:focus {
+          background-color: @oui-tile-background-hover;
+
+          &::before {
+            background: none;
+          }
+
+          &:last-child {
+            &::after {
+              background: none;
+            }
+          }
+
+          + .oui-tile__item {
+            &::before {
+            background: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__definition {
+    margin: 0;
+    flex: 1;
+  }
+
+  &__term {
+    color: @oui-tile-definition-term-color;
+    font-size: @oui-tile-definition-term-font-size;
+    font-weight: @oui-font-regular;
+  }
+
+  &__description {
+    color: @oui-tile-definition-description-color;
+    font-size: @oui-tile-definition-description-font-size;
+    font-weight: @oui-font-bold;
+    margin-left: 0;
+
+    &_vertical-sub {
+      vertical-align: sub;
+    }
+
+    small {
+      font-weight: @oui-font-regular;
+    }
+  }
+
+  &__body {
+    &_list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__top-bordered {
+    &::before {
+      content: "";
+      display: block;
+      margin: 0 @oui-tile-padding;
+      height: 1px;
+      background-color: @oui-tile-item-border-color;
+    }
+  }
+
+  &__body-content {
+    padding: 0 @oui-tile-padding;
+  }
 }
