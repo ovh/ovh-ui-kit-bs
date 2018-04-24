@@ -31,8 +31,8 @@
 }
 .oui-tile__button {
   margin: 0;
-  padding-left: 2.4rem;
-  padding-right: 2.4rem;
+  padding-left: 0;
+  padding-right: 0;
   font-weight: 600;
   text-align: left;
   text-decoration: none;
@@ -41,9 +41,6 @@
 .oui-tile__button.oui-button_link:hover,
 .oui-tile__button.oui-button_link:focus {
   text-decoration: none;
-}
-.oui-tile__button.oui-button_full-width.oui-button_icon-right .oui-icon::before {
-  right: 2.4rem;
 }
 .oui-tile__item {
   position: relative;
@@ -54,6 +51,9 @@
 }
 .oui-tile__item:last-child {
   border-bottom: 1px solid #eaeaea;
+}
+.oui-tile__item_button {
+  padding: 0;
 }
 .oui-tile__item_button:hover,
 .oui-tile__item_button:focus {
