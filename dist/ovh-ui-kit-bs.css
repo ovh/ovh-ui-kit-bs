@@ -17,25 +17,35 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  padding: 2.7rem 0 4.6rem;
+  padding: 2.7rem 2.4rem 4.6rem;
   background-color: #fff;
   border: 1px solid #dadce0;
   border-radius: 3px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
 }
 .oui-tile__title {
-  margin-left: 2.4rem;
-  margin-right: 2.4rem;
   font-weight: 600;
+  color: #3f5167;
+}
+.oui-tile__legend {
   color: #3f5167;
 }
 .oui-tile__button {
   margin: 0;
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  margin: 0 -2.4rem;
+  box-sizing: content-box;
   font-weight: 600;
   text-align: left;
   text-decoration: none;
+}
+.oui-tile__button.oui-button_full-width.oui-button_icon-right .oui-icon::before {
+  right: 2.4rem;
+}
+.oui-tile__button:hover,
+.oui-tile__button:focus {
+  background-color: #f2f2f2;
 }
 .oui-tile__button.oui-button_link,
 .oui-tile__button.oui-button_link:hover,
@@ -46,7 +56,6 @@
   position: relative;
   display: flex;
   border-top: 1px solid #eaeaea;
-  margin: 0 2.4rem;
   padding: 1.3rem 0;
 }
 .oui-tile__item:last-child {
@@ -54,22 +63,6 @@
 }
 .oui-tile__item_button {
   padding: 0;
-}
-.oui-tile__item_button:hover,
-.oui-tile__item_button:focus {
-  background-color: #f2f2f2;
-}
-.oui-tile__item_button:hover::before,
-.oui-tile__item_button:focus::before {
-  background: none;
-}
-.oui-tile__item_button:hover:last-child::after,
-.oui-tile__item_button:focus:last-child::after {
-  background: none;
-}
-.oui-tile__item_button:hover + .oui-tile__item::before,
-.oui-tile__item_button:focus + .oui-tile__item::before {
-  background: none;
 }
 .oui-tile__definition {
   margin: 0;
@@ -100,12 +93,12 @@
 .oui-tile__top-bordered::before {
   content: "";
   display: block;
-  margin: 0 2.7rem 0 4.6rem;
+  margin: 0 2.7rem 2.4rem 4.6rem;
   height: 1px;
   background-color: #eaeaea;
 }
 .oui-tile__body-content {
-  padding: 0 2.7rem 0 4.6rem;
+  padding: 0 2.7rem 2.4rem 4.6rem;
 }
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)

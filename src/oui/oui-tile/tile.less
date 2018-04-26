@@ -13,19 +13,35 @@
   box-shadow: @oui-tile-box-shadow;
 
   &__title {
-    margin-left: @oui-tile-item-side-spacing;
-    margin-right: @oui-tile-item-side-spacing;
     font-weight: @oui-font-semibold;
+    color: @oui-tile-title-color;
+  }
+
+  &__legend {
     color: @oui-tile-title-color;
   }
 
   &__button {
     margin: 0;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: @oui-tile-item-side-spacing;
+    padding-right: @oui-tile-item-side-spacing;
+    margin: 0 -@oui-tile-item-side-spacing;
+    box-sizing: content-box;
     font-weight: @oui-font-semibold;
     text-align: left;
     text-decoration: none;
+
+    &.oui-button_full-width.oui-button_icon-right {
+      .oui-icon {
+        &::before {
+          right: @oui-tile-item-side-spacing;
+        }
+      }
+    }
+
+    &:hover, &:focus {
+      background-color: @oui-tile-background-hover;
+    }
   }
 
   &__button.oui-button_link {
@@ -39,7 +55,6 @@
     display: flex;
 
     border-top: 1px solid @oui-tile-item-border-color;
-    margin: 0 @oui-tile-item-side-spacing;
     padding: @oui-tile-item-top-spacing 0;
 
     &:last-child {
@@ -49,26 +64,7 @@
     // stylelint-disable max-nesting-depth
     &_button {
       padding: 0;
-      &:hover,
-        &:focus {
-          background-color: @oui-tile-background-hover;
 
-          &::before {
-            background: none;
-          }
-
-          &:last-child {
-            &::after {
-              background: none;
-            }
-          }
-
-          + .oui-tile__item {
-            &::before {
-            background: none;
-          }
-        }
-      }
     }
   }
 
