@@ -85,7 +85,7 @@
 .oui-tile__description_vertical-sub {
   vertical-align: sub;
 }
-.oui-tile__description small {
+.oui-tile__extra {
   font-weight: 400;
 }
 .oui-tile__body_list {

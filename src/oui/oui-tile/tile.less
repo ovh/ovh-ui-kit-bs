@@ -55,7 +55,6 @@
   &__item {
     position: relative;
     display: flex;
-
     border-top: 1px solid @oui-tile-item-border-color;
     padding: @oui-tile-item-top-spacing 0;
 
@@ -63,10 +62,8 @@
       border-bottom: 1px solid @oui-tile-item-border-color;
     }
 
-    // stylelint-disable max-nesting-depth
     &_button {
       padding: 0;
-
     }
   }
 
@@ -90,10 +87,10 @@
     &_vertical-sub {
       vertical-align: sub;
     }
+  }
 
-    small {
-      font-weight: @oui-font-regular;
-    }
+  &__extra {
+    font-weight: @oui-font-regular;
   }
 
   &__body {
