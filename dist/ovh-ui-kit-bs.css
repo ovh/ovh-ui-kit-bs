@@ -47,6 +47,9 @@
 .oui-tile__button:focus {
   background-color: #f2f2f2;
 }
+.oui-tile__button .oui-icon {
+  font-size: initial;
+}
 .oui-tile__button.oui-button_link,
 .oui-tile__button.oui-button_link:hover,
 .oui-tile__button.oui-button_link:focus {
