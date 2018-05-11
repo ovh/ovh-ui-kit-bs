@@ -1191,12 +1191,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #113f6d;
+  color: #00a2bf;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #007e9b;
+  color: #113f6d;
   text-decoration: underline;
 }
 a:focus {
@@ -3490,7 +3490,7 @@ fieldset[disabled] .btn-danger.focus {
   background-color: #122844;
 }
 .btn-link {
-  color: #113f6d;
+  color: #00a2bf;
   font-weight: normal;
   border-radius: 0;
 }
@@ -3511,7 +3511,7 @@ fieldset[disabled] .btn-link {
 }
 .btn-link:hover,
 .btn-link:focus {
-  color: #007e9b;
+  color: #113f6d;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -4091,7 +4091,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #113f6d;
+  border-color: #00a2bf;
 }
 .nav .nav-divider {
   height: 1px;
@@ -4816,7 +4816,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding: 6px 13px;
   line-height: 1.5;
   text-decoration: none;
-  color: #113f6d;
+  color: #00a2bf;
   background-color: #fff;
   border: 1px solid #ddd;
   margin-left: -1px;
@@ -4837,7 +4837,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > li > a:focus,
 .pagination > li > span:focus {
   z-index: 2;
-  color: #007e9b;
+  color: #113f6d;
   background-color: #eeeeee;
   border-color: #ddd;
 }
@@ -5035,7 +5035,7 @@ a.badge:focus {
 }
 .list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-  color: #113f6d;
+  color: #00a2bf;
   background-color: #fff;
 }
 .list-group-item > .badge {
@@ -5110,7 +5110,7 @@ a.badge:focus {
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #113f6d;
+  border-color: #00a2bf;
 }
 .thumbnail .caption {
   padding: 9px;
@@ -9112,6 +9112,13 @@ textarea.form-control:focus {
   background-color: #f5fcfd;
   text-decoration: none;
 }
+input.form-control:read-only,
+textarea.form-control:read-only {
+  border-color: #e6e6e6;
+  box-shadow: none;
+  background-color: #f2f2f2;
+  color: #7991a3;
+}
 input.form-control:disabled,
 textarea.form-control:disabled {
   border-color: #bbbdbf;
@@ -9119,13 +9126,6 @@ textarea.form-control:disabled {
   box-shadow: none;
   color: #bbbdbf;
   cursor: not-allowed;
-}
-input.form-control:read-only,
-textarea.form-control:read-only {
-  border-color: #e6e6e6;
-  box-shadow: none;
-  background-color: #f2f2f2;
-  color: #7991a3;
 }
 input.form-control::placeholder,
 textarea.form-control::placeholder {
