@@ -81,7 +81,7 @@
   font-size: 1.6rem;
   font-weight: 700;
   margin-left: 0;
-  word-break: break-word;
+  word-break: break-all;
 }
 .oui-tile__description_vertical-sub {
   vertical-align: sub;
