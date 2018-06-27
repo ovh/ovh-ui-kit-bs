@@ -75,32 +75,77 @@
 }
 
 .dropdown-menu {
-    #oui > .action-menu-base();
-
-    max-width: @oui-dropdown-max-width;
-    background-color: @oui-dropdown-background-color;
-    border: @oui-dropdown-border-width @oui-dropdown-border-color solid;
-    box-shadow: 0 4px 6px 0 @oui-dropdown-shadow-color;
+    min-width: 100%;
+    max-width: @oui-dropdown-menu-max-width;
+    display: none;
+    margin: 0;
+    position: absolute;
+    list-style: none;
+    text-align: initial;
+    box-shadow: @oui-dropdown-menu-box-shadow;
+    border: @oui-dropdown-menu-border-width @oui-dropdown-menu-border-color solid;
+    background-color: @oui-dropdown-menu-background-color;
+    z-index: @oui-dropdown-menu-zindex;
 
     li {
         padding: 0;
 
-        #oui > .dropdown-menu-link(a);
-        #oui > .dropdown-menu-link(button);
+        a,
+        button {
+            width: 100%;
+            line-height: @oui-dropdown-item-line-height;
+            display: block;
+            padding: @oui-dropdown-item-padding;
+            text-align: left;
+            font-size: @oui-dropdown-item-font-size;
+            font-weight: @oui-dropdown-item-font-weight;
+            color: @oui-dropdown-item-font-color;
+            border: none;
+            background-color: @oui-dropdown-item-background-color;
 
-        .oui-icon {
+            &,
+            &:focus,
+            &:hover {
+            #oui > .animate();
+
+            text-decoration: none;
+            }
+
+            &:focus {
+            outline-width: 1px;
+            outline-style: dotted;
+            outline-color: initial;
+            outline-offset: -2px;
+            }
+
+            &:hover,
+            &:focus {
+            background-color: @oui-dropdown-item-background-color_active;
+            color: @oui-dropdown-item-font-color_active;
+            }
+
+            &:disabled {
+            background-color: @oui-dropdown-item-background-color;
+            color: @oui-dropdown-item-font-color_disabled;
+            }
+
+            .oui-icon {
             padding: 0 rem-calc(5);
             font-size: rem-calc(12);
             color: inherit;
+            }
         }
 
         &.divider {
-            #oui > .action-menu-item-divider-base();
+            height: @oui-dropdown-menu-border-width;
+            margin: @oui-dropdown-menu-spacing 0;
+            display: block;
+            background-color: @oui-dropdown-menu-border-color;
         }
 
         &.dropdown-divider {
             padding-top: rem-calc(4);
-            border-top: 1px solid @oui-action-menu-divider-color;
+            border-top: 1px solid @oui-dropdown-menu-border-color;
         }
 
         & + .dropdown-divider { margin-top: rem-calc(4); }
@@ -110,35 +155,5 @@
         > .fa,
         > .oui-icon,
         > .ovh-font { display: none; }
-    }
-}
-
-// Mixins
-#oui {
-    .dropdown-menu-link(
-        @link-selector
-    ) {
-        > @{link-selector} {
-            #oui > .button-normalize();
-            #oui > .button-base();
-            #oui > .button-action-menu();
-
-            &:hover,
-            &:focus,
-            &:active {
-                background-color: @oui-action-menu-item-active-background-color;
-                color: @oui-action-menu-item-active-text-color;
-            }
-        }
-
-        > @{link-selector}:disabled,
-        &.disabled > @{link-selector} {
-            color: @oui-color-dusty;
-
-            &:hover {
-                color: @oui-color-dusty;
-                background-color: @oui-color-foam;
-            }
-        }
     }
 }
