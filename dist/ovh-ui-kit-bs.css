@@ -8736,7 +8736,7 @@ button.close {
   background-color: #f2f2f2;
 }
 .dropdown-menu {
-  min-width: 100%;
+  min-width: 140px;
   max-width: 300px;
   display: none;
   margin: 0;
