@@ -1,58 +1,93 @@
 // Progress
 .progress {
-    #oui > .progress-base();
+    #oui > .progress-normalize();
 
+    width: 100%;
+    min-height: @oui-progress-height;
+    height: auto;
+    display: flex;
+    flex-direction: row;
     position: relative;
+    margin: @oui-progress-margin;
+    border-radius: 0;
     box-shadow: none;
-    background: @progress-bar-bg;
+    background: none;
 
-    // Variations
-    &-info { background: @progress-bar-info-bg; }
-
-    &-success { background: @progress-bar-success-bg; }
-
-    &-warning { background: @progress-bar-warning-bg; }
-
-    &-danger { background: @progress-bar-danger-bg; }
+    // Background bar
+    &::before {
+      content: " ";
+      height: @oui-progress-height;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      border-radius: (@oui-progress-height / 2);
+      background-color: @oui-progress-background-color;
+      z-index: 0;
+    }
 
     &-bar {
-        #oui > .progress-bar-base(@oui-progress-height);
-
+        height: auto;
+        line-height: inherit;
+        float: none;
+        font-size: inherit;
+        text-align: right;
         box-shadow: none;
-        background: @progress-bar-fg;
+        background: none;
+        transition: width @oui-animation-default-timing @oui-animation-default;
 
-        // Variations
-        &-info {
-            #oui > .progress-bar(@progress-bar-info-fg; @progress-bar-info-text);
+        // Foreground bar
+        &::before {
+          content: " ";
+          width: 100%;
+          height: @oui-progress-height;
+          display: block;
+          position: relative;
+          border-top-left-radius: (@oui-progress-height / 2);
+          border-bottom-left-radius: (@oui-progress-height / 2);
+          background: @progress-bar-fg;
         }
 
-        &-success {
-            #oui > .progress-bar(@progress-bar-success-fg; @progress-bar-success-text);
+        & ~ &::before {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
         }
 
-        &-warning {
-            #oui > .progress-bar(@progress-bar-warning-fg; @progress-bar-warning-text);
+        &:last-of-type::before {
+          border-top-right-radius: (@oui-progress-height / 2);
+          border-bottom-right-radius: (@oui-progress-height / 2);
         }
 
-        &-danger {
-            #oui > .progress-bar(@progress-bar-danger-fg; @progress-bar-danger-text);
-        }
+        &-info::before { background-color: @oui-progress-info-foreground-color; }
 
-        & > span {
-            #oui > .progress-bar-label();
-            white-space: nowrap;
-        }
+        &-success::before { background-color: @oui-progress-success-foreground-color; }
+
+        &-warning::before { background-color: @oui-progress-warning-foreground-color; }
+
+        &-danger::before { background-color: @oui-progress-error-foreground-color; }
     }
 
     // Label
     &-bar-label {
-        #oui > .progress-bar-label();
+        margin-top: @oui-progress-bar-text-spacing;
+        display: block;
+        position: relative;
+        font-size: @oui-progress-bar-text-font-size;
+        font-weight: @oui-progress-bar-text-font-weight;
+        white-space: nowrap;
+        text-align: right;
+        color: @oui-progress-bar-text-color;
     }
 
     // Striped bars
     &-striped,
     &-bar-striped {
-        #oui > .progress-indeterminate();
+        &:before {
+            background-image: linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0, 0, 0, .1) 66%, transparent 66%);
+            background-size: @oui-progress-height * 2 @oui-progress-height, 100% 100%, 100% 100%;
+            animation: animate-stripes 1s linear infinite;
+        }
 
         animation: none;
 
