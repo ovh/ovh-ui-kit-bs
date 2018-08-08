@@ -6,6 +6,12 @@
     background-position-x: 4.8rem;
   }
 }
+oui-button {
+  display: inline-block;
+}
+oui-form-actions {
+  display: block;
+}
 oui-progress,
 oui-progress-bar,
 oui-progress-threshold {
@@ -7879,7 +7885,7 @@ button.close {
   min-width: 10rem;
   max-width: 32rem;
   position: relative;
-  margin: 0 0 2rem;
+  margin: 0;
   padding: 1rem 2rem;
   font-size: 1.6rem;
   font-weight: 600;
@@ -9790,7 +9796,6 @@ dl.dl-horizontal.dl-lg dd {
   min-width: 10rem;
   max-width: 32rem;
   position: relative;
-  margin: 0 0 2rem;
   padding: 1rem 2rem;
   font-size: 1.6rem;
   font-weight: 600;
@@ -10061,7 +10066,7 @@ body > .popover {
 }
 .table > tbody > tr > th,
 .table > tbody > tr > td {
-  padding: 0.8rem 1rem 0.7rem;
+  padding: 0.5rem 1rem;
   height: 5.6rem;
   white-space: nowrap;
   border-bottom: 1px solid #e9ebe7;
@@ -10204,7 +10209,7 @@ h6,
 }
 .well {
   background: #f6f7f5;
-  border: 0.2rem solid #e1e4df;
+  border: 2px solid #e1e4df;
   border-radius: 6px;
   padding: 2rem;
   box-shadow: none;
