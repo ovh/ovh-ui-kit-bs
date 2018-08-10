@@ -33,13 +33,9 @@ A test page(https://ovh-ux.github.io/ovh-ui-kit-bs/) is available [here](https:/
 Those dependencies are needed to compile the LESS import.
 
 - [Bootstrap](https://github.com/twbs/bootstrap)
-- [less-plugin-remcalc](https://github.com/ovh-ux/less-plugin-remcalc)
 - [ovh-ui-kit](https://github.com/ovh-ux/ovh-ui-kit)
 
 ```less
-/* Required */
-@rem-base: rem-base(10px);
-
 // Paths of the dependencies
 @bs-path: "./node_modules/bootstrap";
 @oui-path: "./node_modules/ovh-ui-kit";
