@@ -29,18 +29,17 @@
   "devDependencies": {
     "bootstrap": "^3.3.7",
     "cpx": "^1.5.0",
-    "less": "^2.7.3",
+    "less": "^3.8.1",
     "less-plugin-clean-css": "^1.5.1",
-    "less-plugin-remcalc": "^0.0.1",
-    "opn-cli": "^3.1.0",
-    "ovh-ui-kit": "^2.18.x",
+    "less-plugin-remcalc": "^0.1.0",
+    "ovh-ui-kit": "^2.18.0",
     "rimraf": "^2.6.2",
-    "stylelint": "^8.4.0",
+    "stylelint": "^9.4.0",
     "stylelint-config-ovh": "^0.1.0"
   },
   "peerDependencies": {
     "bootstrap": "^3.3.7",
-    "less-plugin-remcalc": "^0.0.1",
-    "ovh-ui-kit": "^2.17.x"
+    "less-plugin-remcalc": "^0.1.0",
+    "ovh-ui-kit": "^2.18.0"
   }
 }
