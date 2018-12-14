@@ -6840,6 +6840,9 @@ oui-progress-bar,
 oui-progress-threshold {
   display: block;
 }
+html {
+  font-size: 16px;
+}
 h1,
 .h1 {
   line-height: 1.5;
