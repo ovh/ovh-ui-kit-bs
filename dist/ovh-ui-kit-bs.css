@@ -2707,7 +2707,7 @@ input[type="search"] {
   }
 }
 .form-group {
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 .radio,
 .checkbox {
@@ -6002,7 +6002,7 @@ button.close {
   filter: alpha(opacity=100);
 }
 .modal-header {
-  padding: 3rem 4rem;
+  padding: 1.875rem 2.5rem;
   border-bottom: 1px solid none;
 }
 .modal-header .close {
@@ -6014,10 +6014,10 @@ button.close {
 }
 .modal-body {
   position: relative;
-  padding: 3rem 4rem;
+  padding: 1.875rem 2.5rem;
 }
 .modal-footer {
-  padding: 3rem 4rem;
+  padding: 1.875rem 2.5rem;
   text-align: right;
   border-top: 1px solid none;
 }
@@ -6826,7 +6826,7 @@ button.close {
     background-position-x: 0;
   }
   to {
-    background-position-x: 4.8rem;
+    background-position-x: 3rem;
   }
 }
 oui-button {
@@ -6904,21 +6904,21 @@ h6,
   border: 0;
   border-collapse: separate;
   border-spacing: 0;
-  margin: 0 0 2rem;
+  margin: 0 0 1.25rem;
   text-align: left;
-  font-size: 1.6rem;
+  font-size: 1rem;
 }
 .table > thead > tr > th {
   overflow: hidden;
   text-overflow: ellipsis;
   transition-duration: 0.2s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 0.2rem 1rem;
+  padding: 0.125rem 0.625rem;
   white-space: nowrap;
   outline: none;
   color: #59697d;
   font-weight: 400;
-  height: 4.4rem;
+  height: 2.75rem;
   vertical-align: inherit;
   background-color: #e9ebe7;
 }
@@ -6936,8 +6936,8 @@ h6,
 }
 .table > tbody > tr > th,
 .table > tbody > tr > td {
-  padding: 0.5rem 1rem;
-  height: 5.6rem;
+  padding: 0.313rem 0.625rem;
+  height: 3.5rem;
   white-space: nowrap;
   border-bottom: 1px solid #e9ebe7;
   outline: none;
@@ -6982,9 +6982,9 @@ label {
   font-smoothing: antialiased;
   display: block;
   padding: 0;
-  margin: 0 0 0.6rem;
+  margin: 0 0 0.375rem;
   color: #59697d;
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 label.required::after {
@@ -7015,17 +7015,17 @@ textarea.form-control {
   /* stylelint-enable */
   display: block;
   width: 100%;
-  min-height: 4rem;
-  padding: 0 1.1rem;
+  min-height: 2.5rem;
+  padding: 0 0.688rem;
   border: 1px solid #bbbdbf;
   border-radius: 3px;
-  margin: 0 0 2rem;
+  margin: 0 0 1.25rem;
   vertical-align: top;
   background-color: #fff;
   box-shadow: inset 2px 2px 1px 0 rgba(18, 40, 68, 0.07);
   color: #122844;
-  font-size: 1.6rem;
-  line-height: 3.4rem;
+  font-size: 1rem;
+  line-height: 2.125rem;
   font-weight: 600;
   margin-bottom: 0;
   font-size: 16px;
@@ -7047,36 +7047,36 @@ input.form-control_xl,
 textarea.form-control_xl,
 input.form-control_5,
 textarea.form-control_5 {
-  width: 50rem;
-  min-width: 50rem;
+  width: 31.25rem;
+  min-width: 31.25rem;
 }
 input.form-control_l,
 textarea.form-control_l,
 input.form-control_4,
 textarea.form-control_4 {
-  width: 35rem;
-  min-width: 35rem;
+  width: 21.875rem;
+  min-width: 21.875rem;
 }
 input.form-control_m,
 textarea.form-control_m,
 input.form-control_3,
 textarea.form-control_3 {
-  width: 25rem;
-  min-width: 25rem;
+  width: 15.625rem;
+  min-width: 15.625rem;
 }
 input.form-control_s,
 textarea.form-control_s,
 input.form-control_2,
 textarea.form-control_2 {
-  width: 15rem;
-  min-width: 15rem;
+  width: 9.375rem;
+  min-width: 9.375rem;
 }
 input.form-control_xs,
 textarea.form-control_xs,
 input.form-control_1,
 textarea.form-control_1 {
-  width: 7.5rem;
-  min-width: 7.5rem;
+  width: 4.688rem;
+  min-width: 4.688rem;
 }
 @media screen and (max-width: 767px) {
   input.form-control_auto,
@@ -7090,36 +7090,36 @@ textarea.form-control_1 {
   textarea.form-control_xl,
   input.form-control_5,
   textarea.form-control_5 {
-    width: 30rem;
-    min-width: 30rem;
+    width: 18.75rem;
+    min-width: 18.75rem;
   }
   input.form-control_l,
   textarea.form-control_l,
   input.form-control_4,
   textarea.form-control_4 {
-    width: 30rem;
-    min-width: 30rem;
+    width: 18.75rem;
+    min-width: 18.75rem;
   }
   input.form-control_m,
   textarea.form-control_m,
   input.form-control_3,
   textarea.form-control_3 {
-    width: 25rem;
-    min-width: 25rem;
+    width: 15.625rem;
+    min-width: 15.625rem;
   }
   input.form-control_s,
   textarea.form-control_s,
   input.form-control_2,
   textarea.form-control_2 {
-    width: 15rem;
-    min-width: 15rem;
+    width: 9.375rem;
+    min-width: 9.375rem;
   }
   input.form-control_xs,
   textarea.form-control_xs,
   input.form-control_1,
   textarea.form-control_1 {
-    width: 7.5rem;
-    min-width: 7.5rem;
+    width: 4.688rem;
+    min-width: 4.688rem;
   }
 }
 input.form-control::selection,
@@ -7304,15 +7304,15 @@ input[type="checkbox"] {
 .radio label,
 .radio-inline {
   line-height: 1.5;
-  padding-left: calc(1.6rem * 1.5);
-  font-size: 1.6rem;
+  padding-left: calc(1rem * 1.5);
+  font-size: 1rem;
   font-weight: 600;
   color: inherit;
 }
 .checkbox-description,
 .radio-description {
   display: block;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   font-weight: 400;
 }
 .has-success .checkbox-description,
@@ -7329,11 +7329,11 @@ input[type="checkbox"] {
 }
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"] {
-  margin-left: calc(-1.6rem * 1.5);
+  margin-left: calc(-1rem * 1.5);
 }
 .radio input[type="radio"],
 .radio-inline input[type="radio"] {
-  margin-left: calc(-1.6rem * 1.5);
+  margin-left: calc(-1rem * 1.5);
 }
 select.form-control {
   font-family: 'Source Sans Pro', sans-serif;
@@ -7346,9 +7346,9 @@ select.form-control {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   line-height: 38px;
-  height: calc(1.6rem * 2.25);
+  height: calc(1rem * 2.25);
   min-height: 40px;
-  padding: 0 1.1rem;
+  padding: 0 0.688rem;
   font-size: 16px;
   font-weight: 600;
   color: #122844;
@@ -7435,7 +7435,7 @@ select.form-control.input-lg,
 .form-group-lg textarea.form-control,
 .form-group-lg select.form-control {
   height: 46px;
-  padding: 10px 1.1rem;
+  padding: 10px 0.688rem;
   font-size: 18px;
   line-height: 1.3333333;
   border-radius: 3px;
@@ -7471,7 +7471,7 @@ select.form-control.input-sm,
 .form-group-sm textarea.form-control,
 .form-group-sm select.form-control {
   height: 29px;
-  padding: 3px 1.1rem;
+  padding: 3px 0.688rem;
   font-size: 16px;
   line-height: 1.5;
   border-radius: 3px;
@@ -7512,7 +7512,7 @@ select[multiple].form-group-sm select.form-control {
   top: calc(16px * 1.5 + 6px);
 }
 .has-feedback .form-control {
-  padding-right: calc(50px + 1.1rem);
+  padding-right: calc(50px + 0.688rem);
 }
 .has-feedback .form-control-feedback {
   color: #bbbdbf;
@@ -7619,12 +7619,12 @@ select[multiple].form-group-sm select.form-control {
   overflow-y: hidden;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  min-width: 10rem;
-  max-width: 32rem;
+  min-width: 6.25rem;
+  max-width: 20rem;
   position: relative;
   margin: 0;
-  padding: 1rem 2rem;
-  font-size: 1.6rem;
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.007em;
   border-radius: 3px;
@@ -7661,11 +7661,11 @@ select[multiple].form-group-sm select.form-control {
   opacity: 1;
 }
 .btn .oui-icon {
-  font-size: 1rem;
+  font-size: 0.625rem;
   vertical-align: middle;
 }
 .btn-default {
-  padding: 0.7rem 2rem;
+  padding: 0.438rem 1.25rem;
   background-color: #fff;
   border: 1px solid #bdbec0;
 }
@@ -7705,7 +7705,7 @@ select[multiple].form-group-sm select.form-control {
 .btn-info,
 .btn-warning,
 .btn-danger {
-  padding: 0.8rem 2rem;
+  padding: 0.5rem 1.25rem;
   background-color: #59d2ef;
 }
 .btn-primary:hover,
@@ -7875,7 +7875,7 @@ select[multiple].form-group-sm select.form-control {
 }
 .btn-link {
   min-width: 0;
-  padding: 0.8rem 2rem;
+  padding: 0.5rem 1.25rem;
   border: 0;
   background: none;
   color: #00a2bf;
@@ -7920,20 +7920,20 @@ select[multiple].form-group-sm select.form-control {
   border-radius: 3px;
 }
 .btn-lg {
-  min-height: 4.5rem;
+  min-height: 2.813rem;
 }
 .oui-icon.oui-icon_small {
   font-size: 16px;
 }
 .caret {
-  width: 1rem;
-  height: 1rem;
-  line-height: 1rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  line-height: 0.625rem;
   display: inline-block;
   margin-left: 0;
   vertical-align: middle;
   color: #113f6d;
-  font-size: 1rem;
+  font-size: 0.625rem;
   border: none;
 }
 .caret::before {
@@ -7951,7 +7951,7 @@ select[multiple].form-group-sm select.form-control {
   padding: 0;
   color: #333;
   font-family: 'Oui Icons';
-  font-size: 2.4rem;
+  font-size: 1.5rem;
   line-height: 1;
   font-weight: normal;
   font-style: normal;
@@ -8184,13 +8184,13 @@ select[multiple].form-group-sm select.form-control {
   content: "\f112";
 }
 .dropdown-toggle .oui-icon {
-  width: 1rem;
-  height: 1rem;
-  line-height: 1rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  line-height: 0.625rem;
   margin: auto;
   text-align: center;
   color: inherit;
-  font-size: 1rem;
+  font-size: 0.625rem;
   vertical-align: middle;
   cursor: pointer;
   pointer-events: none;
@@ -8240,11 +8240,11 @@ select[multiple].form-group-sm select.form-control {
 .dropdown-menu li a,
 .dropdown-menu li button {
   width: 100%;
-  line-height: 2.2rem;
+  line-height: 1.375rem;
   display: block;
-  padding: 0.8rem 2rem;
+  padding: 0.5rem 1.25rem;
   text-align: left;
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: 400;
   color: #113f6d;
   border: none;
@@ -8287,7 +8287,7 @@ select[multiple].form-group-sm select.form-control {
 }
 .dropdown-menu li.divider {
   height: 1px;
-  margin: 0.4rem 0;
+  margin: 0.25rem 0;
   display: block;
   background-color: #bbbdbf;
 }
@@ -8331,7 +8331,7 @@ select[multiple].form-group-sm select.form-control {
   margin-bottom: 0;
   padding-left: 10px;
   padding-right: 10px;
-  font-size: 1.6rem;
+  font-size: 1rem;
   color: #122844;
 }
 .input-group-addon {
@@ -8360,8 +8360,8 @@ select[multiple].form-group-sm select.form-control {
 }
 .input-group-lg > .form-control {
   min-height: 46px;
-  padding-left: 1.1rem;
-  padding-right: 1.1rem;
+  padding-left: 0.688rem;
+  padding-right: 0.688rem;
 }
 .input-group-lg .input-group-addon,
 .input-group-lg .input-group-btn .btn {
@@ -8369,8 +8369,8 @@ select[multiple].form-group-sm select.form-control {
 }
 .input-group-sm > .form-control {
   min-height: 29px;
-  padding-left: 1.1rem;
-  padding-right: 1.1rem;
+  padding-left: 0.688rem;
+  padding-right: 0.688rem;
 }
 .input-group-sm .input-group-addon,
 .input-group-sm .input-group-btn .btn {
@@ -8536,8 +8536,8 @@ select[multiple].form-group-sm select.form-control {
   color: #fff;
 }
 .pagination {
-  margin: 0 0 2rem;
-  font-size: 1.6rem;
+  margin: 0 0 1.25rem;
+  font-size: 1rem;
 }
 .pagination > li > a,
 .pagination > li > span {
@@ -8561,22 +8561,22 @@ select[multiple].form-group-sm select.form-control {
   overflow-y: hidden;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  min-width: 10rem;
-  max-width: 32rem;
+  min-width: 6.25rem;
+  max-width: 20rem;
   position: relative;
-  padding: 1rem 2rem;
-  font-size: 1.6rem;
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.007em;
   border-radius: 3px;
   vertical-align: top;
   color: #113f6d;
-  padding: 0.7rem 2rem;
+  padding: 0.438rem 1.25rem;
   background-color: #fff;
   border: 1px solid #bdbec0;
-  min-width: 4rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  min-width: 2.5rem;
+  padding-left: 0.313rem;
+  padding-right: 0.313rem;
   margin: 0;
   border-radius: 0;
 }
@@ -8679,9 +8679,9 @@ select[multiple].form-group-sm select.form-control {
   min-height: 50px;
   line-height: 1.375;
   position: relative;
-  padding: 1.2rem 1.6rem;
-  margin: 0 0 1.6rem;
-  font-size: 1.6rem;
+  padding: 0.75rem 1rem;
+  margin: 0 0 1rem;
+  font-size: 1rem;
   font-weight: 400;
   color: #122844;
   border: 2px solid transparent;
@@ -8691,11 +8691,11 @@ select[multiple].form-group-sm select.form-control {
 .alert::before {
   display: block;
   position: absolute;
-  top: 1.4rem;
-  left: 1.6rem;
+  top: 0.875rem;
+  left: 1rem;
 }
 .alert.alert-info {
-  padding: 1.6rem 1.6rem 1.6rem 5.8rem;
+  padding: 1rem 1rem 1rem 3.625rem;
   color: #3f5167;
   border-color: #b3becc;
   background-color: #dfeaf8;
@@ -8715,7 +8715,7 @@ select[multiple].form-group-sm select.form-control {
   padding: 0;
   color: #333;
   font-family: 'Oui Icons';
-  font-size: 2.4rem;
+  font-size: 1.5rem;
   line-height: 1;
   font-weight: normal;
   font-style: normal;
@@ -8724,7 +8724,7 @@ select[multiple].form-group-sm select.form-control {
   content: "\f125";
   position: absolute;
   display: block;
-  font-size: 2.6rem;
+  font-size: 1.625rem;
   color: #7d8da1;
 }
 .alert.alert-info::before.oui-icon-add::before {
@@ -8963,7 +8963,7 @@ select[multiple].form-group-sm select.form-control {
   height: 75%;
 }
 .alert.alert-success {
-  padding: 1.6rem 1.6rem 1.6rem 5.8rem;
+  padding: 1rem 1rem 1rem 3.625rem;
   color: #57710e;
   border-color: #b0ca67;
   background-color: #e0eac2;
@@ -8983,7 +8983,7 @@ select[multiple].form-group-sm select.form-control {
   padding: 0;
   color: #333;
   font-family: 'Oui Icons';
-  font-size: 2.4rem;
+  font-size: 1.5rem;
   line-height: 1;
   font-weight: normal;
   font-style: normal;
@@ -8992,7 +8992,7 @@ select[multiple].form-group-sm select.form-control {
   content: "\f133";
   position: absolute;
   display: block;
-  font-size: 2.6rem;
+  font-size: 1.625rem;
   color: #b0ca67;
 }
 .alert.alert-success::before.oui-icon-add::before {
@@ -9231,7 +9231,7 @@ select[multiple].form-group-sm select.form-control {
   height: 75%;
 }
 .alert.alert-warning {
-  padding: 1.6rem 1.6rem 1.6rem 5.8rem;
+  padding: 1rem 1rem 1rem 3.625rem;
   color: #8a5300;
   border-color: #e3cd4d;
   background-color: #faefa0;
@@ -9251,7 +9251,7 @@ select[multiple].form-group-sm select.form-control {
   padding: 0;
   color: #333;
   font-family: 'Oui Icons';
-  font-size: 2.4rem;
+  font-size: 1.5rem;
   line-height: 1;
   font-weight: normal;
   font-style: normal;
@@ -9260,7 +9260,7 @@ select[multiple].form-group-sm select.form-control {
   content: "\f136";
   position: absolute;
   display: block;
-  font-size: 2.6rem;
+  font-size: 1.625rem;
   color: #d9ae00;
 }
 .alert.alert-warning::before.oui-icon-add::before {
@@ -9499,7 +9499,7 @@ select[multiple].form-group-sm select.form-control {
   height: 75%;
 }
 .alert.alert-danger {
-  padding: 1.6rem 1.6rem 1.6rem 5.8rem;
+  padding: 1rem 1rem 1rem 3.625rem;
   color: #b04020;
   border-color: #eca490;
   background-color: #f5e0da;
@@ -9519,7 +9519,7 @@ select[multiple].form-group-sm select.form-control {
   padding: 0;
   color: #333;
   font-family: 'Oui Icons';
-  font-size: 2.4rem;
+  font-size: 1.5rem;
   line-height: 1;
   font-weight: normal;
   font-style: normal;
@@ -9528,7 +9528,7 @@ select[multiple].form-group-sm select.form-control {
   content: "\f11c";
   position: absolute;
   display: block;
-  font-size: 2.6rem;
+  font-size: 1.625rem;
   color: #e36947;
 }
 .alert.alert-danger::before.oui-icon-add::before {
@@ -9788,25 +9788,25 @@ select[multiple].form-group-sm select.form-control {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   width: 100%;
-  min-height: 1.2rem;
+  min-height: 0.75rem;
   height: auto;
   display: flex;
   flex-direction: row;
   position: relative;
-  margin: 1rem 0;
+  margin: 0.625rem 0;
   border-radius: 0;
   box-shadow: none;
   background: none;
 }
 .progress::before {
   content: " ";
-  height: 1.2rem;
+  height: 0.75rem;
   display: block;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  border-radius: 0.6rem;
+  border-radius: 0.375rem;
   background-color: #f2f2f2;
   z-index: 0;
 }
@@ -9823,11 +9823,11 @@ select[multiple].form-group-sm select.form-control {
 .progress-bar::before {
   content: " ";
   width: 100%;
-  height: 1.2rem;
+  height: 0.75rem;
   display: block;
   position: relative;
-  border-top-left-radius: 0.6rem;
-  border-bottom-left-radius: 0.6rem;
+  border-top-left-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
   background: #122844;
 }
 .progress-bar ~ .progress-bar::before {
@@ -9835,8 +9835,8 @@ select[multiple].form-group-sm select.form-control {
   border-bottom-left-radius: 0;
 }
 .progress-bar:last-of-type::before {
-  border-top-right-radius: 0.6rem;
-  border-bottom-right-radius: 0.6rem;
+  border-top-right-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
 }
 .progress-bar-info::before {
   background-color: #7d8da1;
@@ -9851,10 +9851,10 @@ select[multiple].form-group-sm select.form-control {
   background-color: #e36947;
 }
 .progress-bar-label {
-  margin-top: 0.5rem;
+  margin-top: 0.313rem;
   display: block;
   position: relative;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   font-weight: 400;
   white-space: nowrap;
   text-align: right;
@@ -9867,7 +9867,7 @@ select[multiple].form-group-sm select.form-control {
 .progress-striped:before,
 .progress-bar-striped:before {
   background-image: linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%);
-  background-size: 2.4rem 1.2rem, 100% 100%, 100% 100%;
+  background-size: 1.5rem 0.75rem, 100% 100%, 100% 100%;
   animation: animate-stripes 1s linear infinite;
 }
 .progress-striped.active,
@@ -9893,7 +9893,7 @@ dl.dl-horizontal.dl-lg dd {
   background: #f6f7f5;
   border: 2px solid #e1e4df;
   border-radius: 6px;
-  padding: 2rem;
+  padding: 1.25rem;
   box-shadow: none;
 }
 .close,
@@ -9929,7 +9929,7 @@ dl.dl-horizontal.dl-lg dd {
   padding: 0;
   color: #333;
   font-family: 'Oui Icons';
-  font-size: 2.4rem;
+  font-size: 1.5rem;
   line-height: 1;
   font-weight: normal;
   font-style: normal;
@@ -10171,7 +10171,7 @@ dl.dl-horizontal.dl-lg dd {
   box-shadow: 0 10px 10px rgba(89, 105, 125, 0.25);
 }
 .modal-header {
-  height: 3rem;
+  height: 1.876rem;
   padding: 0;
   position: relative;
   border: none;
@@ -10181,9 +10181,9 @@ dl.dl-horizontal.dl-lg dd {
 }
 .modal-header .close {
   margin-top: 0;
-  padding: 0.9rem 1rem;
+  padding: 0.563rem 0.625rem;
   color: #3f5167;
-  font-size: 1.2rem;
+  font-size: 0.75rem;
   opacity: 1;
 }
 .modal-header .close::before {
@@ -10206,7 +10206,7 @@ dl.dl-horizontal.dl-lg dd {
 .modal-footer {
   display: flex;
   justify-content: flex-end;
-  padding: 0 4rem 3rem;
+  padding: 0 2.5rem 1.875rem;
   border-top: none;
 }
 .modal-footer .btn,
@@ -10215,7 +10215,7 @@ dl.dl-horizontal.dl-lg dd {
 }
 .modal-footer .btn + .btn,
 .modal-footer .oui-button + .oui-button {
-  margin-left: 2rem;
+  margin-left: 1.25rem;
 }
 .tooltip.left,
 .tooltip.top,
@@ -10258,13 +10258,13 @@ dl.dl-horizontal.dl-lg dd {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  min-width: 10rem;
-  max-width: 30rem;
+  min-width: 6.25rem;
+  max-width: 18.75rem;
   box-sizing: border-box;
-  padding: 1rem 2rem;
-  font-size: 1.4rem;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
   color: #113f6d;
-  box-shadow: 0 0.9rem 1rem 0 rgba(39, 100, 177, 0.1);
+  box-shadow: 0 0.563rem 0.625rem 0 rgba(39, 100, 177, 0.1);
   border: solid 1px #bbbdbf;
   background-color: #fff;
   z-index: -1;
