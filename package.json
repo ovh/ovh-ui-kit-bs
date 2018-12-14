@@ -1,6 +1,6 @@
 {
   "name": "ovh-ui-kit-bs",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "A bootstrap theme for the OVH managers, based on ovh-ui-kit.",
   "author": "OVH SAS",
   "license": "BSD-3-Clause",
@@ -23,7 +23,7 @@
     "less:debug": "lessc --remcalc \"src/_dist.less\" \"dist/ovh-ui-kit-bs.css\"",
     "less:dist": "lessc --remcalc --clean-css \"src/_dist.less\" \"dist/ovh-ui-kit-bs.min.css\"",
     "less:vendor": "lessc --remcalc --clean-css \"src/_vendor.less\" \"assets/vendor.min.css\"",
-    "open": "opn ./index.html",
+    "open": "xdg-open ./index.html",
     "start": "npm run open"
   },
   "devDependencies": {
@@ -40,6 +40,6 @@
   "peerDependencies": {
     "bootstrap": "^3.3.7",
     "less-plugin-remcalc": "^0.1.0",
-    "ovh-ui-kit": "^2.18.0"
+    "ovh-ui-kit": "^2.21.0"
   }
 }
