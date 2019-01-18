@@ -2,23 +2,23 @@
   "name": "ovh-ui-kit-bs",
   "version": "2.1.0",
   "description": "A bootstrap theme for the OVH managers, based on ovh-ui-kit.",
-  "author": "OVH SAS",
-  "license": "BSD-3-Clause",
-  "main": "src/ovh-ui-kit-bs.less",
+  "bugs": {
+    "url": "https://github.com/ovh-ux/ovh-ui-kit-bs/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ovh-ux/ovh-ui-kit-bs.git"
   },
-  "bugs": {
-    "url": "https://github.com/ovh-ux/ovh-ui-kit-bs/issues"
-  },
+  "license": "BSD-3-Clause",
+  "author": "OVH SAS",
+  "main": "src/ovh-ui-kit-bs.less",
   "scripts": {
     "build": "npm run clean && npm run less && npm run copy",
     "clean": "rimraf dist",
     "copy": "npm run copy:fonts && npm run copy:icons && npm run copy:glyphicons",
     "copy:fonts": "cpx \"node_modules/ovh-ui-kit/packages/oui-typography/fonts/**/*.{eot,svg,ttf,woff,woff2}\" \"assets/fonts\"",
-    "copy:icons": "cpx \"node_modules/ovh-ui-kit/dist/icons/*.{eot,svg,ttf,woff,woff2,html}\" \"assets/icons\"",
     "copy:glyphicons": "cpx \"node_modules/bootstrap/fonts/*\" \"assets/fonts\"",
+    "copy:icons": "cpx \"node_modules/ovh-ui-kit/dist/icons/*.{eot,svg,ttf,woff,woff2,html}\" \"assets/icons\"",
     "less": "npm run less:dist && npm run less:debug && npm run less:vendor",
     "less:debug": "lessc --remcalc \"src/_dist.less\" \"dist/ovh-ui-kit-bs.css\"",
     "less:dist": "lessc --remcalc --clean-css \"src/_dist.less\" \"dist/ovh-ui-kit-bs.min.css\"",
