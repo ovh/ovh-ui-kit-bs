@@ -23,7 +23,7 @@
     "less:debug": "lessc --remcalc \"src/_dist.less\" \"dist/ovh-ui-kit-bs.css\"",
     "less:dist": "lessc --remcalc --clean-css \"src/_dist.less\" \"dist/ovh-ui-kit-bs.min.css\"",
     "less:vendor": "lessc --remcalc --clean-css \"src/_vendor.less\" \"assets/vendor.min.css\"",
-    "open": "xdg-open ./index.html",
+    "open": "opn index.html",
     "start": "npm run open"
   },
   "devDependencies": {
@@ -32,6 +32,7 @@
     "less": "^3.8.1",
     "less-plugin-clean-css": "^1.5.1",
     "less-plugin-remcalc": "^0.1.0",
+    "opn-cli": "^4.0.0",
     "ovh-ui-kit": "~2.23.1",
     "rimraf": "^2.6.2",
     "stylelint": "^9.4.0",
