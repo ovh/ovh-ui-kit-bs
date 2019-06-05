@@ -23,6 +23,7 @@
     "docs:oui": "cpx \"node_modules/@ovh-ux/ui-kit/dist/**/*\" \"docs/assets/\"",
     "docs:oui-bs": "cpx \"dist/**/*\" \"docs/assets/\"",
     "lint": "stylelint 'src/**/*.less'",
+    "version": "yarn build && git add .",
     "start": "open-cli docs/index.html"
   },
   "devDependencies": {
