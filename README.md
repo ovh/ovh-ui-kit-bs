@@ -2,90 +2,76 @@
 
 ![githubbanner](https://user-images.githubusercontent.com/3379410/27423240-3f944bc4-5731-11e7-87bb-3ff603aff8a7.png)
 
-[![NPM](https://nodei.co/npm/ovh-ui-kit-bs.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/ovh-ui-kit-bs/)
+A [Bootstrap 3](https://github.com/twbs/bootstrap) theme for the OVH managers, based on [OVH UI](https://github.com/ovh-ux/ovh-ui-kit).
 
-[![Maintenance](https://img.shields.io/maintenance/yes/2018.svg)]() [![Chat on gitter](https://img.shields.io/gitter/room/ovh/ux.svg)](https://gitter.im/ovh/ux) [![Build Status](https://travis-ci.org/ovh-ux/ovh-ui-kit-bs.svg)](https://travis-ci.org/ovh-ux/ovh-ui-kit-bs)
+[![npm version](https://badgen.net/npm/v/ovh-ui-kit-bs)](https://www.npmjs.com/package/ovh-ui-kit-bs)
 
-> A [Bootstrap](https://github.com/twbs/bootstrap) theme for the OVH managers, based on [OVH UI](https://github.com/ovh-ux/ovh-ui-kit).
-
-## Installation
+### Install with [npm](https://www.npmjs.com/)
 
 ```bash
-npm install --save-dev ovh-ui-kit-bs
+npm install ovh-ui-kit-bs
+```
+
+### Install with [yarn](https://yarnpkg.com)
+
+```bash
+yarn add ovh-ui-kit-bs
 ```
 
 ## Usage
 
 ### Test page
 
-A test page(https://ovh-ux.github.io/ovh-ui-kit-bs/) is available [here](https://ovh-ux.github.io/ovh-ui-kit-bs/) for viewing all styles and component of our theme.
+A test page is available [here](https://ovh-ux.github.io/ovh-ui-kit-bs/) for viewing all styles and component of our theme.
 
 ### Integration
 
 #### html
 
 ```html
-<link rel="stylesheet" href="./node_modules/ovh-ui-kit-bs/dist/ovh-ui-kit-bs.min.css">
+<link rel="stylesheet" href="path/to/ovh-ui-kit-bs/dist/oui-bs3.css">
+
+<script src="path/to/ovh-ui-kit-bs/dist/js/bootstrap.min.js" type="text/javascript"></script>
 ```
 
-#### less
+**Notes**:
 
-Those dependencies are needed to compile the LESS import.
+* `oui-bs3.css` contains all styles of `bootstrap@v3.4.1`. No need to add another `bootstrap.css` as a base.
+* `bootstrap.js` and `bootstrap.min.js` are provided in the `/dist` folder, but are the same as those provided by `bootstrap@v3.4.1`.
 
-- [Bootstrap](https://github.com/twbs/bootstrap)
-- [less-plugin-remcalc](https://github.com/ovh-ux/less-plugin-remcalc)
-- [ovh-ui-kit](https://github.com/ovh-ux/ovh-ui-kit)
+## Develop
 
-```less
-/* Required */
-@rem-base: rem-base(10px);
+### Run in development mode
 
-// Paths of the dependencies
-@bs-path: "./node_modules/bootstrap";
-@oui-path: "./node_modules/ovh-ui-kit";
+1. Clone and install `ovh-ui-kit-bs`
 
-@import "./node_modules/ovh-ui-kit-bs/src/ovh-ui-kit-bs";
-
-/* Icons & Fonts */
-
-// Bootstrap fonts
-@icon-font-path: "@{bs-path}/fonts/";
-
-// OVH UI icons & fonts
-@oui-icon-dist-folder: "@{oui-path}/dist/icons";
-@oui-font-source-sans-pro-folder: "@{oui-path}/packages/oui-typography/fonts/source-sans-pro";
-
-/* Optional */
-
-// OVH Universe
-@ovh-universe-color: @brand-primary;
-```
-
-## Contributing
-
-Please read our [contributing guidelines](https://github.com/ovh-ux/ovh-ux-guidelines/blob/master/.github/CONTRIBUTING.md).
-
-### Install dependencies
-
-```
+```bash
+git clone https://github.com/ovh-ux/ovh-ui-kit-bs.git
+cd ovh-ui-kit-bs
 yarn install
 ```
 
-### Open the test page
+2. Build and run `ovh-ui-kit-bs` in the test page
 
-This command will open the test page in your default browser.
-
-```
+```bash
+yarn build
 yarn start
 ```
 
-### Build `/dist` files
+If you apply modifications on the source files, you'll need to rebuild the project.
 
-You will need to build the dist files for the changes to be taken into account.
+## Contributing
 
-```
-yarn build
-```
+You've developed a new cool feature? Fixed an annoying bug? We'd be happy
+to hear from you!
+
+Please read our [contributing guidelines](https://github.com/ovh-ux/ovh-ux-guidelines/blob/master/.github/CONTRIBUTING.md).
+
+## Related links
+
+ * Contribute: [https://github.com/ovh-ux/ovh-ux-guidelines/blob/master/.github/CONTRIBUTING.md](https://github.com/ovh-ux/ovh-ux-guidelines/blob/master/.github/CONTRIBUTING.md)
+ * Report bugs: [https://github.com/ovh-ux/ovh-ui-kit-bs/issues](https://github.com/ovh-ux/ovh-ui-kit-bs/issues)
+ * Get latest version: [https://github.com/ovh-ux/ovh-ui-kit-bs](https://github.com/ovh-ux/ovh-ui-kit-bs)
 
 ## License
 

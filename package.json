@@ -13,13 +13,15 @@
   "author": "OVH SAS",
   "main": "dist/css/oui-bs3.css",
   "scripts": {
-    "build": "run-s clean less docs",
+    "build": "run-s clean dist docs",
     "clean": "rimraf dist docs/assets",
+    "dist": "run-p dist:*",
+    "dist:less": "lessc --remcalc --clean-css --source-map \"src/index.less\" \"dist/css/oui-bs3.css\"",
+    "dist:fonts": "cpx \"node_modules/bootstrap/dist/fonts/**/*\" \"dist/fonts/\"",
+    "dist:js": "cpx \"node_modules/bootstrap/dist/js/bootstrap.*\" \"dist/js/\"",
     "docs": "run-p docs:*",
-    "docs:bs": "cpx \"node_modules/bootstrap/dist/**/*\" \"docs/assets/\"",
     "docs:oui": "cpx \"node_modules/@ovh-ux/ui-kit/dist/**/*\" \"docs/assets/\"",
     "docs:oui-bs": "cpx \"dist/**/*\" \"docs/assets/\"",
-    "less": "lessc --remcalc --clean-css --source-map \"src/index.less\" \"dist/css/oui-bs3.css\"",
     "start": "open-cli docs/index.html"
   },
   "devDependencies": {
