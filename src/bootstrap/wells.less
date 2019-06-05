@@ -1,7 +1,9 @@
-@import "@{oui-path}/packages/oui-box/_mixins";
-
 .well {
-    #oui > .box-base();
-
-    box-shadow: none;
+  background: @oui-box-background-color;
+  border: @oui-box-border-size solid @oui-box-border-color;
+  border-radius: @oui-box-border-radius;
+  margin-bottom: @oui-box-spacing;
+  padding: @oui-box-padding;
+  text-align: left;
+  box-shadow: none;
 }

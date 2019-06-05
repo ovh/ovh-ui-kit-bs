@@ -1,24 +1,20 @@
-dl {
-    &.dl-horizontal {
-        &.dl-lg {
-            @media (min-width: 768px) {
-                dt {
-                    width: 200px;
-                }
-
-                dd {
-                    margin-left: 200px + @grid-gutter-width;
-                }
-            }
-
-            dt {
-                text-overflow: inherit;
-                white-space: normal;
-            }
-
-            dd {
-                margin-bottom: 10px;
-            }
-        }
+dl.dl-horizontal.dl-lg {
+  @media (min-width: 768px) {
+    dt {
+      width: 200px;
     }
+
+    dd {
+      margin-left: 200px + @grid-gutter-width;
+    }
+  }
+
+  dt {
+    text-overflow: inherit;
+    white-space: normal;
+  }
+
+  dd {
+    margin-bottom: 10px;
+  }
 }

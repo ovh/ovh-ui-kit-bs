@@ -1,9 +1,4 @@
-@import "@{oui-path}/packages/oui/_settings";
-@import "@{oui-path}/packages/oui-button/_variables";
-@import "@{oui-path}/packages/oui-field/_variables";
-@import "@{oui-path}/packages/oui-modal/_variables";
-@import "@{oui-path}/packages/oui-progress/_variables";
-@import "@{oui-path}/packages/oui-responsive/_variables";
+@import "@{oui-path}/less/_variables";
 
 //
 // Variables
@@ -137,9 +132,9 @@
 @table-condensed-cell-padding:  5px;
 
 //** Default background color used for all tables.
-@table-bg:                      transparent;
+@table-bg:                      @oui-datagrid-row-background-color_odd;
 //** Background color used for `.table-striped`.
-@table-bg-accent:               #f9f9f9;
+@table-bg-accent:               @oui-datagrid-row-background-color_even;
 //** Background color used for `.table-hover`.
 @table-bg-hover:                #f5f5f5;
 @table-bg-active:               @table-bg-hover;
@@ -667,21 +662,21 @@
 @progress-bar-fg:             @ovh-universe-color;
 @progress-bar-text:           #fff;
 //** Success progress bar color
-@progress-bar-success-bg:     @oui-progress-success-background-color;
+@progress-bar-success-bg:     @oui-progress-background-color;
 @progress-bar-success-fg:     @oui-progress-success-foreground-color;
-@progress-bar-success-text:   @oui-progress-success-text-color;
+@progress-bar-success-text:   @oui-progress-bar-text-color;
 //** Warning progress bar color
-@progress-bar-warning-bg:     @oui-progress-warning-background-color;
+@progress-bar-warning-bg:     @oui-progress-background-color;
 @progress-bar-warning-fg:     @oui-progress-warning-foreground-color;
-@progress-bar-warning-text:   @oui-progress-warning-text-color;
+@progress-bar-warning-text:   @oui-progress-bar-text-color;
 //** Danger progress bar color
-@progress-bar-danger-bg:      @oui-progress-error-background-color;
+@progress-bar-danger-bg:      @oui-progress-background-color;
 @progress-bar-danger-fg:      @oui-progress-error-foreground-color;
-@progress-bar-danger-text:    @oui-progress-error-text-color;
+@progress-bar-danger-text:    @oui-progress-bar-text-color;
 //** Info progress bar color
-@progress-bar-info-bg:        @oui-progress-info-background-color;
+@progress-bar-info-bg:        @oui-progress-background-color;
 @progress-bar-info-fg:        @oui-progress-info-foreground-color;
-@progress-bar-info-text:      @oui-progress-info-text-color;
+@progress-bar-info-text:      @oui-progress-bar-text-color;
 
 
 //== List group

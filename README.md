@@ -68,7 +68,7 @@ Please read our [contributing guidelines](https://github.com/ovh-ux/ovh-ux-guide
 ### Install dependencies
 
 ```
-make install
+yarn install
 ```
 
 ### Open the test page
@@ -76,7 +76,7 @@ make install
 This command will open the test page in your default browser.
 
 ```
-make dev
+yarn start
 ```
 
 ### Build `/dist` files
@@ -84,7 +84,7 @@ make dev
 You will need to build the dist files for the changes to be taken into account.
 
 ```
-make build
+yarn build
 ```
 
 ## License

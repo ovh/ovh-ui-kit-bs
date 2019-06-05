@@ -1,16 +1,17 @@
-@import "@{oui-path}/packages/oui-typography/_variables";
+.headings(@index: length(@oui-heading-font-sizes)) when(@index > 0) {
+  .headings(@index - 1);
 
-.ovh-ui-kit-bs-typography-headers(@index: length(@oui-header-font-sizes)) when(@index > 0) {
-    .ovh-ui-kit-bs-typography-headers(@index - 1);
+  h@{index},
+  .h@{index} {
+    #oui > .base-font();
 
-    h@{index},
-    .h@{index} {
-        line-height: @line-height-base;
-        font-weight: extract(@oui-header-font-weights, @index);
-        margin: extract(@oui-header-margins, @index);
-    }
+    font-size: extract(@oui-heading-font-sizes, @index);
+    font-weight: extract(@oui-heading-font-weights, @index);
+    margin: extract(@oui-heading-margins, @index);
+    color: inherit;
+  }
 }
 
-.ovh-ui-kit-bs-typography-headers();
+.headings();
 
-.header-underline { border-bottom: @oui-header-border-width solid @oui-header-border-color; }
+.header-underline { border-bottom: @oui-heading-border-width solid @oui-heading-border-color; }
