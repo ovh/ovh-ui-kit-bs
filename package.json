@@ -22,9 +22,10 @@
     "docs": "run-p docs:*",
     "docs:oui": "cpx \"node_modules/@ovh-ux/ui-kit/dist/**/*\" \"docs/assets/\"",
     "docs:oui-bs": "cpx \"dist/**/*\" \"docs/assets/\"",
-    "lint": "stylelint 'src/**/*.less'",
+    "preversion": "yarn test",
     "version": "yarn build && git add .",
-    "start": "open-cli docs/index.html"
+    "start": "open-cli docs/index.html",
+    "test": "stylelint 'src/**/*.less'"
   },
   "devDependencies": {
     "@ovh-ux/ui-kit": "^3.1.3",

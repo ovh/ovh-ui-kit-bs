@@ -65,11 +65,11 @@ If you apply modifications on the source files, you'll need to rebuild the proje
 You've developed a new cool feature? Fixed an annoying bug? We'd be happy
 to hear from you!
 
-Please read our [contributing guidelines](https://github.com/ovh-ux/ovh-ux-guidelines/blob/master/.github/CONTRIBUTING.md).
+Please read our [contributing guidelines](https://github.com/ovh-ux/ovh-ui-kit-bs/blob/master/.github/CONTRIBUTING.md).
 
 ## Related links
 
- * Contribute: [https://github.com/ovh-ux/ovh-ux-guidelines/blob/master/.github/CONTRIBUTING.md](https://github.com/ovh-ux/ovh-ux-guidelines/blob/master/.github/CONTRIBUTING.md)
+ * Contribute: [https://github.com/ovh-ux/ovh-ui-kit-bs/blob/master/.github/CONTRIBUTING.md](https://github.com/ovh-ux/ovh-ui-kit-bs/blob/master/.github/CONTRIBUTING.md)
  * Report bugs: [https://github.com/ovh-ux/ovh-ui-kit-bs/issues](https://github.com/ovh-ux/ovh-ui-kit-bs/issues)
  * Get latest version: [https://github.com/ovh-ux/ovh-ui-kit-bs](https://github.com/ovh-ux/ovh-ui-kit-bs)
 
