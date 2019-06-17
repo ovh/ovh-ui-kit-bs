@@ -1,58 +1,56 @@
-@import "@{oui-path}/packages/oui-input/_mixins";
-@import "@{oui-path}/packages/oui-input/_normalize";
-@import "@{oui-path}/packages/oui-label/_mixins";
-@import "@{oui-path}/packages/oui-label/_normalize";
-@import "@{oui-path}/packages/oui-radio/_variables";
-@import "@{oui-path}/packages/oui-select/_normalize";
-
 label {
-    #oui > .label-normalize();
-    #oui > .label-base();
+  #oui > .base-font();
 
-    &.required::after {
-        content: "*";
-        color: @state-danger-text;
-        margin-left: 5px;
-    }
+  display: block;
+  padding: @oui-label-padding;
+  margin: @oui-label-margin;
+  color: @oui-label-font-color;
+  font-size: @oui-label-font-size;
+  font-weight: @oui-label-font-weight;
+
+  &.required::after {
+    content: "*";
+    color: @state-danger-text;
+    margin-left: 5px;
+  }
 }
 
 legend {
-    font-size: @font-size-base;
-    font-weight: @oui-font-semibold;
-    margin-bottom: .5em;
+  font-size: @font-size-base;
+  font-weight: @oui-font-semibold;
+  margin-bottom: 0.5em;
 }
 
 .form-control {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 // Inputs, Textarea
+textarea.form-control { resize: vertical; }
+
 input.form-control,
 textarea.form-control {
-    #oui > .input-normalize();
-    #oui > .input-base();
+  #oui > .input-base();
 
-    margin-bottom: 0;
-    font-size: 16px;
+  margin-bottom: 0;
+  font-size: 16px;
 
-    // States
-    &:disabled,
-    &.disabled { opacity: 1; }
+  // States
+  &:disabled,
+  &.disabled { opacity: 1; }
 
-    .has-success & {
-        #oui > .input-variant(@state-success-text; @state-success-bg; @state-success-border);
-    }
+  .has-success & {
+    #oui > .input-variant(@state-success-text; @state-success-bg; @state-success-border);
+  }
 
-    .has-warning & {
-        #oui > .input-variant(@state-warning-text; @state-warning-bg; @state-warning-border);
-    }
+  .has-warning & {
+    #oui > .input-variant(@state-warning-text; @state-warning-bg; @state-warning-border);
+  }
 
-    .has-error & {
-        #oui > .input-variant(@state-danger-text; @state-danger-bg; @state-danger-border);
-    }
+  .has-error & {
+    #oui > .input-variant(@state-danger-text; @state-danger-bg; @state-danger-border);
+  }
 }
-
-textarea.form-control { resize: vertical; }
 
 // Checkbox, Radio
 input[type="radio"],
@@ -62,280 +60,387 @@ input[type="checkbox"] { margin: @padding-base-vertical 0 0 0; }
 .checkbox-inline,
 .radio,
 .radio-inline {
-    color: @oui-checkbox-font-color;
+  color: @oui-checkbox-font-color;
 
-    &.disabled { color: @oui-color-dusty; }
+  &.disabled { color: @oui-color-dusty; }
 }
 
 .checkbox label,
 .checkbox-inline,
 .radio label,
 .radio-inline {
-    line-height: @oui-checkbox-line-height;
-    padding-left: calc(@oui-checkbox-size * 1.5);
-    font-size: @oui-checkbox-size;
-    font-weight: @oui-font-semibold;
-    color: inherit;
+  line-height: @oui-choice-line-height;
+  padding-left: calc(@oui-choice-font-size * 1.5);
+  font-size: @oui-choice-font-size;
+  font-weight: @oui-font-semibold;
+  color: inherit;
 }
 
 .checkbox-description,
 .radio-description {
-    display: block;
-    font-size: @oui-radio-description-font-size;
-    font-weight: @oui-font-regular;
+  display: block;
+  font-size: @oui-radio-description-font-size;
+  font-weight: @oui-font-regular;
 
-    .has-success & { color: @brand-success; }
+  .has-success & { color: @brand-success; }
 
-    .has-warning & { color: @brand-warning; }
+  .has-warning & { color: @brand-warning; }
 
-    .has-error & { color: @brand-danger; }
+  .has-error & { color: @brand-danger; }
 }
 
 .checkbox,
 .checkbox-inline {
-    input[type="checkbox"] { margin-left: calc(-@oui-checkbox-size * 1.5); }
+  input[type="checkbox"] { margin-left: calc(-@oui-choice-font-size * 1.5); }
 }
 
 .radio,
 .radio-inline {
-    input[type="radio"] { margin-left: calc(-@oui-checkbox-size * 1.5); }
+  input[type="radio"] { margin-left: calc(-@oui-choice-font-size * 1.5); }
 }
 
 // Select
 select.form-control {
-    #oui > .select-normalize();
+  #oui > .base-font();
+  #oui > .text-ellipsis();
 
-    line-height: 38px;
-    height: ~"calc(@{oui-select-font-size} * 2.25)";
-    min-height: 40px;
-    padding: 0 @oui-input-padding;
-    font-size: 16px;
-    font-weight: @oui-select-font-weight;
-    color: @oui-select-font-color;
-    box-shadow: @oui-select-shadow;
-    border: 1px solid @oui-select-border-color;
-    background-color: #fff;
-    cursor: pointer;
+  height: @oui-select-height;
+  padding: 0 @oui-select-padding-x;
+  font-size: @oui-select-font-size;
+  font-weight: @oui-select-font-weight;
+  color: @oui-select-font-color;
+  box-shadow: @oui-select-box-shadow;
+  border: @oui-select-border-width solid @oui-select-border-color;
+  background-color: @oui-select-background-color;
+  cursor: pointer;
 
-    &:focus,
-    &:active {
-        border: 1px solid @oui-input-border-color-focus;
-        outline: none;
-        box-shadow: inset 1px 1px 2px 0 fade(@oui-input-border-color-focus, 50%), 0 0 3px 0 rgba(0, 0, 0, 0.35);
-        background-color: @oui-input-background-color-focus;
-    }
+  &:focus,
+  &:active {
+    border: 1px solid @oui-input-border-color_focus;
+    outline: none;
+    box-shadow: inset 1px 1px 2px 0 fade(@oui-input-border-color_focus, 50%), 0 0 3px 0 rgba(0, 0, 0, 0.35);
+    background-color: @oui-input-background-color_focus;
+  }
 
-    &:disabled {
-        border-color: @oui-input-background-color-disabled;
-        background-color: @oui-color-concrete;
-        color: @oui-input-font-color-disabled;
-        text-shadow: none;
-        cursor: not-allowed;
-    }
+  &:disabled {
+    border-color: @oui-input-background-color_disabled;
+    background-color: @oui-input-background-color_disabled;
+    color: @oui-input-font-color_disabled;
+    text-shadow: none;
+    cursor: not-allowed;
+  }
 
-    &[multiple] {
-        height: auto;
-        background-image: none;
-    }
+  &[multiple] {
+    height: auto;
+    background-image: none;
+  }
 
-    // States
-    &.disabled { opacity: 1; }
+  // States
+  &.disabled { opacity: 1; }
 
-    .has-success & {
-        #oui > .select-variant(@state-success-text; @state-success-bg; @state-success-border);
-    }
+  .has-success & {
+    #oui > .select-variant(@state-success-text; @state-success-bg; @state-success-border);
+  }
 
-    .has-warning & {
-        #oui > .select-variant(@state-warning-text; @state-warning-bg; @state-warning-border);
-    }
+  .has-warning & {
+    #oui > .select-variant(@state-warning-text; @state-warning-bg; @state-warning-border);
+  }
 
-    .has-error & {
-        #oui > .select-variant(@state-danger-text; @state-danger-bg; @state-danger-border);
-    }
+  .has-error & {
+    #oui > .select-variant(@state-danger-text; @state-danger-bg; @state-danger-border);
+  }
 }
 
 // Sizing
+// stylelint-disable no-descending-specificity
 input.form-control,
 textarea.form-control,
 select.form-control {
-    &.input-lg,
-    .form-group-lg & {
-        .input-size(@input-height-large; @padding-large-vertical; @oui-input-padding; @font-size-large; @line-height-large; @input-border-radius-large);
+  &.input-lg,
+  .form-group-lg & {
+    .input-size(
+      @input-height-large,
+      @padding-large-vertical,
+      @oui-input-padding-x,
+      @font-size-large,
+      @line-height-large,
+      @input-border-radius-large
+    );
 
-        min-height: @input-height-large;
-    }
+    min-height: @input-height-large;
+  }
 
-    &.input-sm,
-    .form-group-sm & {
-        .input-size(@input-height-small; @padding-small-vertical; @oui-input-padding; @font-size-base; @line-height-small; @input-border-radius-small);
+  &.input-sm,
+  .form-group-sm & {
+    .input-size(
+      @input-height-small,
+      @padding-small-vertical,
+      @oui-input-padding-x,
+      @font-size-base,
+      @line-height-small,
+      @input-border-radius-small
+    );
 
-        min-height: @input-height-small;
-    }
+    min-height: @input-height-small;
+  }
 }
+// stylelint-enable no-descending-specificity
 
 // Feedbacks
 .form-control-feedback {
-    min-width: 50px;
-    font-size: @font-size-base;
-    color: @oui-color-silver;
+  min-width: 50px;
+  font-size: @font-size-base;
+  color: @oui-color-silver;
 
-    &.oui-icon { font-size: @font-size-large; }
+  &.oui-icon { font-size: @font-size-large; }
 }
 
 .has-feedback {
-    label ~ .form-control-feedback { top: calc(@font-size-base * @line-height-base + 6px); }
+  label ~ .form-control-feedback { top: calc(@font-size-base * @line-height-base + 6px); }
 
-    .form-control { padding-right: calc(50px + @oui-input-padding) }
+  .form-control { padding-right: calc(50px + @oui-input-padding); }
 
-    // Feedback Icon
-    #oui > .feedback-variant(@oui-color-silver; @oui-input-border-color-focus);
+  // Feedback Icon
+  #oui > .feedback-variant(@oui-color-silver; @oui-input-border-color_focus);
 
-    &.has-success {
-        #oui > .feedback-variant(@oui-color-silver; @state-success-text);
-    }
+  &.has-success {
+    #oui > .feedback-variant(@oui-color-silver; @state-success-text);
+  }
 
-    &.has-warning {
-        #oui > .feedback-variant(@oui-color-silver; @state-warning-text);
-    }
+  &.has-warning {
+    #oui > .feedback-variant(@oui-color-silver; @state-warning-text);
+  }
 
-    &.has-error {
-        #oui > .feedback-variant(@oui-color-silver; @state-danger-text);
-    }
+  &.has-error {
+    #oui > .feedback-variant(@oui-color-silver; @state-danger-text);
+  }
 }
 
 // Feedback states
 .input-group-addon {
-    .has-success & { border-color: @state-success-border; }
+  .has-success & { border-color: @state-success-border; }
 
-    .has-warning & { border-color: @state-warning-border; }
+  .has-warning & { border-color: @state-warning-border; }
 
-    .has-error & { border-color: @state-danger-border; }
+  .has-error & { border-color: @state-danger-border; }
 }
-
 
 // Help text
 .help-block {
-    font-size: @font-size-base;
-    color: @oui-color-sapphire;
+  font-size: @font-size-base;
+  color: @oui-color-sapphire;
 }
-
 
 // Inline Forms
 .form-inline {
-    label {
-        display: inline-block;
-        margin-bottom: 0;
-        vertical-align: middle;
-    }
+  label {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
 
-    .input-group { width: auto; }
+  .input-group { width: auto; }
 }
 
 // Horizontal Forms
 .form-horizontal {
-    .radio,
-    .checkbox,
-    .radio-inline,
-    .checkbox-inline {
-        padding-top: @padding-base-vertical;
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline {
+    padding-top: @padding-base-vertical;
+  }
+
+  .help-block { margin-bottom: 0; }
+
+  @media (min-width: @screen-sm-min) {
+    .control-label {
+      margin-bottom: 0;
+      padding-top: @padding-base-vertical;
     }
+  }
 
-    .help-block { margin-bottom: 0; }
-
+  .form-group-lg {
     @media (min-width: @screen-sm-min) {
-        .control-label {
-            margin-bottom: 0;
-            padding-top: @padding-base-vertical;
-        }
+      .control-label {
+        line-height: @line-height-large;
+        padding-top: calc(@padding-large-vertical + 1px); // Padding + Border
+        font-size: @font-size-large;
+      }
     }
+  }
 
-    .form-group-lg {
-        @media (min-width: @screen-sm-min) {
-            .control-label {
-                line-height: @line-height-large;
-                padding-top: calc(@padding-large-vertical + 1px); // Padding + Border
-                font-size: @font-size-large;
-            }
-        }
+  .form-group-sm {
+    @media (min-width: @screen-sm-min) {
+      .control-label {
+        padding-top: calc(@padding-small-vertical + 1px); // Padding + Border
+        font-size: @font-size-base;
+      }
     }
-
-    .form-group-sm {
-        @media (min-width: @screen-sm-min) {
-            .control-label {
-                padding-top: calc(@padding-small-vertical + 1px); // Padding + Border
-                font-size: @font-size-base;
-            }
-        }
-    }
+  }
 }
 
 // Mixins
 #oui {
-    .input-variant(
-        @status-font-color;
-        @status-background-color;
-        @status-border-color
-    ) {
-        box-shadow: 1px 2px 0 0 rgba(18, 40, 68, 0.07) inset;
+  .input-base(
+    @height: @oui-input-height,
+    @margin: @oui-input-margin,
+    @padding: @oui-input-padding,
+    @font-color: @oui-input-font-color,
+    @font-color_disabled: @oui-input-font-color_disabled,
+    @font-color_readonly: @oui-input-font-color_readonly,
+    @font-size: @oui-input-font-size,
+    @font-weight: @oui-input-font-weight,
+    @border-color: @oui-input-border-color,
+    @border-color_hover: @oui-input-border-color_hover,
+    @border-color_focus: @oui-input-border-color_focus,
+    @border-color_disabled: @oui-input-border-color_disabled,
+    @border-color_readonly: @oui-input-border-color_readonly,
+    @border-radius: @oui-input-border-radius,
+    @border-size: @oui-input-border-size,
+    @box-shadow: @oui-input-box-shadow,
+    @box-shadow_focus: @oui-input-box-shadow_focus,
+    @box-shadow_error: @oui-input-box-shadow_error,
+    @background-color: @oui-input-background-color,
+    @background-color_focus: @oui-input-background-color_focus,
+    @background-color_disabled: @oui-input-background-color_disabled,
+    @background-color_readonly: @oui-input-background-color_readonly,
+    @selection-background-color: @oui-input-selection-background-color,
+    @selection-font-color: @oui-input-selection-font-color
+  ) {
+    #oui > .base-font();
 
-        &:not(:disabled),
-        &:not(:disabled):hover,
-        &:not(:disabled):active,
-        &:not(:disabled):focus {
-            font-weight: 400;
-            color: @status-font-color;
-            border-color: @status-border-color;
-            background-color: @status-background-color;
-        }
+    width: 100%;
+    min-height: @height;
+    line-height: calc(@height - (@border-size * 2));
+    margin: @margin;
+    padding: @padding;
+    display: block;
+    border: @border-size solid @border-color;
+    border-radius: @border-radius;
+    background-color: @background-color;
+    box-shadow: @box-shadow;
+    color: @font-color;
+    font-size: @font-size;
+    font-weight: @font-weight;
 
-        &:not(:disabled):focus { box-shadow: 0 0 3px 0 rgba(0, 0, 0, .35); }
-
-        &::selection {
-            color: #fff;
-            background: @status-font-color;
-        }
-
-        &::-moz-selection {
-            color: #fff;
-            background: @status-font-color;
-        }
-
-        &::-webkit-selection {
-            color: #fff;
-            background: @status-font-color;
-        }
+    &::-ms-clear,
+    &::-ms-reveal {
+      display: none;
     }
 
-    .select-variant(
-        @status-font-color;
-        @status-background-color;
-        @status-border-color
-    ) {
-        box-shadow: @oui-select-shadow;
-
-        &:not(:disabled),
-        &:not(:disabled):hover,
-        &:not(:disabled):active,
-        &:not(:disabled):focus {
-            font-weight: 400;
-            color: @status-font-color;
-            border-color: @status-border-color;
-            background-color: @status-background-color;
-        }
-
-        &:not(:disabled):focus { box-shadow: 0 0 3px 0 rgba(0, 0, 0, .35); }
+    &::selection {
+      background: @selection-background-color;
+      color: @selection-font-color;
     }
 
-    .feedback-variant(
-        @feedback-color;
-        @feedback-color-focus
-    ) {
-        .form-control-feedback { color: @feedback-color; }
-
-        .form-control {
-            & ~ .form-control-feedback { color: @feedback-color; }
-
-            &:focus ~ .form-control-feedback { color: @feedback-color-focus; }
-        }
+    &::-moz-selection {
+      background: @selection-background-color;
+      color: @selection-font-color;
     }
+
+    &:hover {
+      border-color: @border-color_hover;
+    }
+
+    &:focus {
+      #oui > .animate();
+
+      transition-property: border-color, box-shadow, background-color;
+      border-color: @border-color_focus;
+      outline: none;
+      box-shadow: @box-shadow_focus;
+      background-color: @background-color_focus;
+      text-decoration: none;
+    }
+
+    &:read-only {
+      border-color: @border-color_readonly;
+      box-shadow: none;
+      background-color: @background-color_readonly;
+      color: @font-color_readonly;
+    }
+
+    &:disabled {
+      border-color: @border-color_disabled;
+      background-color: @background-color_disabled;
+      box-shadow: none;
+      color: @font-color_disabled;
+      cursor: auto;
+    }
+
+    &::placeholder {
+      color: @oui-input-placeholder-font-color;
+    }
+  }
+
+  .input-variant(
+      @status-font-color;
+      @status-background-color;
+      @status-border-color
+  ) {
+    box-shadow: 1px 2px 0 0 rgba(18, 40, 68, 0.07) inset;
+
+    &:not(:disabled),
+    &:not(:disabled):hover,
+    &:not(:disabled):active,
+    &:not(:disabled):focus {
+      font-weight: 400;
+      color: @status-font-color;
+      border-color: @status-border-color;
+      background-color: @status-background-color;
+    }
+
+    &:not(:disabled):focus { box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.35); }
+
+    &::selection {
+      color: #fff;
+      background: @status-font-color;
+    }
+
+    // stylelint-disable no-descending-specificity
+    &::-moz-selection {
+      color: #fff;
+      background: @status-font-color;
+    }
+
+    &::-webkit-selection {
+      color: #fff;
+      background: @status-font-color;
+    }
+    // stylelint-enable no-descending-specificity
+  }
+
+  .select-variant(
+      @status-font-color;
+      @status-background-color;
+      @status-border-color
+  ) {
+    box-shadow: @oui-select-box-shadow;
+
+    &:not(:disabled),
+    &:not(:disabled):hover,
+    &:not(:disabled):active,
+    &:not(:disabled):focus {
+      font-weight: 400;
+      color: @status-font-color;
+      border-color: @status-border-color;
+      background-color: @status-background-color;
+    }
+
+    &:not(:disabled):focus { box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.35); }
+  }
+
+  .feedback-variant(
+      @feedback-color;
+      @feedback-color-focus
+  ) {
+    .form-control-feedback { color: @feedback-color; }
+
+    .form-control {
+      & ~ .form-control-feedback { color: @feedback-color; }
+
+      &:focus ~ .form-control-feedback { color: @feedback-color-focus; }
+    }
+  }
 }

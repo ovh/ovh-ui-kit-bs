@@ -1,121 +1,139 @@
-@import "@{oui-path}/packages/oui-message/_normalize";
-@import "@{oui-path}/packages/oui-message/_variables";
-
 // Alert
 .alert {
-    #oui > .message-normalize();
+  #oui > .base-font();
 
-    width: 100%;
-    max-width: 100%;
-    min-height: 50px;
-    line-height: 1.375;
-    position: relative;
-    padding: @oui-message-padding;
-    margin: @oui-message-margin;
-    font-size: @oui-message-font-size;
-    font-weight: @oui-message-font-weight;
-    color: @text-color;
-    border: 2px solid transparent;
-    border-radius: @border-radius-large;
-    background-color: @oui-message-background-color;
+  width: 100%;
+  max-width: 100%;
+  min-height: 50px;
+  line-height: 1.375;
+  position: relative;
+  padding: @oui-message-padding;
+  margin: @oui-message-margin;
+  font-size: @oui-message-font-size;
+  font-weight: @oui-message-font-weight;
+  color: @text-color;
+  border: @oui-message-border-width solid transparent;
+  border-radius: @border-radius-large;
+  background-color: @oui-message-background-color;
 
-    &::before {
-        display: block;
-        position: absolute;
-        top: @oui-message-success-icon-position-top;
-        left: @oui-message-success-icon-position-left;
-    }
+  &::before {
+    display: block;
+    position: absolute;
+    top: @oui-message-icon-position-top;
+    left: @oui-message-icon-position-left;
+  }
 
-    &.alert-info {
-        #oui > .alert-variant(
-            @oui-message-info-padding;
-            @state-info-text;
-            @state-info-border;
-            @state-info-bg;
-            @oui-message-info-icon-size;
-            @oui-message-info-icon-color;
-            @oui-icon-index-info_circle
-        );
-    }
+  &.alert-info {
+    #oui > .alert-variant(
+      @oui-message-padding;
+      @state-info-text;
+      @state-info-border;
+      @state-info-bg;
+      @oui-message-icon-size;
+      @oui-message-info-icon-color;
+      @oui-icon-index-info_circle
+    );
+  }
 
-    &.alert-success {
-        #oui > .alert-variant(
-            @oui-message-success-padding;
-            @state-success-text;
-            @state-success-border;
-            @state-success-bg;
-            @oui-message-success-icon-size;
-            @oui-message-success-icon-color;
-            @oui-icon-index-success_circle
-        );
-    }
+  &.alert-success {
+    #oui > .alert-variant(
+      @oui-message-padding;
+      @state-success-text;
+      @state-success-border;
+      @state-success-bg;
+      @oui-message-icon-size;
+      @oui-message-success-icon-color;
+      @oui-icon-index-success_circle
+    );
+  }
 
-    &.alert-warning {
-        #oui > .alert-variant(
-            @oui-message-warning-padding;
-            @state-warning-text;
-            @state-warning-border;
-            @state-warning-bg;
-            @oui-message-warning-icon-size;
-            @oui-message-warning-icon-color;
-            @oui-icon-index-warning_circle
-        );
-    }
+  &.alert-warning {
+    #oui > .alert-variant(
+      @oui-message-padding;
+      @state-warning-text;
+      @state-warning-border;
+      @state-warning-bg;
+      @oui-message-icon-size;
+      @oui-message-warning-icon-color;
+      @oui-icon-index-warning_circle
+    );
+  }
 
-    &.alert-danger {
-        #oui > .alert-variant(
-            @oui-message-error-padding;
-            @state-danger-text;
-            @state-danger-border;
-            @state-danger-bg;
-            @oui-message-error-icon-size;
-            @oui-message-error-icon-color;
-            @oui-icon-index-error_circle
-        );
-    }
+  &.alert-danger {
+    #oui > .alert-variant(
+      @oui-message-padding;
+      @state-danger-text;
+      @state-danger-border;
+      @state-danger-bg;
+      @oui-message-icon-size;
+      @oui-message-error-icon-color;
+      @oui-icon-index-error_circle
+    );
+  }
 }
 
 .alert-dismissable,
 .alert-dismissible {
-    .close {
-        &:extend(.close);
+  .close {
+    #oui > .animate();
 
-        float: none;
-        position: absolute;
-        top: 6px;
-        right: 6px;
+    cursor: pointer;
+    position: absolute;
+    float: none;
+    top: @oui-message-close-button-top;
+    right: @oui-message-close-button-right;
+    min-width: @oui-message-close-button-width;
+    min-height: @oui-message-close-button-height;
+    padding: @oui-message-close-button-padding;
+    border: @oui-message-close-button-border;
+    margin: @oui-message-close-button-margin;
+    background-color: @oui-message-close-button-background-color;
+    opacity: @oui-message-close-button-opacity;
+    color: @oui-message-close-button-color;
+    font-weight: @oui-font-semibold;
+    font-size: @oui-message-close-button-font-size;
+    line-height: 0;
+    text-align: center;
 
-        &::before { display: block; }
+    &::before {
+      display: block;
     }
+
+    &:hover,
+    &:focus,
+    &:active {
+      #oui > .animate();
+
+      outline: none;
+      opacity: @oui-message-close-button-opacity_hover;
+    }
+  }
 }
 
 // Mixins
 #oui {
-    .alert-variant(
-        @padding;
-        @font-color;
-        @border-color;
-        @background-color;
-        @icon-size;
-        @icon-color;
-        @icon-content
-    ) {
-        padding: @padding;
-        color: @font-color;
-        border-color: @border-color;
-        background-color: @background-color;
+  .alert-variant(
+      @padding;
+      @font-color;
+      @border-color;
+      @background-color;
+      @icon-size;
+      @icon-color;
+      @icon-content
+  ) {
+    padding: @padding;
+    color: @font-color;
+    border-color: @border-color;
+    background-color: @background-color;
 
-        &::before {
-            #oui > .icon-normalize();
-            #oui > .icon();
-            #oui > .icon-type();
-            #oui > .icon-bicolor();
+    &::before {
+      #oui > .icon();
 
-            content: @icon-content;
-            position: absolute;
-            display: block;
-            font-size: @icon-size;
-            color: @icon-color;
-        }
+      content: @icon-content;
+      position: absolute;
+      display: block;
+      font-size: @icon-size;
+      color: @icon-color;
     }
+  }
 }

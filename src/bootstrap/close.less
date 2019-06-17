@@ -1,35 +1,33 @@
 // Close
 .close {
-    #oui > .animate();
+  #oui > .animate();
+  #oui > .icon();
 
-    cursor: pointer;
-    min-width: @close-font-size;
-    min-height: @close-font-size;
-    line-height: 0;
-    overflow: hidden;
-    opacity: .6;
-    text-align: center;
-    font-size: @close-font-size;
-    color: @close-color;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: @oui-modal-close-button-size;
+  min-height: @oui-modal-close-button-size;
+  padding: @oui-modal-close-button-padding-y @oui-modal-close-button-padding-x;
+  border: none;
+  margin: 0;
+  background-color: transparent;
+  color: @oui-modal-close-button-color;
+  font-size: @oui-modal-close-button-size;
+  text-align: center;
 
-    [aria-hidden] { display: none; }
+  &::before {
+    content: @oui-icon-index-close_thin;
+    display: block;
+  }
 
-    &::before {
-        #oui > .icon-normalize();
-        #oui > .icon();
-        #oui > .icon-type();
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    opacity: 1;
+  }
 
-        content: @oui-icon-index-close;
-        font-size: inherit;
-        color: @text-color;
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-        #oui > .animate();
-
-        outline: none;
-        opacity: 1;
-    }
+  [aria-hidden] { display: none; }
 }
