@@ -1,6 +1,6 @@
 {
   "name": "ovh-ui-kit-bs",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A bootstrap theme for the OVH managers, based on ovh-ui-kit.",
   "bugs": {
     "url": "https://github.com/ovh-ux/ovh-ui-kit-bs/issues"
