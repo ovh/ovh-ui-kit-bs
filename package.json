@@ -28,7 +28,7 @@
     "test": "stylelint 'src/**/*.less'"
   },
   "devDependencies": {
-    "@ovh-ux/ui-kit": "^3.2.2",
+    "@ovh-ux/ui-kit": "^3.3.4",
     "bootstrap": "^3.4.1",
     "cpx": "^1.5.0",
     "less": "^3.9.0",

@@ -132,10 +132,10 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@ovh-ux/ui-kit@^3.2.2":
-  version "3.2.2"
-  resolved "https://registry.yarnpkg.com/@ovh-ux/ui-kit/-/ui-kit-3.2.2.tgz#6df5665384f7bec04f957b549047a48bea5971d6"
-  integrity sha512-Ls+FtEwzXG/0nGej8KsxoGD6hQitA+vsAVPXQIr72S8iAXRHj9FzpSjFH9uXD1TAMjhZZQMLdkjEXBB11ZidIQ==
+"@ovh-ux/ui-kit@^3.3.4":
+  version "3.3.4"
+  resolved "https://registry.yarnpkg.com/@ovh-ux/ui-kit/-/ui-kit-3.3.4.tgz#ea5df5d4b16b7c277344a689b3cdea291a122a30"
+  integrity sha512-xZ+kkUxFqTvf0ivXMVj3lZ/kzXtiu+egi9SsFwqZELiXNTR8Pgqi+GGIeglO+jeSZVRoQigmCaa2mzoOKUodNw==
 
 "@types/events@*":
   version "3.0.0"
