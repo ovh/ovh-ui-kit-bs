@@ -6950,11 +6950,11 @@ oui-criteria-adder {
   text-overflow: ellipsis;
   transition-duration: 0.2s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  color: #59697d;
+  font-weight: 700;
   padding: 0.125rem 0.625rem;
   white-space: nowrap;
   outline: none;
-  color: #59697d;
-  font-weight: 400;
   height: 2.75rem;
   vertical-align: inherit;
   background-color: #e9ebe7;
@@ -8386,29 +8386,33 @@ oui-form-actions {
   display: block;
   content: "\f15e";
 }
-.caret::before.oui-icon-triangle-up_extra-thin::before {
+.caret::before.oui-icon-triangle-up-down_extra-thin::before {
   display: block;
   content: "\f15f";
 }
-.caret::before.oui-icon-user::before {
+.caret::before.oui-icon-triangle-up_extra-thin::before {
   display: block;
   content: "\f160";
 }
-.caret::before.oui-icon-user_extra-thin::before {
+.caret::before.oui-icon-user::before {
   display: block;
   content: "\f161";
 }
-.caret::before.oui-icon-user_line::before {
+.caret::before.oui-icon-user_extra-thin::before {
   display: block;
   content: "\f162";
 }
-.caret::before.oui-icon-warning_circle::before {
+.caret::before.oui-icon-user_line::before {
   display: block;
   content: "\f163";
 }
-.caret::before.oui-icon-warning_extra-thin::before {
+.caret::before.oui-icon-warning_circle::before {
   display: block;
   content: "\f164";
+}
+.caret::before.oui-icon-warning_extra-thin::before {
+  display: block;
+  content: "\f165";
 }
 .dropup .caret,
 .navbar-fixed-bottom .dropdown .caret {
@@ -9341,29 +9345,33 @@ oui-message {
   display: block;
   content: "\f15e";
 }
-.alert.alert-info::before.oui-icon-triangle-up_extra-thin::before {
+.alert.alert-info::before.oui-icon-triangle-up-down_extra-thin::before {
   display: block;
   content: "\f15f";
 }
-.alert.alert-info::before.oui-icon-user::before {
+.alert.alert-info::before.oui-icon-triangle-up_extra-thin::before {
   display: block;
   content: "\f160";
 }
-.alert.alert-info::before.oui-icon-user_extra-thin::before {
+.alert.alert-info::before.oui-icon-user::before {
   display: block;
   content: "\f161";
 }
-.alert.alert-info::before.oui-icon-user_line::before {
+.alert.alert-info::before.oui-icon-user_extra-thin::before {
   display: block;
   content: "\f162";
 }
-.alert.alert-info::before.oui-icon-warning_circle::before {
+.alert.alert-info::before.oui-icon-user_line::before {
   display: block;
   content: "\f163";
 }
-.alert.alert-info::before.oui-icon-warning_extra-thin::before {
+.alert.alert-info::before.oui-icon-warning_circle::before {
   display: block;
   content: "\f164";
+}
+.alert.alert-info::before.oui-icon-warning_extra-thin::before {
+  display: block;
+  content: "\f165";
 }
 .alert.alert-info::before::after {
   content: "";
@@ -9793,29 +9801,33 @@ oui-message {
   display: block;
   content: "\f15e";
 }
-.alert.alert-success::before.oui-icon-triangle-up_extra-thin::before {
+.alert.alert-success::before.oui-icon-triangle-up-down_extra-thin::before {
   display: block;
   content: "\f15f";
 }
-.alert.alert-success::before.oui-icon-user::before {
+.alert.alert-success::before.oui-icon-triangle-up_extra-thin::before {
   display: block;
   content: "\f160";
 }
-.alert.alert-success::before.oui-icon-user_extra-thin::before {
+.alert.alert-success::before.oui-icon-user::before {
   display: block;
   content: "\f161";
 }
-.alert.alert-success::before.oui-icon-user_line::before {
+.alert.alert-success::before.oui-icon-user_extra-thin::before {
   display: block;
   content: "\f162";
 }
-.alert.alert-success::before.oui-icon-warning_circle::before {
+.alert.alert-success::before.oui-icon-user_line::before {
   display: block;
   content: "\f163";
 }
-.alert.alert-success::before.oui-icon-warning_extra-thin::before {
+.alert.alert-success::before.oui-icon-warning_circle::before {
   display: block;
   content: "\f164";
+}
+.alert.alert-success::before.oui-icon-warning_extra-thin::before {
+  display: block;
+  content: "\f165";
 }
 .alert.alert-success::before::after {
   content: "";
@@ -9863,7 +9875,7 @@ oui-message {
   font-style: normal;
   position: relative;
   z-index: 1;
-  content: "\f163";
+  content: "\f164";
   position: absolute;
   display: block;
   font-size: 1.625rem;
@@ -10245,29 +10257,33 @@ oui-message {
   display: block;
   content: "\f15e";
 }
-.alert.alert-warning::before.oui-icon-triangle-up_extra-thin::before {
+.alert.alert-warning::before.oui-icon-triangle-up-down_extra-thin::before {
   display: block;
   content: "\f15f";
 }
-.alert.alert-warning::before.oui-icon-user::before {
+.alert.alert-warning::before.oui-icon-triangle-up_extra-thin::before {
   display: block;
   content: "\f160";
 }
-.alert.alert-warning::before.oui-icon-user_extra-thin::before {
+.alert.alert-warning::before.oui-icon-user::before {
   display: block;
   content: "\f161";
 }
-.alert.alert-warning::before.oui-icon-user_line::before {
+.alert.alert-warning::before.oui-icon-user_extra-thin::before {
   display: block;
   content: "\f162";
 }
-.alert.alert-warning::before.oui-icon-warning_circle::before {
+.alert.alert-warning::before.oui-icon-user_line::before {
   display: block;
   content: "\f163";
 }
-.alert.alert-warning::before.oui-icon-warning_extra-thin::before {
+.alert.alert-warning::before.oui-icon-warning_circle::before {
   display: block;
   content: "\f164";
+}
+.alert.alert-warning::before.oui-icon-warning_extra-thin::before {
+  display: block;
+  content: "\f165";
 }
 .alert.alert-warning::before::after {
   content: "";
@@ -10697,29 +10713,33 @@ oui-message {
   display: block;
   content: "\f15e";
 }
-.alert.alert-danger::before.oui-icon-triangle-up_extra-thin::before {
+.alert.alert-danger::before.oui-icon-triangle-up-down_extra-thin::before {
   display: block;
   content: "\f15f";
 }
-.alert.alert-danger::before.oui-icon-user::before {
+.alert.alert-danger::before.oui-icon-triangle-up_extra-thin::before {
   display: block;
   content: "\f160";
 }
-.alert.alert-danger::before.oui-icon-user_extra-thin::before {
+.alert.alert-danger::before.oui-icon-user::before {
   display: block;
   content: "\f161";
 }
-.alert.alert-danger::before.oui-icon-user_line::before {
+.alert.alert-danger::before.oui-icon-user_extra-thin::before {
   display: block;
   content: "\f162";
 }
-.alert.alert-danger::before.oui-icon-warning_circle::before {
+.alert.alert-danger::before.oui-icon-user_line::before {
   display: block;
   content: "\f163";
 }
-.alert.alert-danger::before.oui-icon-warning_extra-thin::before {
+.alert.alert-danger::before.oui-icon-warning_circle::before {
   display: block;
   content: "\f164";
+}
+.alert.alert-danger::before.oui-icon-warning_extra-thin::before {
+  display: block;
+  content: "\f165";
 }
 .alert.alert-danger::before::after {
   content: "";
@@ -11317,29 +11337,33 @@ dl.dl-horizontal.dl-lg dd {
   display: block;
   content: "\f15e";
 }
-.close::before.oui-icon-triangle-up_extra-thin::before {
+.close::before.oui-icon-triangle-up-down_extra-thin::before {
   display: block;
   content: "\f15f";
 }
-.close::before.oui-icon-user::before {
+.close::before.oui-icon-triangle-up_extra-thin::before {
   display: block;
   content: "\f160";
 }
-.close::before.oui-icon-user_extra-thin::before {
+.close::before.oui-icon-user::before {
   display: block;
   content: "\f161";
 }
-.close::before.oui-icon-user_line::before {
+.close::before.oui-icon-user_extra-thin::before {
   display: block;
   content: "\f162";
 }
-.close::before.oui-icon-warning_circle::before {
+.close::before.oui-icon-user_line::before {
   display: block;
   content: "\f163";
 }
-.close::before.oui-icon-warning_extra-thin::before {
+.close::before.oui-icon-warning_circle::before {
   display: block;
   content: "\f164";
+}
+.close::before.oui-icon-warning_extra-thin::before {
+  display: block;
+  content: "\f165";
 }
 .close:hover,
 .close:focus,
