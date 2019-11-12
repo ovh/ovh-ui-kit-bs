@@ -28,15 +28,15 @@
     "test": "stylelint 'src/**/*.less'"
   },
   "devDependencies": {
-    "@ovh-ux/ui-kit": "^3.4.0",
+    "@ovh-ux/ui-kit": "^3.8.0",
     "bootstrap": "^3.4.1",
     "cpx": "^1.5.0",
-    "less": "^3.9.0",
+    "less": "^3.10.3",
     "less-plugin-clean-css": "^1.5.1",
     "less-plugin-remcalc": "^0.1.0",
     "npm-run-all": "^4.1.5",
     "opn-cli": "^5.0.0",
-    "rimraf": "^2.6.3",
+    "rimraf": "^2.7.1",
     "stylelint": "^10.1.0",
     "stylelint-config-standard": "^18.3.0"
   }

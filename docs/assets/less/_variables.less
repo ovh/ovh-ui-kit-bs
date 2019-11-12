@@ -57,8 +57,10 @@
 @oui-icon-dist-folder: "../fonts/oui-icons";
 @oui-icon-spacing: 0;
 @oui-icon-size: 1.5em;
+@oui-icon-size_inherit: inherit;
 @oui-icon-color: inherit;
 @oui-icon-char-color: @oui-color-white;
+@oui-icon-font: normal normal normal @oui-icon-size/1 @oui-global-base-font-family-icon;
 @oui-icon-font-family: @oui-global-base-font-family-icon;
 
 // Abbreviations
@@ -151,6 +153,12 @@
 // Fonts
 @oui-font-source-sans-pro-folder: "../fonts/source-sans-pro";
 
+// Description
+@oui-description-term-font-weight: @oui-font-bold;
+@oui-description-description-font-weight: @oui-font-regular;
+@oui-description-horizontal-line-height: rem-calc(20);
+@oui-description-horizontal-margin-bottom: rem-calc(5);
+
 // Choice
 //
 // Common style for checkboxes, radios and select-picker
@@ -239,6 +247,15 @@
 @oui-choice-thumbnail-border-color-light-checked: @oui-color-pacific;
 @oui-choice-thumbnail-border-color-light-checked_hover: @oui-color-turquoise;
 @oui-choice-thumbnail-border-color-light-checked_disabled: @oui-color-pacific;
+
+@oui-choice-thumbnail-footer-spacing: @oui-choice-section-spacing;
+@oui-choice-thumbnail-footer-line-height: 1.125;
+@oui-choice-thumbnail-footer-padding-x: @oui-choice-thumbnail-padding;
+@oui-choice-thumbnail-footer-padding-y: rem-calc(10);
+@oui-choice-thumbnail-footer-background: @oui-color-charlotte;
+@oui-choice-thumbnail-footer-background_disabled: fade(@oui-color-charlotte, 50%);
+@oui-choice-thumbnail-footer-font-weight: @oui-font-semibold;
+@oui-choice-thumbnail-footer-font-size: rem-calc(18);
 
 /*
  * Components
@@ -510,16 +527,6 @@
 @oui-checkbox-box-shadow_focus: @oui-choice-box-shadow_focus;
 @oui-checkbox-box-shadow_error: @oui-choice-box-shadow_error;
 
-@oui-checkbox-thumbnail-padding: @oui-choice-thumbnail-padding;
-@oui-checkbox-thumbnail-footer-background: @oui-color-charlotte;
-@oui-checkbox-thumbnail-footer-background_disabled: fade(@oui-color-charlotte, 50%);
-@oui-checkbox-thumbnail-footer-font-weight: @oui-font-semibold;
-@oui-checkbox-thumbnail-footer-font-size: rem-calc(18);
-@oui-checkbox-thumbnail-footer-margin-top: rem-calc(10);
-@oui-checkbox-thumbnail-footer-margin-bottom: -@oui-choice-thumbnail-padding;
-@oui-checkbox-thumbnail-footer-margin-top-checked: calc(@oui-checkbox-thumbnail-footer-margin-top - @oui-choice-thumbnail-border-width);
-@oui-checkbox-thumbnail-footer-margin-bottom-checked: calc(-@oui-choice-thumbnail-padding + @oui-choice-thumbnail-border-width);
-
 // Checkbox - M Variant
 @oui-checkbox-m-line-height: @oui-choice-m-line-height;
 @oui-checkbox-m-font-size: @oui-choice-m-font-size;
@@ -584,6 +591,7 @@
 // Criteria Adder
 @oui-criteria-adder-spacing: rem-calc(10);
 @oui-criteria-adder-icon-size: rem-calc(24);
+@oui-criteria-adder-icon-spacing: rem-calc(15);
 @oui-criteria-adder-menu-width: rem-calc(300);
 
 @oui-criteria-adder-form-padding: rem-calc(20);
@@ -614,6 +622,12 @@
 @oui-datagrid-header-font-weight_sorted: @oui-font-semibold;
 @oui-datagrid-header-padding: rem-calc(2) rem-calc(10);
 @oui-datagrid-header-height: rem-calc(44);
+
+@oui-datagrid-footer-background-color: @oui-datagrid-header-background-color;
+@oui-datagrid-footer-font-color: @oui-datagrid-header-font-color;
+@oui-datagrid-footer-font-weight: @oui-datagrid-header-font-weight;
+@oui-datagrid-footer-padding: @oui-datagrid-header-padding;
+@oui-datagrid-footer-height: @oui-datagrid-header-height;
 
 @oui-datagrid-cell-background-color: @oui-color-white;
 @oui-datagrid-cell-border-color: @oui-color-nurse;
@@ -1328,12 +1342,15 @@
 @oui-popover-close-button-icon-color: @oui-color-info-dark;
 
 // Popover - Help button
+@oui-popover-button-width: 1em;
+@oui-popover-button-height: 1em;
 @oui-popover-button-line-height: 1;
 @oui-popover-button-spacing: rem-calc(10);
 @oui-popover-button-content: @oui-icon-index-help_circle;
+@oui-popover-button-font: normal normal normal rem-calc(16)/@oui-popover-button-line-height @oui-popover-button-font-family;
 @oui-popover-button-font-family: @oui-global-base-font-family-icon;
 @oui-popover-button-font-color: @oui-color-sapphire;
-@oui-popover-button-font-size: rem-calc(16);
+@oui-popover-button-font-size: inherit;
 @oui-popover-button-box-shadow_focus: @oui-button-secondary-box-shadow_focus;
 
 // Progress
@@ -1361,7 +1378,6 @@
 // Progress Tracker
 @oui-progress-tracker-margin: 0 0 rem-calc(20);
 @oui-progress-tracker-step-spacing: rem-calc(30);
-@oui-progress-tracker-connector-spacing: rem-calc(5);
 @oui-progress-tracker-font-size: rem-calc(16);
 @oui-progress-tracker-font-weight: @oui-font-regular;
 
@@ -1379,6 +1395,7 @@
 @oui-progress-tracker-label-color_active: @oui-color-sapphire;
 @oui-progress-tracker-label-color_complete: @oui-color-sapphire;
 @oui-progress-tracker-label-color_error: @oui-color-error-dark;
+@oui-progress-tracker-label-spacing: rem-calc(10);
 @oui-progress-tracker-label-font-weight: @oui-font-semibold;
 @oui-progress-tracker-label-line-height: 1.4;
 
@@ -1392,6 +1409,9 @@
 @oui-progress-tracker-status-font-size_error: rem-calc(18);
 @oui-progress-tracker-status-icon_complete: @oui-icon-index-ok_extra-thin;
 @oui-progress-tracker-status-icon_error: @oui-icon-index-close_extra-thin;
+
+@oui-progress-tracker-connector-spacing: rem-calc(5);
+@oui-progress-tracker-connector-size: rem-calc(4);
 
 // Radio
 @oui-radio-min-height: @oui-choice-min-height;
@@ -1456,16 +1476,6 @@
 @oui-ragio-toggle-group-background-color_disabled: @oui-color-concrete;
 @oui-ragio-toggle-group-background-color_checked: @oui-color-sapphire;
 @oui-ragio-toggle-group-background-color_checked-disabled: @oui-color-ironlight;
-
-@oui-radio-thumbnail-padding: @oui-choice-thumbnail-padding;
-@oui-radio-thumbnail-footer-background: @oui-color-charlotte;
-@oui-radio-thumbnail-footer-background_disabled: fade(@oui-color-charlotte, 50%);
-@oui-radio-thumbnail-footer-font-weight: @oui-font-semibold;
-@oui-radio-thumbnail-footer-font-size: rem-calc(18);
-@oui-radio-thumbnail-footer-margin-top: rem-calc(10);
-@oui-radio-thumbnail-footer-margin-bottom: -@oui-choice-thumbnail-padding;
-@oui-radio-thumbnail-footer-margin-top-checked: calc(@oui-radio-thumbnail-footer-margin-top - @oui-choice-thumbnail-border-width);
-@oui-radio-thumbnail-footer-margin-bottom-checked: calc(-@oui-choice-thumbnail-padding + @oui-choice-thumbnail-border-width);
 
 // Search
 @oui-search-margin: 0;
@@ -1570,6 +1580,7 @@
 // Select Picker
 @oui-select-picker-padding: @oui-choice-thumbnail-padding;
 @oui-select-picker-border-width: @oui-choice-thumbnail-border-width;
+@oui-select-picker-border-width-checked: @oui-choice-thumbnail-border-width-checked;
 @oui-select-picker-border-color: @oui-choice-thumbnail-border-color;
 @oui-select-picker-border-color_disabled: @oui-choice-thumbnail-border-color_disabled;
 
@@ -1910,10 +1921,11 @@
 @oui-tile-item-border-width: 1px;
 
 @oui-tile-definition-term-color: @oui-color-dusty;
-@oui-tile-definition-term-font-size: rem-calc(14);
+@oui-tile-definition-term-font-size: rem-calc(16);
 @oui-tile-definition-term-font-weight: @oui-font-regular;
 @oui-tile-definition-description-color: @oui-color-rhino;
 @oui-tile-definition-description-font-size: rem-calc(16);
+@oui-tile-definition-actions-spacing: rem-calc(10);
 
 // Timepicker
 @oui-timepicker-margin: @oui-input-margin;
