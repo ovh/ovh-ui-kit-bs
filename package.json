@@ -41,6 +41,6 @@
   "peerDependencies": {
     "bootstrap": "^3.3.7",
     "less-plugin-remcalc": "^0.1.0",
-    "ovh-ui-kit": "~2.23.1"
+    "ovh-ui-kit": "~2.40.0"
   }
 }
