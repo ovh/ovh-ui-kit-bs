@@ -33,7 +33,7 @@
     "less-plugin-clean-css": "^1.5.1",
     "less-plugin-remcalc": "^0.1.0",
     "opn-cli": "^4.0.0",
-    "ovh-ui-kit": "~2.35.2",
+    "ovh-ui-kit": "~2.40.0",
     "rimraf": "^2.6.2",
     "stylelint": "^9.4.0",
     "stylelint-config-ovh": "^0.1.0"
