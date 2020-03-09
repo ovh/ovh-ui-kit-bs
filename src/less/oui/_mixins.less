@@ -1,0 +1,69 @@
+#oui {
+  // From accessibility.less
+  .outline-border(
+    @outline-width: @oui-a11y-outline-width;
+    @outline-style: @oui-a11y-outline-style;
+    @outline-color: @oui-a11y-outline-color;
+    @outline-offset: @oui-a11y-outline-offset;
+    @outline-radius: @oui-a11y-outline-radius;
+  ) {
+    outline-width: @outline-width;
+    outline-style: @outline-style;
+    outline-color: @outline-color;
+    outline-offset: @outline-offset;
+    -moz-outline-radius: @outline-radius;
+  }
+
+  .visually-hidden() {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0;
+    margin: -1px;
+    padding: 0;
+
+    &_focusable:active,
+    &_focusable:focus {
+      position: static;
+      height: auto;
+      width: auto;
+      margin: 0;
+      clip: auto;
+      overflow: visible;
+    }
+  }
+
+  // From animations.less
+  .animate(@duration: @oui-animation-default-timing) {
+    transition-duration: @duration;
+    transition-timing-function: @oui-animation-default;
+    transition-property: background-color, border-color, box-shadow, color, fill;
+  }
+
+  // From typography.less
+  .base-font(
+    @line-height: @earth-line-height,
+    @letter-spacing: @earth-letter-spacing,
+    @font-family: @earth-font-family,
+    @font-weight: @earth-font-weight,
+    @font-size: @earth-font-size,
+    @font-color: @earth-color,
+    @text-align: @earth-text-align,
+  ) {
+    line-height: @line-height;
+    letter-spacing: @letter-spacing;
+    font-family: @font-family;
+    font-weight: @font-weight;
+    font-size: @font-size;
+    color: @font-color;
+    text-align: @text-align;
+  }
+
+  .text-ellipsis() {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

@@ -1,0 +1,71 @@
+// Input Groups
+.input-group {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  vertical-align: middle;
+
+  .form-control {
+    border-radius: 0;
+    margin: 0;
+  }
+
+  &-addon { cursor: default; }
+
+  &-btn {
+    padding: 0;
+    border: 0;
+  }
+
+  &-btn + .form-control { margin-left: -1px; }
+
+  &-addon,
+  &-btn .btn {
+    min-width: 0;
+    min-height: @input-height-base;
+    margin-bottom: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: @oui-button-font-size;
+    color: @text-color;
+  }
+
+  .form-control,
+  &-addon,
+  &-btn {
+    &:first-child { border-radius: @base-border-radius-medium 0 0 @base-border-radius-medium; }
+
+    &:last-child { border-radius: 0 @base-border-radius-medium @base-border-radius-medium 0; }
+  }
+
+  &.disabled &-addon {
+    background-color: @oui-form-control-background-color_disabled;
+    color: @oui-form-control-font-color_disabled;
+  }
+
+  &.disabled &-addon,
+  &.disabled &-btn .btn {
+    border-color: @oui-form-control-border-color_disabled !important;
+  }
+
+  // Sizing
+  // stylelint-disable no-descending-specificity
+  &-lg > .form-control {
+    min-height: @input-height-large;
+    padding-left: @oui-form-control-padding-x;
+    padding-right: @oui-form-control-padding-x;
+  }
+
+  &-lg &-addon,
+  &-lg &-btn .btn { min-height: @input-height-large; }
+
+  &-sm > .form-control {
+    min-height: @input-height-small;
+    padding-left: @oui-form-control-padding-x;
+    padding-right: @oui-form-control-padding-x;
+  }
+
+  &-sm &-addon,
+  &-sm &-btn .btn { min-height: @input-height-small; }
+  // stylelint-enable no-descending-specificity
+}
