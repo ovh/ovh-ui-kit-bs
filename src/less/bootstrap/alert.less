@@ -1,20 +1,14 @@
 // Alert
 .alert {
-  #oui > .base-font();
-
   width: 100%;
   max-width: 100%;
-  min-height: 50px;
-  line-height: 1.375;
+  min-height: @oui-message-min-height;
+  line-height: @oui-message-line-height;
   position: relative;
   padding: @oui-message-padding;
   margin: @oui-message-margin;
   font-size: @oui-message-font-size;
   font-weight: @oui-message-font-weight;
-  color: @text-color;
-  border: @oui-message-border-width solid transparent;
-  border-radius: @border-radius-large;
-  background-color: @oui-message-background-color;
 
   &::before {
     display: block;
@@ -23,51 +17,35 @@
     left: @oui-message-icon-position-left;
   }
 
-  &.alert-info {
-    #oui > .alert-variant(
-      @oui-message-padding;
-      @state-info-text;
-      @state-info-border;
-      @state-info-bg;
-      @oui-message-icon-size;
-      @oui-message-info-icon-color;
-      @oui-icon-index-info-circle
+  &.alert-info::before {
+    #oui > .icon-replacer-helper(
+      @icon-path: @oui-icon-path-info-circle,
+      @icon-color: @oui-message-info-icon-color,
+      @icon-size: @oui-message-icon-size
     );
   }
 
-  &.alert-success {
-    #oui > .alert-variant(
-      @oui-message-padding;
-      @state-success-text;
-      @state-success-border;
-      @state-success-bg;
-      @oui-message-icon-size;
-      @oui-message-success-icon-color;
-      @oui-icon-index-success-circle
+  &.alert-success::before {
+    #oui > .icon-replacer-helper(
+      @icon-path: @oui-icon-path-success-circle,
+      @icon-color: @oui-message-success-icon-color,
+      @icon-size: @oui-message-icon-size
     );
   }
 
-  &.alert-warning {
-    #oui > .alert-variant(
-      @oui-message-padding;
-      @state-warning-text;
-      @state-warning-border;
-      @state-warning-bg;
-      @oui-message-icon-size;
-      @oui-message-warning-icon-color;
-      @oui-icon-index-warning-circle
+  &.alert-warning::before {
+    #oui > .icon-replacer-helper(
+      @icon-path: @oui-icon-path-warning-circle,
+      @icon-color: @oui-message-warning-icon-color,
+      @icon-size: @oui-message-icon-size
     );
   }
 
-  &.alert-danger {
-    #oui > .alert-variant(
-      @oui-message-padding;
-      @state-danger-text;
-      @state-danger-border;
-      @state-danger-bg;
-      @oui-message-icon-size;
-      @oui-message-error-icon-color;
-      @oui-icon-index-error-circle
+  &.alert-danger::before {
+    #oui > .icon-replacer-helper(
+      @icon-path: @oui-icon-path-error-circle,
+      @icon-color: @oui-message-error-icon-color,
+      @icon-size: @oui-message-icon-size
     );
   }
 }
@@ -75,8 +53,6 @@
 .alert-dismissable,
 .alert-dismissible {
   .close {
-    #oui > .animate();
-
     cursor: pointer;
     position: absolute;
     float: none;
@@ -102,38 +78,8 @@
     &:hover,
     &:focus,
     &:active {
-      #oui > .animate();
-
       outline: none;
       opacity: @oui-message-close-button-opacity_hover;
-    }
-  }
-}
-
-// Mixins
-#oui {
-  .alert-variant(
-      @padding;
-      @font-color;
-      @border-color;
-      @background-color;
-      @icon-size;
-      @icon-color;
-      @icon-content
-  ) {
-    padding: @padding;
-    color: @font-color;
-    border-color: @border-color;
-    background-color: @background-color;
-
-    &::before {
-      // #oui > .icon();
-
-      content: @icon-content;
-      position: absolute;
-      display: block;
-      font-size: @icon-size;
-      color: @icon-color;
     }
   }
 }

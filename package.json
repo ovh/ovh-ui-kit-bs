@@ -17,7 +17,7 @@
     "clean": "rimraf dist docs/assets",
     "dist": "run-p dist:*",
     "dist:less": "lessc --remcalc --clean-css --source-map \"src/index.less\" \"dist/css/oui-bs3.css\"",
-    "dist:assets": "cpx \"src/{fonts,svg}/**/*\" \"dist/\"",
+    "dist:fonts": "cpx \"src/fonts/**/*\" \"dist/fonts\"",
     "dist:bootstrap": "cpx \"node_modules/bootstrap/dist/{fonts/**/*,js/bootstrap.*}\" \"dist/\"",
     "docs": "run-p docs:*",
     "docs:oui-bs": "cpx \"dist/**/*\" \"docs/assets/\"",

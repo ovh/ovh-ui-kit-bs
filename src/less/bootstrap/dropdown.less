@@ -1,7 +1,5 @@
 // Dropdowns
 .caret {
-  // #oui > .icon();
-
   width: @oui-button-dropdown-icon-size;
   height: @oui-button-dropdown-icon-size;
   line-height: @oui-button-dropdown-icon-size;
@@ -13,16 +11,24 @@
   border: none;
 
   &::before {
-    content: @oui-icon-index-chevron-down;
-    font-size: inherit;
-    color: inherit;
+    #oui > .icon-replacer-helper(
+      @icon-path: @oui-icon-path-chevron-down,
+      @icon-color: inherit,
+      @icon-size: @oui-modal-close-button-size
+    );
   }
 
   .dropup &,
   .navbar-fixed-bottom .dropdown & {
     border: none;
 
-    &::before { content: @oui-icon-index-chevron-up; }
+    &::before {
+      #oui > .icon-replacer-helper(
+        @icon-path: @oui-icon-path-chevron-up,
+        @icon-color: inherit,
+        @icon-size: @oui-modal-close-button-size
+      );
+    }
   }
 }
 

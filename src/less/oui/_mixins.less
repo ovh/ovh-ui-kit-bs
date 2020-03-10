@@ -66,4 +66,22 @@
     white-space: nowrap;
     text-overflow: ellipsis;
   }
+
+  .icon-replacer-helper(
+    @icon-color,
+    @icon-path,
+    @icon-size: 1em
+  ) {
+    // We need to escape '#' in the value to '%23',
+    // For the value to work as data url
+    @icon-color-esc: escape(@icon-color);
+
+    content: ' ';
+    width: @icon-size;
+    height: @icon-size;
+    display: block;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="@{icon-color-esc}" fill-rule="evenodd" d="@{icon-path}"/></svg>');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }

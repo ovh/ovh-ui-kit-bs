@@ -1,8 +1,5 @@
 // Close
 .close {
-  #oui > .animate();
-  // #oui > .icon();
-
   cursor: pointer;
   position: absolute;
   top: 0;
@@ -18,8 +15,10 @@
   text-align: center;
 
   &::before {
-    content: @oui-icon-index-close;
-    display: block;
+    #oui > .icon-replacer-helper(
+      @icon-path: @oui-icon-path-close,
+      @icon-color: @oui-modal-close-button-color
+    );
   }
 
   &:hover,
