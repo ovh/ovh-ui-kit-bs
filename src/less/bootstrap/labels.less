@@ -1,4 +1,83 @@
+// Labels
 .label {
-  font-size: 12px;
-  font-weight: @oui-font-semibold;
+  line-height: @oui-badge-line-height;
+  max-width: @oui-badge-max-width;
+  margin: @oui-badge-margin;
+  padding: @oui-badge-padding;
+  color: @oui-badge-font-color;
+  font-size: @oui-badge-font-size;
+  font-weight: @oui-badge-font-weight;
+  border-radius: @oui-badge-border-radius;
+  background-color: @oui-badge-background-color;
+
+  &-default {
+    #oui > .label-variant();
+  }
+
+  &-primary {
+    #oui > .label-variant(
+      @font-color: @oui-button-primary-font-color,
+      @background-color: @oui-button-primary-background-color,
+      @background-color_hover: @oui-button-primary-background-color_hover
+    );
+  }
+
+  &-success {
+    #oui > .label-variant(
+      @font-color: @oui-status-font-color_success,
+      @background-color: @oui-status-background-color_success,
+      @background-color_hover: darken(@oui-status-background-color_success, 10%)
+    );
+  }
+
+  &-info {
+    #oui > .label-variant(
+      @font-color: @oui-status-font-color_info,
+      @background-color: @oui-status-background-color_info,
+      @background-color_hover: darken(@oui-status-background-color_info, 10%)
+    );
+  }
+
+  &-warning {
+    #oui > .label-variant(
+      @font-color: @oui-status-font-color_warning,
+      @background-color: @oui-status-background-color_warning,
+      @background-color_hover: darken(@oui-status-background-color_warning, 10%)
+    );
+  }
+
+  &-danger {
+    #oui > .label-variant(
+      @font-color: @oui-status-font-color_error,
+      @background-color: @oui-status-background-color_error,
+      @background-color_hover: darken(@oui-status-background-color_error, 10%)
+    );
+  }
+}
+
+#oui {
+  .label-variant(
+    @font-color: @oui-button-secondary-font-color,
+    @background-color: @oui-button-secondary-background-color,
+    @background-color_hover: @oui-button-secondary-background-color_hover
+  ) {
+    color: @font-color;
+    background-color: @background-color;
+
+    a&,
+    &[href] {
+      &:hover,
+      &:focus {
+        color: @font-color;
+        background-color: @background-color_hover;
+      }
+
+      &:focus:not(:disabled),
+      &:focus:not(.disabled) {
+        #oui > .outline-border();
+
+        z-index: 1; // Avoid the outline to be cropped
+      }
+    }
+  }
 }

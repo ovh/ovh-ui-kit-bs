@@ -1,0 +1,16 @@
+.badge {
+  margin: @oui-badge-s-margin;
+  padding: @oui-badge-s-padding;
+  border-radius: @oui-badge-border-radius;
+
+  #oui > .label-variant(
+    @font-color: @oui-button-primary-font-color,
+    @background-color: @oui-button-primary-background-color,
+    @background-color_hover: @oui-button-primary-background-color_hover
+  );
+
+  .list-group-item.active > &,
+  .nav-pills > .active > a > & {
+    #oui > .label-variant();
+  }
+}
