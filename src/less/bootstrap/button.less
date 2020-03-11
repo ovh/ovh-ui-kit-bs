@@ -1,57 +1,56 @@
 // Buttons
-.btn {
-  #oui > .text-ellipsis();
-  #oui > .base-font();
 
-  min-width: 0;
-  max-width: 100%;
-  display: inline-block;
-  position: relative;
-  margin: @oui-button-margin;
+.btn {
+  #oui > .animate();
+
+  min-width: @oui-button-small-min-width;
+  max-width: @oui-button-max-width;
+  min-height: @oui-button-min-height;
+  line-height: @oui-button-line-height;
   padding: @oui-button-padding;
+  margin: @oui-button-margin;
+  display: inline-block;
   text-align: center;
+  letter-spacing: @oui-button-letter-spacing;
   font-size: @oui-button-font-size;
   font-weight: @oui-button-font-weight;
-  letter-spacing: @oui-button-letter-spacing;
+  border: solid @oui-button-border-width;
   border-radius: @oui-button-radius;
-  cursor: pointer;
-  border: none;
-  user-select: none;
-  overflow-y: hidden;
-  appearance: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  vertical-align: middle;
-  color: @oui-button-font-color;
-  white-space: normal;
-  text-overflow: initial;
+  background-color: @oui-button-background-color;
+
+  &-xs,
+  &-sm,
+  &-lg {
+    line-height: @oui-button-line-height;
+  }
+
+  &-lg {
+    min-height: @oui-button-large-min-height;
+  }
 
   &,
+  &:active,
   &:focus,
-  &:hover { text-decoration: none; }
+  &:hover {
+    outline: none;
+    text-decoration: none;
+  }
 
-  &:focus {
+  &:focus:not(:disabled),
+  &:focus:not(.disabled) {
     #oui > .outline-border();
+
+    z-index: 1; // Avoid the outline to be cropped
   }
 
   &:disabled,
-  &.disabled {
-    opacity: 1;
+  &.disabled,
+  &:disabled:active,
+  &.disabled:active {
+    cursor: not-allowed;
+    opacity: 0.5;
   }
 
-  &:disabled {
-    cursor: auto;
-  }
-
-  &:active:disabled {
-    box-shadow: none;
-  }
-
-  .oui-icon {
-    font-size: @oui-button-dropdown-icon-size;
-    vertical-align: middle;
-  }
-
-  // Alternate buttons
   &-default {
     #oui > .button-color(
       @background-color: @oui-button-secondary-background-color,
@@ -75,19 +74,13 @@
     padding: @oui-button-secondary-padding;
     border-width: @oui-button-secondary-border-width;
 
-    &:disabled,
-    &.disabled {
-      color: @oui-button-secondary-font-color_disabled !important;
-      border-color: @oui-button-secondary-border-color_disabled !important;
-      background-color: @oui-button-secondary-background-color_disabled !important;
-      cursor: not-allowed;
+    &.btn-xs,
+    &.btn-sm {
+      padding: @oui-button-secondary-padding_small;
     }
 
-    &:focus,
-    &:hover,
-    &:hover:focus {
-      outline: none;
-      background: @oui-button-secondary-background-color;
+    &.btn-lg {
+      padding: @oui-button-secondary-padding_large;
     }
   }
 
@@ -96,6 +89,20 @@
   &-info,
   &-warning,
   &-danger {
+    padding: @oui-button-primary-padding;
+    border-width: @oui-button-primary-border-width;
+
+    &.btn-xs,
+    &.btn-sm {
+      padding: @oui-button-primary-padding_small;
+    }
+
+    &.btn-lg {
+      padding: @oui-button-primary-padding_large;
+    }
+  }
+
+  &-primary {
     #oui > .button-color(
       @background-color: @oui-button-primary-background-color,
       @background-color_hover: @oui-button-primary-background-color_hover,
@@ -106,6 +113,7 @@
       @border-color_active: @oui-button-primary-border-color_active,
       @border-color_disabled: @oui-button-primary-border-color_disabled,
       @box-shadow: @oui-button-primary-box-shadow,
+      @box-shadow_hover: @oui-button-primary-box-shadow_hover,
       @box-shadow_focus: @oui-button-primary-box-shadow_focus,
       @box-shadow_active: @oui-button-primary-box-shadow_active,
       @box-shadow_disabled: @oui-button-primary-box-shadow_disabled,
@@ -114,99 +122,126 @@
       @icon-color: @oui-button-primary-icon-color,
       @icon-color_disabled: @oui-button-primary-icon-color_disabled
     );
-
-    padding: @oui-button-primary-padding;
-    border-width: @oui-button-primary-border-width;
-
-    &:disabled,
-    &.disabled {
-      border-color: @oui-button-secondary-border-color_disabled !important;
-      color: @oui-button-primary-font-color_disabled !important;
-      background-color: @oui-button-primary-background-color_disabled !important;
-      cursor: not-allowed;
-    }
-  }
-
-  // stylelint-disable no-descending-specificity
-  &-primary {
-    #oui > .button-variant(@btn-success-color; @oui-button-primary-background-color; @oui-button-primary-background-color_hover; @oui-button-primary-background-color);
   }
 
   &-success {
-    #oui > .button-variant(@btn-success-color; @btn-success-bg; darken(@btn-success-bg, 10%); @btn-success-border);
+    #oui > .button-color(
+      @background-color: @btn-success-bg,
+      @background-color_hover: darken(@btn-success-bg, 10%),
+      @background-color_active: darken(@btn-success-bg, 20%),
+      @background-color_disabled: @btn-success-bg,
+      @border-color: @btn-success-border,
+      @border-color_hover: darken(@btn-success-border, 10%),
+      @border-color_active: darken(@btn-success-border, 20%),
+      @border-color_disabled: @btn-success-border,
+      @box-shadow: @oui-button-primary-box-shadow,
+      @box-shadow_hover: @oui-button-primary-box-shadow_hover,
+      @box-shadow_focus: @oui-button-primary-box-shadow_focus,
+      @box-shadow_active: @oui-button-primary-box-shadow_active,
+      @box-shadow_disabled: @oui-button-primary-box-shadow_disabled,
+      @font-color: @btn-success-color,
+      @font-color_disabled: @btn-success-color,
+      @icon-color: @btn-success-color,
+      @icon-color_disabled: @btn-success-color
+    );
   }
 
   &-info {
-    #oui > .button-variant(@btn-info-color; @btn-info-bg; darken(@btn-info-bg, 10%); @btn-info-border);
+    #oui > .button-color(
+      @background-color: @btn-info-bg,
+      @background-color_hover: darken(@btn-info-bg, 10%),
+      @background-color_active: darken(@btn-info-bg, 20%),
+      @background-color_disabled: @btn-info-bg,
+      @border-color: @btn-info-border,
+      @border-color_hover: darken(@btn-info-border, 10%),
+      @border-color_active: darken(@btn-info-border, 20%),
+      @border-color_disabled: @btn-info-border,
+      @box-shadow: @oui-button-primary-box-shadow,
+      @box-shadow_hover: @oui-button-primary-box-shadow_hover,
+      @box-shadow_focus: @oui-button-primary-box-shadow_focus,
+      @box-shadow_active: @oui-button-primary-box-shadow_active,
+      @box-shadow_disabled: @oui-button-primary-box-shadow_disabled,
+      @font-color: @btn-info-color,
+      @font-color_disabled: @btn-info-color,
+      @icon-color: @btn-info-color,
+      @icon-color_disabled: @btn-info-color
+    );
   }
 
   &-warning {
-    #oui > .button-variant(@btn-warning-color; @btn-warning-bg; darken(@btn-warning-bg, 10%); @btn-warning-border);
+    #oui > .button-color(
+      @background-color: @btn-warning-bg,
+      @background-color_hover: darken(@btn-warning-bg, 10%),
+      @background-color_active: darken(@btn-warning-bg, 20%),
+      @background-color_disabled: @btn-warning-bg,
+      @border-color: @btn-warning-border,
+      @border-color_hover: darken(@btn-warning-border, 10%),
+      @border-color_active: darken(@btn-warning-border, 20%),
+      @border-color_disabled: @btn-warning-border,
+      @box-shadow: @oui-button-primary-box-shadow,
+      @box-shadow_hover: @oui-button-primary-box-shadow_hover,
+      @box-shadow_focus: @oui-button-primary-box-shadow_focus,
+      @box-shadow_active: @oui-button-primary-box-shadow_active,
+      @box-shadow_disabled: @oui-button-primary-box-shadow_disabled,
+      @font-color: @btn-warning-color,
+      @font-color_disabled: @btn-warning-color,
+      @icon-color: @btn-warning-color,
+      @icon-color_disabled: @btn-warning-color
+    );
   }
 
   &-danger {
-    #oui > .button-variant(@btn-danger-color; @btn-danger-bg; darken(@btn-danger-bg, 10%); @btn-danger-border);
+    #oui > .button-color(
+      @background-color: @btn-danger-bg,
+      @background-color_hover: darken(@btn-danger-bg, 10%),
+      @background-color_active: darken(@btn-danger-bg, 20%),
+      @background-color_disabled: @btn-danger-bg,
+      @border-color: @btn-danger-border,
+      @border-color_hover: darken(@btn-danger-border, 10%),
+      @border-color_active: darken(@btn-danger-border, 20%),
+      @border-color_disabled: @btn-danger-border,
+      @box-shadow: @oui-button-primary-box-shadow,
+      @box-shadow_hover: @oui-button-primary-box-shadow_hover,
+      @box-shadow_focus: @oui-button-primary-box-shadow_focus,
+      @box-shadow_active: @oui-button-primary-box-shadow_active,
+      @box-shadow_disabled: @oui-button-primary-box-shadow_disabled,
+      @font-color: @btn-danger-color,
+      @font-color_disabled: @btn-danger-color,
+      @icon-color: @btn-danger-color,
+      @icon-color_disabled: @btn-danger-color
+    );
   }
-  // stylelint-enable no-descending-specificity
 
-  // Link buttons
   &-link {
-    min-width: 0;
+    #oui > .button-color(
+      @background-color: @oui-button-link-background-color,
+      @background-color_hover: @oui-button-link-background-color_hover,
+      @background-color_active: @oui-button-link-background-color_active,
+      @background-color_disabled: @oui-button-link-background-color_disabled,
+      @border-color: @oui-button-link-border-color,
+      @border-color_hover: @oui-button-link-border-color_hover,
+      @border-color_active: @oui-button-link-border-color_active,
+      @border-color_disabled: @oui-button-link-border-color_disabled,
+      @box-shadow: @oui-button-link-box-shadow,
+      @box-shadow_focus: @oui-button-link-box-shadow_focus,
+      @box-shadow_active: @oui-button-link-box-shadow_active,
+      @box-shadow_disabled: @oui-button-link-box-shadow_disabled,
+      @font-color: @oui-button-link-font-color,
+      @font-color_disabled: @oui-button-link-font-color_disabled,
+      @icon-color: @oui-button-link-icon-color,
+      @icon-color_disabled: @oui-button-link-icon-color_disabled
+    );
+
     padding: @oui-button-link-padding;
-    border: 0;
-    background: none;
-    color: @oui-button-link-font-color;
-    font-weight: @oui-button-link-font-weight;
-    text-decoration: underline;
 
-    &:hover,
-    &:focus {
-      background: none;
-      color: @oui-button-link-font-color_hover;
-      text-decoration: underline;
+    &.btn-xs,
+    &.btn-sm {
+      padding: @oui-button-link-padding_small;
     }
 
-    &:disabled,
-    &:disabled:active,
-    &.disabled {
-      background: none;
-      color: @oui-button-link-font-color_disabled;
-      text-decoration: underline;
+    &.btn-lg {
+      padding: @oui-button-link-padding_large;
     }
-
-    &:active:focus,
-    &.active:focus {
-      outline: none;
-    }
-
-    .oui-icon {
-      color: @oui-button-link-icon-color;
-    }
-  }
-
-  // Button Sizes
-  &-xs {
-    .button-size(
-      @padding-xs-vertical,
-      @padding-xs-horizontal,
-      @font-size-small,
-      @line-height-small,
-      @btn-border-radius-small
-    );
-  }
-
-  &-sm {
-    .button-size(
-      @padding-small-vertical,
-      @padding-small-horizontal,
-      @font-size-base,
-      @line-height-small,
-      @btn-border-radius-small
-    );
-  }
-
-  &-lg {
-    min-height: @oui-button-large-min-height;
   }
 }
 
@@ -222,6 +257,7 @@
     @border-color_active: @oui-button-secondary-border-color_active,
     @border-color_disabled: @oui-button-secondary-border-color_disabled,
     @box-shadow: @oui-button-secondary-box-shadow,
+    @box-shadow_hover: @oui-button-secondary-box-shadow_hover,
     @box-shadow_focus: @oui-button-secondary-box-shadow_focus,
     @box-shadow_active: @oui-button-secondary-box-shadow_active,
     @box-shadow_disabled: @oui-button-secondary-box-shadow_disabled,
@@ -239,60 +275,40 @@
       color: @icon-color;
     }
 
-    &:hover,
-    &:focus {
+    &:focus,
+    &.focus {
+      background-color: @background-color;
+      border-color: @border-color;
+      box-shadow: @box-shadow_focus;
+
+      &:active,
+      &.active {
+        background-color: @background-color_active;
+        border-color: @border-color_active;
+        box-shadow: @box-shadow_active;
+      }
+    }
+
+    &:hover {
       background-color: @background-color_hover;
       border-color: @border-color_hover;
-    }
-
-    &:focus {
-      box-shadow: @box-shadow_focus;
-    }
-
-    &:active {
-      background-color: @background-color_active;
-      border-color: @border-color_active;
-      box-shadow: @box-shadow_active;
+      box-shadow: @box-shadow_hover;
     }
 
     &:disabled,
-    &:disabled:active {
-      color: @font-color_disabled;
-      border-color: @border-color_disabled;
-      background-color: @background-color_disabled;
-      box-shadow: @box-shadow_disabled;
+    &.disabled {
+      &,
+      &:hover,
+      &:active {
+        color: @font-color_disabled;
+        border-color: @border-color_disabled;
+        background-color: @background-color_disabled;
+        box-shadow: @box-shadow_disabled;
 
-      .oui-icon {
-        color: @icon-color_disabled;
+        .oui-icon {
+          color: @icon-color_disabled;
+        }
       }
     }
-  }
-
-  .button-variant(
-    @font-color,
-    @background-color,
-    @background-color-hover,
-    @border-color
-  ) {
-    color: @font-color;
-    background-color: @background-color;
-
-    &:active,
-    &.active,
-    &:active:focus,
-    &.active:focus,
-    &:focus,
-    &.focus,
-    &:hover,
-    &:hover:focus {
-      outline: none;
-      background-color: @background-color-hover;
-    }
-
-    &:focus,
-    &.focus { box-shadow: 0 0 3px 1px fade(@background-color, 60%); }
-
-    &:active,
-    &.active { box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, 0.33333333); }
   }
 }

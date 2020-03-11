@@ -1963,7 +1963,7 @@ less-plugin-remcalc@^0.1.0:
   resolved "https://registry.yarnpkg.com/less-plugin-remcalc/-/less-plugin-remcalc-0.1.0.tgz#34bce158cd24d2a14efa8984e01b2b9d0420d4cc"
   integrity sha512-Nws5vHVO5QwXlIURF9ncZwTZtw91CH57F1yMm98c52RwWRaqZdmntcyxG+LuBLqM2Qfh2GWt0v0BrVrkzj2Cqg==
 
-less@^3.10.3:
+less@^3.11.1:
   version "3.11.1"
   resolved "https://registry.yarnpkg.com/less/-/less-3.11.1.tgz#c6bf08e39e02404fe6b307a3dfffafdc55bd36e2"
   integrity sha512-tlWX341RECuTOvoDIvtFqXsKj072hm3+9ymRBe76/mD6O5ZZecnlAOVDlWAleF2+aohFrxNidXhv2773f6kY7g==

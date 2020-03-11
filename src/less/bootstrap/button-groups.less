@@ -1,0 +1,31 @@
+
+.btn-group.open .dropdown-toggle {
+  box-shadow: none;
+}
+
+.btn-group:not(.btn-group-justified) {
+  .btn {
+    border-radius: @oui-button-radius !important; // Force to avoid bigger selector
+  }
+
+  .btn + .btn,
+  .btn + .btn-group,
+  .btn-group + .btn,
+  .btn-group + .btn-group {
+    margin-left: @oui-button-group-primary-spacing;
+  }
+}
+
+.btn-group-vertical {
+  .btn {
+    border-radius: @oui-button-radius !important; // Force to avoid bigger selector
+  }
+
+  .btn + .btn,
+  .btn + .btn-group,
+  .btn-group + .btn,
+  .btn-group + .btn-group {
+    margin-top: @oui-button-group-primary-spacing;
+    margin-left: 0;
+  }
+}
