@@ -36,11 +36,15 @@
     text-decoration: none;
   }
 
-  &:focus:not(:disabled),
-  &:focus:not(.disabled) {
-    #oui > .outline-border();
+  &:focus,
+  &.focus {
+    &,
+    &:active,
+    &.active {
+      #oui > .outline-border();
 
-    z-index: 1; // Avoid the outline to be cropped
+      z-index: 1; // Avoid the outline to be cropped
+    }
   }
 
   &:disabled,
@@ -49,6 +53,7 @@
   &.disabled:active {
     cursor: not-allowed;
     opacity: 0.5;
+    outline: none !important;
   }
 
   &-default {
@@ -127,12 +132,16 @@
   &-success {
     #oui > .button-color(
       @background-color: @btn-success-bg,
-      @background-color_hover: darken(@btn-success-bg, 10%),
-      @background-color_active: darken(@btn-success-bg, 20%),
+      @background-color_hover: darken(@btn-success-bg,
+      10%),
+      @background-color_active: darken(@btn-success-bg,
+      20%),
       @background-color_disabled: @btn-success-bg,
       @border-color: @btn-success-border,
-      @border-color_hover: darken(@btn-success-border, 10%),
-      @border-color_active: darken(@btn-success-border, 20%),
+      @border-color_hover: darken(@btn-success-border,
+      10%),
+      @border-color_active: darken(@btn-success-border,
+      20%),
       @border-color_disabled: @btn-success-border,
       @box-shadow: @oui-button-primary-box-shadow,
       @box-shadow_hover: @oui-button-primary-box-shadow_hover,
@@ -149,12 +158,16 @@
   &-info {
     #oui > .button-color(
       @background-color: @btn-info-bg,
-      @background-color_hover: darken(@btn-info-bg, 10%),
-      @background-color_active: darken(@btn-info-bg, 20%),
+      @background-color_hover: darken(@btn-info-bg,
+      10%),
+      @background-color_active: darken(@btn-info-bg,
+      20%),
       @background-color_disabled: @btn-info-bg,
       @border-color: @btn-info-border,
-      @border-color_hover: darken(@btn-info-border, 10%),
-      @border-color_active: darken(@btn-info-border, 20%),
+      @border-color_hover: darken(@btn-info-border,
+      10%),
+      @border-color_active: darken(@btn-info-border,
+      20%),
       @border-color_disabled: @btn-info-border,
       @box-shadow: @oui-button-primary-box-shadow,
       @box-shadow_hover: @oui-button-primary-box-shadow_hover,
@@ -171,12 +184,16 @@
   &-warning {
     #oui > .button-color(
       @background-color: @btn-warning-bg,
-      @background-color_hover: darken(@btn-warning-bg, 10%),
-      @background-color_active: darken(@btn-warning-bg, 20%),
+      @background-color_hover: darken(@btn-warning-bg,
+      10%),
+      @background-color_active: darken(@btn-warning-bg,
+      20%),
       @background-color_disabled: @btn-warning-bg,
       @border-color: @btn-warning-border,
-      @border-color_hover: darken(@btn-warning-border, 10%),
-      @border-color_active: darken(@btn-warning-border, 20%),
+      @border-color_hover: darken(@btn-warning-border,
+      10%),
+      @border-color_active: darken(@btn-warning-border,
+      20%),
       @border-color_disabled: @btn-warning-border,
       @box-shadow: @oui-button-primary-box-shadow,
       @box-shadow_hover: @oui-button-primary-box-shadow_hover,
@@ -193,12 +210,16 @@
   &-danger {
     #oui > .button-color(
       @background-color: @btn-danger-bg,
-      @background-color_hover: darken(@btn-danger-bg, 10%),
-      @background-color_active: darken(@btn-danger-bg, 20%),
+      @background-color_hover: darken(@btn-danger-bg,
+      10%),
+      @background-color_active: darken(@btn-danger-bg,
+      20%),
       @background-color_disabled: @btn-danger-bg,
       @border-color: @btn-danger-border,
-      @border-color_hover: darken(@btn-danger-border, 10%),
-      @border-color_active: darken(@btn-danger-border, 20%),
+      @border-color_hover: darken(@btn-danger-border,
+      10%),
+      @border-color_active: darken(@btn-danger-border,
+      20%),
       @border-color_disabled: @btn-danger-border,
       @box-shadow: @oui-button-primary-box-shadow,
       @box-shadow_hover: @oui-button-primary-box-shadow_hover,
@@ -275,6 +296,13 @@
       color: @icon-color;
     }
 
+    &:active,
+    &.active {
+      background-color: @background-color_active;
+      border-color: @border-color_active;
+      box-shadow: @box-shadow_active;
+    }
+
     &:focus,
     &.focus {
       background-color: @background-color;
@@ -289,7 +317,9 @@
       }
     }
 
-    &:hover {
+    &:hover,
+    &:active:hover,
+    &.active:hover {
       background-color: @background-color_hover;
       border-color: @border-color_hover;
       box-shadow: @box-shadow_hover;

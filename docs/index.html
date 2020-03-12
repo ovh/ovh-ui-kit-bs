@@ -408,12 +408,14 @@
                             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                             <p class="help-block">Example block-level help text here.</p>
                         </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox"> Remember me
-                            </label>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Remember me
+                                </label>
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
+                        <button type="submit" class="btn btn-default btn-lg">Submit</button>
                     </form>
                 </section>
                 <!-- Form Vertical -->
@@ -446,7 +448,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-default">Submit</button>
+                                <button type="submit" class="btn btn-default btn-lg">Submit</button>
                             </div>
                         </div>
                     </form>
@@ -640,7 +642,7 @@
             <!-- Checkboxes / Radios -->
             <h2>Checkboxes / Radios</h2>
             <div class="row" style="margin-bottom: 15px;">
-                <div class="col-lg-4">
+                <div class="col-lg-6">
 
                     <!-- Checkboxes -->
                     <div class="form-group">
@@ -676,6 +678,7 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="control-label">Checkboxes</label>
                         <label class="checkbox-inline">
                             <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
                         </label>
@@ -688,8 +691,47 @@
                     </div>
                     <!-- /Checkboxes -->
 
+                    <!-- Checkboxes List -->
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Checkboxes</label>
+                            <div class="col-sm-8">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="checkboxListExample"> Option 1
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="checkboxListExample"> Option 2
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="checkboxListExample"> Option 3
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- /Checkboxes List -->
+
+                    <!-- Checkboxes Group -->
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-default active">
+                            <input type="checkbox" checked> Checkbox 1 (pre-checked)
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="checkbox"> Checkbox 2
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="checkbox"> Checkbox 3
+                        </label>
+                    </div>
+                    <!-- /Checkboxes Group -->
+
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-6">
 
                     <!-- Radios -->
                     <div class="form-group">
@@ -725,6 +767,7 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="control-label">Radios</label>
                         <label class="radio-inline">
                             <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
                         </label>
@@ -736,34 +779,6 @@
                         </label>
                     </div>
                     <!-- /Radios -->
-
-                </div>
-                <div class="col-lg-4">
-
-                    <!-- Checkboxes List -->
-                    <form class="form-horizontal">
-                        <div class="form-group">
-                            <label class="col-sm-4 control-label">Checkboxes</label>
-                            <div class="col-sm-8">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="checkboxListExample"> Option 1
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="checkboxListExample"> Option 2
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="checkboxListExample"> Option 3
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                    <!-- /Checkboxes List -->
 
                     <!-- Radios List -->
                     <form class="form-horizontal">
@@ -790,6 +805,19 @@
                     </form>
                     <!-- /Radios List -->
 
+                    <!-- Radios Group -->
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-default active">
+                            <input type="radio" name="options" id="option1" checked> Radio 1 (preselected)
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="radio" name="options" id="option2"> Radio 2
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="radio" name="options" id="option3"> Radio 3
+                        </label>
+                      </div>
+                      <!-- /Radios Group -->
                 </div>
             </div>
             <!-- /Checkboxes / Radios -->
@@ -827,25 +855,25 @@
                     <div class="form-group has-feedback">
                         <label class="control-label" for="inputDefault2">Default input</label>
                         <input type="text" class="form-control" id="inputDefault2" aria-describedby="inputDefault2Status">
-                        <span class="oui-icon oui-icon-eye form-control-feedback" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-eye-open form-control-feedback" aria-hidden="true"></span>
                         <span id="inputDefault2Status" class="sr-only">(default)</span>
                     </div>
                     <div class="form-group has-success has-feedback">
                         <label class="control-label" for="inputSuccess2">Input with success</label>
                         <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
-                        <span class="oui-icon oui-icon-success_circle form-control-feedback" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
                         <span id="inputSuccess2Status" class="sr-only">(success)</span>
                     </div>
                     <div class="form-group has-warning has-feedback">
                         <label class="control-label" for="inputWarning2">Input with warning</label>
                         <input type="text" class="form-control" id="inputWarning2" aria-describedby="inputWarning2Status">
-                        <span class="oui-icon oui-icon-warning_circle form-control-feedback" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span>
                         <span id="inputWarning2Status" class="sr-only">(warning)</span>
                     </div>
                     <div class="form-group has-error has-feedback">
                         <label class="control-label" for="inputError2">Input with error</label>
                         <input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status">
-                        <span class="oui-icon oui-icon-error_circle form-control-feedback" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
                         <span id="inputError2Status" class="sr-only">(error)</span>
                     </div>
                     <div class="form-group has-success has-feedback">
@@ -854,7 +882,7 @@
                             <span class="input-group-addon">@</span>
                             <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
                         </div>
-                        <span class="oui-icon oui-icon-success_circle form-control-feedback" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
                         <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
                     </div>
                 </div>

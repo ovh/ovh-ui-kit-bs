@@ -176,41 +176,41 @@
 //##
 
 // `<input>` background color
-@input-bg:                       #fff;
+@input-bg:                       @oui-form-control-background-color;
 // `<input disabled>` background color
-@input-bg-disabled:              @gray-lighter;
+@input-bg-disabled:              @oui-form-control-background-color_disabled;
 
 // Text color for `<input>`s
-@input-color:                    @gray;
+@input-color:                    @oui-form-control-font-color;
 // `<input>` border color
-@input-border:                   #ccc;
+@input-border:                   @oui-form-control-border-color;
 
 // TODO: Rename `@input-border-radius` to `@input-border-radius-base` in v4
 // Default `.form-control` border radius
 // This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
-@input-border-radius:            @border-radius-base;
+@input-border-radius:            @oui-form-control-border-radius;
 // Large `.form-control` border radius
-@input-border-radius-large:      @border-radius-base;
+@input-border-radius-large:      @oui-form-control-border-radius;
 // Small `.form-control` border radius
-@input-border-radius-small:      @border-radius-small;
+@input-border-radius-small:      @oui-form-control-border-radius;
 
 // Border color for inputs on focus
-@input-border-focus:             #66afe9;
+@input-border-focus:             @oui-form-control-border-color_focus;
 
 // Placeholder text color
 @input-color-placeholder:        #999;
 
 // Default `.form-control` height
-@input-height-base:              40px;
+@input-height-base:              @oui-form-control-height;
 // Large `.form-control` height
-@input-height-large:             46px;
+@input-height-large:             @oui-form-control-height;
 // Small `.form-control` height
-@input-height-small:             29px;
+@input-height-small:             @oui-form-control-height;
 
 // `.form-group` margin
-@form-group-margin-bottom:       @base-spacing-large;
+@form-group-margin-bottom:       @oui-field-margin;
 
-@legend-color:                   @gray-dark;
+@legend-color:                   @oui-field-label-font-color;
 @legend-border-color:            #e5e5e5;
 
 // Background color for textual input addons
