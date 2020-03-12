@@ -96,7 +96,6 @@
     pointer-events: none;
   }
 
-  // stylelint-disable no-descending-specificity
   .caret,
   .oui-icon {
     margin-left: @oui-button-dropdown-padding-x;
@@ -104,7 +103,6 @@
     .btn-group &,
     .input-group & { margin-left: 0; }
   }
-  // stylelint-enable no-descending-specificity
 
   &.btn-default {
     &:active,
@@ -180,13 +178,11 @@
         color: @oui-dropdown-item-font-color_disabled;
       }
 
-      // stylelint-disable no-descending-specificity
       .oui-icon {
         padding: 0 5px;
         font-size: 12px;
         color: inherit;
       }
-      // stylelint-enable no-descending-specificity
     }
 
     &.divider {
