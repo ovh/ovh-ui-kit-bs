@@ -8,7 +8,6 @@
 
   > .dropdown {
     &.open::after {
-      animation: nav-tabs-border-bounce-animation 1s linear 1 both;
       left: 0;
       width: 100%;
     }
@@ -52,14 +51,13 @@
 
 // Tabs
 .nav.nav-tabs {
-  background-color: @oui-color-nurse;
+  background-color: @oui-header-background-color;
   border-bottom: 0;
-  padding-left: @grid-gutter-width;
-  padding-right: @grid-gutter-width;
+  padding-left: @oui-header-spacing-y;
+  padding-right: @oui-header-spacing-y;
 
   > li {
     margin: 0;
-    margin-right: 4px;
 
     &::after {
       content: " ";
@@ -67,25 +65,39 @@
       display: block;
       left: 50%;
       position: relative;
-      border-bottom: 4px solid @ovh-universe-color;
+      border-bottom: @oui-header-tabs-item-border-width solid @oui-header-tabs-item-border-color;
     }
 
     > a {
-      padding: 8px 30px;
+      padding: @oui-header-tabs-item-padding;
       margin-right: 0;
+      font-size: @oui-header-tabs-item-font-size;
+      font-weight: @oui-header-tabs-item-font-weight;
       border: none;
-      color: @oui-color-sapphire;
+      color: @oui-header-tabs-item-font-color;
       cursor: pointer;
 
       &:hover,
       &:focus {
         border-color: transparent;
       }
+
+      &.dropdown-toggle {
+        padding: @oui-header-tabs-item-padding_dropdown;
+
+        .caret {
+          height: auto;
+          position: absolute;
+          margin-right: @oui-button-dropdown-margin-right;
+          right: 0;
+          top: 0;
+          bottom: 0;
+        }
+      }
     }
 
     &.active {
       &::after {
-        animation: nav-tabs-border-bounce-animation 1000ms linear 1 both;
         left: 0;
         width: 100%;
       }
@@ -96,8 +108,8 @@
         &:focus {
           background-color: transparent;
           border: none;
-          color: @oui-color-sapphire;
-          font-weight: @oui-font-semibold;
+          color: @oui-header-tabs-item-font-color;
+          font-weight: @oui-header-tabs-item-font-weight;
         }
       }
     }
@@ -110,77 +122,4 @@
   margin-top: @grid-gutter-width;
   padding-left: @grid-gutter-width;
   padding-right: @grid-gutter-width;
-}
-
-// Tabs Animation
-@keyframes nav-tabs-border-bounce-animation {
-  0% {
-    width: 0%;
-    left: 50%;
-  }
-
-  4% {
-    width: 43%;
-    left: 28%;
-  }
-
-  7.91% {
-    width: 88%;
-    left: 11%;
-  }
-
-  11.91% {
-    width: 118.9%;
-    left: -9.45%;
-  }
-
-  15.82% {
-    width: 127.5%;
-    left: -13.5%;
-  }
-
-  20.42% {
-    width: 119.6%;
-    left: -9.8%;
-  }
-
-  24.92% {
-    width: 105.9%;
-    left: -2.95%;
-  }
-
-  29.53% {
-    width: 95.98%;
-    left: 2.5%;
-  }
-
-  34.03% {
-    width: 93.07%;
-    left: 4%;
-  }
-
-  43.14% {
-    width: 98.53%;
-    left: 0.74%;
-  }
-
-  52.15% {
-    width: 101.739%;
-    left: -0.7%;
-  }
-
-  70.37% {
-    width: 99.56%;
-    left: 0.22%;
-  }
-
-  88.59% {
-    width: 100.11%;
-    left: -0.05%;
-  }
-
-  100% {
-    width: 100%;
-    left: 0%;
-  }
 }
