@@ -83,6 +83,18 @@
 }
 
 .dropdown-toggle {
+  position: relative;
+  padding-right: @oui-button-dropdown-padding-right;
+
+  .caret {
+    height: auto;
+    position: absolute;
+    margin-right: @oui-button-dropdown-margin-right;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
   .oui-icon {
     width: @oui-button-dropdown-icon-size;
     height: @oui-button-dropdown-icon-size;

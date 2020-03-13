@@ -12,11 +12,9 @@
 
   &-addon,
   &-btn .btn {
-    min-width: 0;
+    min-width: @input-height-base;
     min-height: @input-height-base;
     margin-bottom: 0;
-    padding-left: 10px;
-    padding-right: 10px;
     font-size: @oui-button-font-size;
     color: @text-color;
   }
@@ -137,6 +135,10 @@
 
       &.btn-xs,
       &.btn-sm { padding: @oui-button-secondary-padding_small; }
+    }
+
+    &.dropdown-toggle {
+      padding-right: @oui-button-dropdown-padding-right;
     }
   }
 }

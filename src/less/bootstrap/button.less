@@ -3,7 +3,7 @@
 .btn {
   #oui > .animate();
 
-  min-width: @oui-button-small-min-width;
+  min-width: @oui-button-min-width;
   max-width: @oui-button-max-width;
   min-height: @oui-button-min-height;
   line-height: @oui-button-line-height;
@@ -24,7 +24,14 @@
     line-height: @oui-button-line-height;
   }
 
+  &-xs,
+  &-sm {
+    min-width: @oui-button-small-min-width;
+    min-height: @oui-button-small-min-height;
+  }
+
   &-lg {
+    min-width: @oui-button-large-min-width;
     min-height: @oui-button-large-min-height;
   }
 
@@ -262,6 +269,56 @@
 
     &.btn-lg {
       padding: @oui-button-link-padding_large;
+    }
+  }
+
+  &.dropdown-toggle {
+    position: relative;
+    padding-right: @oui-button-dropdown-padding-right;
+
+    .caret {
+      height: auto;
+      position: absolute;
+      margin-right: @oui-button-dropdown-margin-right;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+  }
+}
+
+// Toggle Group
+.btn-group {
+  label.btn {
+    #oui > .button-color(
+      @background-color: @oui-radio-toggle-background-color,
+      @background-color_hover: @oui-radio-toggle-background-color_hover,
+      @background-color_active: @oui-radio-toggle-background-color_checked,
+      @background-color_disabled: @oui-radio-toggle-background-color,
+      @border-color: @oui-radio-toggle-border-color,
+      @border-color_hover: @oui-radio-toggle-border-color_hover,
+      @border-color_active: @oui-radio-toggle-border-color_checked,
+      @border-color_disabled: @oui-radio-toggle-border-color,
+      @box-shadow: @oui-radio-toggle-box-shadow,
+      @box-shadow_hover: @oui-radio-toggle-box-shadow_hover,
+      @box-shadow_focus: @oui-radio-toggle-box-shadow_hover,
+      @box-shadow_active: @oui-radio-toggle-box-shadow,
+      @box-shadow_disabled: @oui-radio-toggle-box-shadow,
+      @font-color: @oui-radio-toggle-font-color,
+      @font-color_disabled: @oui-radio-toggle-font-color,
+      @icon-color: @oui-radio-toggle-font-color,
+      @icon-color_disabled: @oui-radio-toggle-font-color
+    );
+
+    &:active,
+    &.active {
+      color: @oui-radio-toggle-font-color_checked;
+    }
+
+    &:hover,
+    &:active:hover,
+    &.active:hover {
+      color: @oui-radio-toggle-font-color_hover;
     }
   }
 }

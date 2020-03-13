@@ -1,50 +1,47 @@
 .nav {
-  > li > a,
-  .open > a {
-    &,
-    &:focus,
-    &:hover { background-color: transparent; }
-  }
-
   > .dropdown {
     &.open::after {
       left: 0;
       width: 100%;
     }
-  }
 
-  > .dropdown > .dropdown-menu {
-    margin-top: 14px;
-
-    &::before,
-    &::after {
-      content: '';
-      height: 0;
-      width: 0;
-      position: absolute;
-      left: 22px;
-      bottom: 100%;
-      display: block;
-      pointer-events: none;
-      transform: translateX(-50%);
-      border: solid transparent;
+    > .dropdown-toggle {
+      padding-right: @oui-button-dropdown-padding-right;
     }
 
-    &::before {
-      border: 10px transparent solid;
-      border-bottom-color: #bbbdbf;
-    }
+    > .dropdown-menu {
+      margin-top: 14px;
 
-    &::after {
-      border: 8px transparent solid;
-      border-bottom-color: #fff;
-    }
+      &::before,
+      &::after {
+        content: '';
+        height: 0;
+        width: 0;
+        position: absolute;
+        left: 22px;
+        bottom: 100%;
+        display: block;
+        pointer-events: none;
+        transform: translateX(-50%);
+        border: solid transparent;
+      }
 
-    &-right::before,
-    &-right::after {
-      left: auto;
-      right: 22px;
-      transform: translateX(50%);
+      &::before {
+        border: 10px transparent solid;
+        border-bottom-color: #bbbdbf;
+      }
+
+      &::after {
+        border: 8px transparent solid;
+        border-bottom-color: #fff;
+      }
+
+      &-right::before,
+      &-right::after {
+        left: auto;
+        right: 22px;
+        transform: translateX(50%);
+      }
     }
   }
 }
@@ -84,15 +81,6 @@
 
       &.dropdown-toggle {
         padding: @oui-header-tabs-item-padding_dropdown;
-
-        .caret {
-          height: auto;
-          position: absolute;
-          margin-right: @oui-button-dropdown-margin-right;
-          right: 0;
-          top: 0;
-          bottom: 0;
-        }
       }
     }
 
@@ -115,6 +103,80 @@
     }
 
     &.disabled > a { color: @text-muted; }
+  }
+}
+
+.nav.nav-pills {
+  padding: @oui-chip-container-padding;
+  margin: @oui-chip-container-margin;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  border: @oui-chip-container-border-width solid @oui-chip-container-border-color;
+  background-color: @oui-chip-container-background-color;
+
+  > li {
+    display: inline-block;
+    margin: @oui-chip-container-item-spacing;
+
+    > a {
+      #oui > .animate();
+      #oui > .base-font(
+        @line-height: @oui-chip-height,
+        @font-color: @oui-chip-font-color,
+        @font-size: @oui-chip-font-size,
+        @font-weight: @oui-chip-font-weight
+      );
+      #oui > .text-ellipsis();
+
+      min-width: @oui-chip-height;
+      height: @oui-chip-height;
+      padding: @oui-chip-padding;
+      position: relative;
+      display: block;
+      text-align: left;
+      color: @oui-chip-font-color;
+      border: none;
+      border-radius: @oui-chip-border-radius;
+      background-color: @oui-chip-background-color;
+
+      &:hover {
+        cursor: pointer;
+        color: @oui-chip-font-color_hover;
+        background-color: @oui-chip-background-color_hover;
+      }
+
+      &:focus {
+        #oui > .outline-border(
+          @outline-radius: calc(@oui-chip-border-radius + @oui-a11y-outline-width + @oui-a11y-outline-offset);
+        );
+      }
+
+      &:active {
+        color: @oui-chip-font-color_active;
+        background-color: @oui-chip-background-color_active;
+      }
+    }
+
+    &.open > a,
+    &.active > a {
+      color: @oui-chip-font-color_active;
+      background-color: @oui-chip-background-color_active;
+
+      &:hover {
+        color: @oui-chip-font-color_hover;
+        background-color: @oui-chip-background-color_hover;
+      }
+    }
+
+    &.divider { display: none; }
+  }
+
+  &.nav-stacked {
+    flex-direction: column;
+    align-content: stretch;
   }
 }
 
