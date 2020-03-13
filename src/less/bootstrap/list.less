@@ -1,3 +1,49 @@
+.list-group {
+  &-item&-item-success {
+    #oui > .list-group-variant(
+      @background-color: @btn-success-bg,
+      @background-color_hover: darken(@btn-success-bg, 10%),
+      @background-color_active: darken(@btn-success-bg, 20%),
+      @background-color_disabled: @btn-success-bg,
+      @font-color: @btn-success-color,
+      @font-color_disabled: @btn-success-color
+    );
+  }
+
+  &-item&-item-info {
+    #oui > .list-group-variant(
+      @background-color: @btn-info-bg,
+      @background-color_hover: darken(@btn-info-bg, 10%),
+      @background-color_active: darken(@btn-info-bg, 20%),
+      @background-color_disabled: @btn-info-bg,
+      @font-color: @btn-info-color,
+      @font-color_disabled: @btn-info-color
+    );
+  }
+
+  &-item&-item-warning {
+    #oui > .list-group-variant(
+      @background-color: @btn-warning-bg,
+      @background-color_hover: darken(@btn-warning-bg, 10%),
+      @background-color_active: darken(@btn-warning-bg, 20%),
+      @background-color_disabled: @btn-warning-bg,
+      @font-color: @btn-warning-color,
+      @font-color_disabled: @btn-warning-color
+    );
+  }
+
+  &-item&-item-danger {
+    #oui > .list-group-variant(
+      @background-color: @btn-danger-bg,
+      @background-color_hover: darken(@btn-danger-bg, 10%),
+      @background-color_active: darken(@btn-danger-bg, 20%),
+      @background-color_disabled: @btn-danger-bg,
+      @font-color: @btn-danger-color,
+      @font-color_disabled: @btn-danger-color
+    );
+  }
+}
+
 dl.dl-horizontal.dl-lg {
   @media (min-width: 768px) {
     dt {
@@ -16,5 +62,42 @@ dl.dl-horizontal.dl-lg {
 
   dd {
     margin-bottom: 10px;
+  }
+}
+
+#oui {
+  .list-group-variant(
+    @background-color: @oui-button-secondary-background-color,
+    @background-color_hover: @oui-button-secondary-background-color_hover,
+    @background-color_active: @oui-button-secondary-background-color_active,
+    @background-color_disabled: @oui-button-secondary-background-color_disabled,
+    @font-color: @oui-button-secondary-font-color,
+    @font-color_disabled: @oui-button-secondary-font-color_disabled
+  ) {
+    color: @font-color;
+    background-color: @background-color;
+
+    a& {
+      &:hover {
+        color: @font-color;
+        background-color: @background-color_hover;
+      }
+
+      &.focus,
+      &:focus {
+        #oui > .outline-border();
+
+        z-index: 1; // Avoid the outline to be cropped
+        color: @font-color;
+        background-color: @background-color_active;
+      }
+
+      &.disabled,
+      &:disabled {
+        opacity: 0.5;
+        color: @font-color_disabled;
+        background-color: @background-color_disabled;
+      }
+    }
   }
 }

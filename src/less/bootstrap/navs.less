@@ -49,9 +49,9 @@
 // Tabs
 .nav.nav-tabs {
   background-color: @oui-header-background-color;
-  border-bottom: 0;
   padding-left: @oui-header-spacing-y;
   padding-right: @oui-header-spacing-y;
+  border-bottom: @oui-header-tabs-border-bottom;
 
   > li {
     margin: 0;
@@ -77,6 +77,7 @@
       &:hover,
       &:focus {
         border-color: transparent;
+        background-color: transparent;
       }
 
       &.dropdown-toggle {

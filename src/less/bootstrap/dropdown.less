@@ -21,6 +21,14 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+
+    .navbar.navbar-inverse & {
+      #oui > .icon-replacer-helper(
+        @icon-path: @oui-icon-path-chevron-down,
+        @icon-color: #9d9d9d,
+        @icon-size: @oui-button-dropdown-icon-size
+      );
+    }
   }
 
   .dropup &,
