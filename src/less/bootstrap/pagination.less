@@ -1,8 +1,11 @@
 .pagination {
+  display: inline-flex;
   margin: @oui-pagination-margin;
   font-size: @oui-pagination-font-size;
 
   > li {
+    display: inline-block;
+
     > a,
     > span {
       &:extend(.btn all);
@@ -26,21 +29,9 @@
         @icon-color_disabled: @oui-button-secondary-icon-color_disabled
       );
 
-      min-width: @oui-button-small-min-width;
-      padding-left: @oui-button-small-padding-x;
-      padding-right: @oui-button-small-padding-x;
-      margin: 0;
-      border-radius: 0;
+      padding: @oui-button-secondary-padding_small;
+      border-width: @oui-button-secondary-border-width;
     }
-
-    + li > a,
-    + li > span { border-left: none; }
-
-    &:first-child > a,
-    &:first-child > span { border-radius: @border-radius-base 0 0 @border-radius-base; }
-
-    &:last-child > a,
-    &:last-child > span { border-radius: 0 @border-radius-base @border-radius-base 0; }
 
     // Active
     &.active > a,
@@ -48,21 +39,62 @@
       &,
       &:hover,
       &:focus {
-        background-color: @oui-pagination-button-selected-background;
         color: @oui-pagination-button-selected-color;
+        background-color: @oui-pagination-button-selected-background;
+        border-color: @oui-pagination-button-selected-background;
+        box-shadow: none;
       }
     }
 
     // Disabled
     &.disabled > a,
     &.disabled > span {
+      opacity: 0.5;
+
       &,
       &:hover,
-      &:focus {
-        color: @oui-color-silver;
-        border-color: @oui-color-concrete;
-        background-color: @oui-color-concrete;
+      &:active {
+        color: @oui-button-secondary-font-color_disabled;
+        border-color: @oui-button-secondary-border-color_disabled;
+        background-color: @oui-button-secondary-background-color_disabled;
+        box-shadow: @oui-button-secondary-box-shadow_disabled;
       }
     }
+
+    + li {
+      margin-left: @oui-button-group-secondary-spacing;
+    }
+
+    // + li > a,
+    // + li > span { border-left: none; }
+
+    // &:first-child > a,
+    // &:first-child > span { border-radius: @border-radius-base 0 0 @border-radius-base; }
+
+    // &:last-child > a,
+    // &:last-child > span { border-radius: 0 @border-radius-base @border-radius-base 0; }
+
+    // // Active
+    // &.active > a,
+    // &.active > span {
+    //   &,
+    //   &:hover,
+    //   &:focus {
+    //     background-color: @oui-pagination-button-selected-background;
+    //     color: @oui-pagination-button-selected-color;
+    //   }
+    // }
+
+    // // Disabled
+    // &.disabled > a,
+    // &.disabled > span {
+    //   &,
+    //   &:hover,
+    //   &:focus {
+    //     color: @oui-color-silver;
+    //     border-color: @oui-color-concrete;
+    //     background-color: @oui-color-concrete;
+    //   }
+    // }
   }
 }
