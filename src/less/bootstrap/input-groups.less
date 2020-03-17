@@ -1,0 +1,144 @@
+// Input Groups
+.input-group {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  vertical-align: middle;
+
+  .form-control {
+    border-radius: 0;
+    margin: 0;
+  }
+
+  &-addon,
+  &-btn .btn {
+    min-width: @input-height-base;
+    min-height: @input-height-base;
+    margin-bottom: 0;
+    font-size: @oui-button-font-size;
+    color: @text-color;
+  }
+
+  .form-control,
+  &-addon,
+  &-btn {
+    &:first-child {
+      border-top-left-radius: @base-border-radius-small;
+      border-bottom-left-radius: 0;
+    }
+
+    &:last-child {
+      border-top-right-radius: @base-border-radius-small;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  &-addon,
+  &-lg &-addon,
+  &-sm &-addon {
+    #oui > .control-base();
+
+    min-width: @oui-input-overlay-size;
+    text-align: center;
+    cursor: default;
+
+    .has-success & {
+      #oui > .control-color(
+        @font-color: @oui-form-control-font-color_success,
+        @border-color: @oui-form-control-border-color_success,
+        @border-bottom-color: @oui-form-control-border-bottom-color_success,
+        @background-color: @oui-form-control-background-color_success,
+        @selection-font-color: @oui-form-selection-font-color_success,
+        @selection-background-color: @oui-form-selection-background-color_success
+      );
+    }
+
+    .has-warning & {
+      #oui > .control-color(
+        @font-color: @oui-form-control-font-color_warning,
+        @border-color: @oui-form-control-border-color_warning,
+        @border-bottom-color: @oui-form-control-border-bottom-color_warning,
+        @background-color: @oui-form-control-background-color_warning,
+        @selection-font-color: @oui-form-selection-font-color_warning,
+        @selection-background-color: @oui-form-selection-background-color_warning
+      );
+    }
+
+    .has-error & {
+      #oui > .control-color(
+        @font-color: @oui-form-control-font-color_error,
+        @border-color: @oui-form-control-border-color_error,
+        @border-bottom-color: @oui-form-control-border-bottom-color_error,
+        @background-color: @oui-form-control-background-color_error,
+        @selection-font-color: @oui-form-selection-font-color_error,
+        @selection-background-color: @oui-form-selection-background-color_error
+      );
+    }
+  }
+
+  &-addon {
+    &:first-child:not(:last-child) {
+      border-right: none;
+    }
+
+    &:last-child:not(:first-child) {
+      border-left: none;
+    }
+  }
+
+  &-btn {
+    padding: 0;
+    border: 0;
+
+    .btn {
+      border-radius: @oui-button-radius !important; // Force to override longer selector
+    }
+
+    .btn + .btn {
+      margin-left: @oui-button-group-primary-spacing;
+    }
+
+    &:first-child {
+      padding-right: @oui-button-group-primary-spacing;
+    }
+
+    &:last-child {
+      padding-left: @oui-button-group-primary-spacing;
+    }
+  }
+
+  &.disabled &-addon {
+    opacity: 0.5;
+    background-color: @oui-form-control-background-color_disabled;
+    color: @oui-form-control-font-color_disabled;
+  }
+
+  &.disabled &-addon,
+  &.disabled &-btn .btn {
+    opacity: 0.5;
+    border-color: @oui-form-control-border-color_disabled !important;
+  }
+
+  > .input-group-btn > .btn,
+  &-sm > .input-group-btn > .btn,
+  &-lg > .input-group-btn > .btn {
+    line-height: @oui-button-line-height;
+    padding: @oui-button-primary-padding;
+    font-size: @oui-button-font-size;
+    font-weight: @oui-button-font-weight;
+
+    &.btn-xs,
+    &.btn-sm { padding: @oui-button-primary-padding_small; }
+
+    &.btn-default {
+      padding: @oui-button-secondary-padding;
+
+      &.btn-xs,
+      &.btn-sm { padding: @oui-button-secondary-padding_small; }
+    }
+
+    &.dropdown-toggle {
+      padding-right: @oui-button-dropdown-padding-right;
+    }
+  }
+}

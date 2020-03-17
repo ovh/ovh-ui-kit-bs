@@ -1,0 +1,23 @@
+.headings(@index: length(@oui-heading-font-sizes)) when(@index > 0) {
+  .headings(@index - 1);
+
+  h@{index},
+  .h@{index} {
+    #oui > .base-font(
+      @line-height: extract(@oui-heading-line-heights, @index),
+      @letter-spacing: extract(@oui-heading-letter-spacings, @index),
+      @font-weight: extract(@oui-heading-font-weights, @index),
+      @font-size: extract(@oui-heading-font-sizes, @index),
+      @font-color: extract(@oui-heading-colors, @index),
+    );
+
+    margin: extract(@oui-heading-margins, @index);
+  }
+}
+
+.headings();
+
+.header-underline {
+  padding-bottom: @oui-heading-border-spacing;
+  border-bottom: @oui-heading-border-width solid @oui-heading-border-color;
+}

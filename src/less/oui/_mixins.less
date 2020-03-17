@@ -1,0 +1,48 @@
+@import './mixins/accessibility';
+@import './mixins/animations';
+@import './mixins/forms';
+
+#oui {
+  // From typography.less
+  .base-font(
+    @line-height: @earth-line-height,
+    @letter-spacing: @earth-letter-spacing,
+    @font-family: @earth-font-family,
+    @font-weight: @earth-font-weight,
+    @font-size: @earth-font-size,
+    @font-color: @earth-color,
+    @text-align: @earth-text-align,
+  ) {
+    line-height: @line-height;
+    letter-spacing: @letter-spacing;
+    font-family: @font-family;
+    font-weight: @font-weight;
+    font-size: @font-size;
+    color: @font-color;
+    text-align: @text-align;
+  }
+
+  .text-ellipsis() {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .icon-replacer-helper(
+    @icon-color,
+    @icon-path,
+    @icon-size: 1em
+  ) {
+    // We need to escape '#' in the value to '%23',
+    // For the value to work as data url
+    @icon-color-esc: escape(@icon-color);
+
+    content: ' ';
+    width: @icon-size;
+    height: @icon-size;
+    display: block;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="@{icon-color-esc}" fill-rule="evenodd" d="@{icon-path}"/></svg>');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

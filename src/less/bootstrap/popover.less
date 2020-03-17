@@ -1,0 +1,52 @@
+.popover {
+  background-color: @oui-popover-background-color;
+  box-shadow: @oui-popover-box-shadow;
+  border: @oui-popover-border-width solid @oui-popover-border-color;
+  border-radius: 0;
+  padding: @oui-popover-padding;
+  color: @oui-popover-font-color;
+  font-size: @oui-popover-font-size;
+  max-width: @oui-popover-max-width;
+
+  a,
+  button {
+    font-size: @font-size-base;
+    padding-left: 0;
+    padding-right: 0;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active { text-decoration: underline; }
+  }
+
+  &-menu {
+    a { display: inline-block; }
+
+    button {
+      display: block;
+      text-align: left;
+    }
+  }
+
+  &-title {
+    line-height: extract(@oui-heading-line-heights, 6);
+    letter-spacing: extract(@oui-heading-letter-spacings, 6);
+    padding: 0;
+    margin: extract(@oui-heading-margins, 6);
+    color: extract(@oui-heading-colors, 6);
+    font-size: extract(@oui-heading-font-sizes, 6);
+    font-weight: extract(@oui-heading-font-weights, 6);
+    border: none;
+    background: none;
+  }
+
+  &-content {
+    padding: 0;
+    color: @oui-color-sapphire;
+    background: none;
+  }
+
+  // When the popover is directly in the body
+  body > & { z-index: @zindex-popover-body; }
+}

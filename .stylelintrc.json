@@ -2,6 +2,9 @@
   "extends": "stylelint-config-standard",
   "rules": {
     "indentation": [2, { "ignore": ["inside-parens"] }],
+    "function-calc-no-invalid": null,
+    "length-zero-no-unit": null,
+    "no-descending-specificity": null,
     "selector-type-no-unknown": [true, { "ignore": ["custom-elements"] }]
   }
 }

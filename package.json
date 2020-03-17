@@ -17,10 +17,9 @@
     "clean": "rimraf dist docs/assets",
     "dist": "run-p dist:*",
     "dist:less": "lessc --remcalc --clean-css --source-map \"src/index.less\" \"dist/css/oui-bs3.css\"",
-    "dist:fonts": "cpx \"node_modules/bootstrap/dist/fonts/**/*\" \"dist/fonts/\"",
-    "dist:js": "cpx \"node_modules/bootstrap/dist/js/bootstrap.*\" \"dist/js/\"",
+    "dist:fonts": "cpx \"src/fonts/**/*\" \"dist/fonts\"",
+    "dist:bootstrap": "cpx \"node_modules/bootstrap/dist/{fonts/**/*,js/bootstrap.*}\" \"dist/\"",
     "docs": "run-p docs:*",
-    "docs:oui": "cpx \"node_modules/@ovh-ux/ui-kit/dist/**/*\" \"docs/assets/\"",
     "docs:oui-bs": "cpx \"dist/**/*\" \"docs/assets/\"",
     "preversion": "yarn test",
     "version": "yarn build && git add .",
@@ -28,16 +27,15 @@
     "test": "stylelint 'src/**/*.less'"
   },
   "devDependencies": {
-    "@ovh-ux/ui-kit": "^3.11.2",
     "bootstrap": "^3.4.1",
     "cpx": "^1.5.0",
-    "less": "^3.10.3",
+    "less": "^3.11.1",
     "less-plugin-clean-css": "^1.5.1",
     "less-plugin-remcalc": "^0.1.0",
     "npm-run-all": "^4.1.5",
     "opn-cli": "^5.0.0",
     "rimraf": "^2.7.1",
-    "stylelint": "^10.1.0",
-    "stylelint-config-standard": "^18.3.0"
+    "stylelint": "^13.2.0",
+    "stylelint-config-standard": "^19.0.0"
   }
 }

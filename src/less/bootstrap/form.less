@@ -1,0 +1,402 @@
+label {
+  #oui > .base-font(
+    @font-color: @oui-field-label-font-color,
+    @font-size: @oui-field-label-font-size,
+    @font-weight: @oui-field-label-font-weight
+  );
+
+  display: block;
+  padding: 0;
+  margin: @oui-field-header-spacing;
+
+  &.required::after {
+    content: "*";
+    color: @state-danger-text;
+    margin-left: 5px;
+  }
+}
+
+legend {
+  font-size: @font-size-base;
+  font-weight: @oui-font-semibold;
+  margin-bottom: 0.5em;
+}
+
+.form-control {
+  &,
+  &.input-lg,
+  &.input-sm,
+  .form-group-lg &,
+  .form-group-sm & {
+    #oui > .control-base();
+
+    width: 100%;
+    display: block;
+
+    &,
+    &:focus {
+      box-shadow: @oui-form-control-box-shadow;
+    }
+
+    // States
+    #oui > .control-states();
+
+    &:disabled,
+    &.disabled { opacity: 0.5; }
+
+    .has-success & {
+      &,
+      &:hover,
+      &:focus {
+        #oui > .control-color(
+          @font-color: @oui-form-control-font-color_success,
+          @border-color: @oui-form-control-border-color_success,
+          @border-bottom-color: @oui-form-control-border-bottom-color_success,
+          @background-color: @oui-form-control-background-color_success,
+          @selection-font-color: @oui-form-selection-font-color_success,
+          @selection-background-color: @oui-form-selection-background-color_success,
+        );
+      }
+
+      &,
+      &:focus {
+        box-shadow: @oui-form-control-box-shadow;
+      }
+    }
+
+    .has-warning & {
+      &,
+      &:hover,
+      &:focus {
+        #oui > .control-color(
+          @font-color: @oui-form-control-font-color_warning,
+          @border-color: @oui-form-control-border-color_warning,
+          @border-bottom-color: @oui-form-control-border-bottom-color_warning,
+          @background-color: @oui-form-control-background-color_warning,
+          @selection-font-color: @oui-form-selection-font-color_warning,
+          @selection-background-color: @oui-form-selection-background-color_warning,
+        );
+      }
+
+      &,
+      &:focus {
+        box-shadow: @oui-form-control-box-shadow;
+      }
+    }
+
+    .has-error & {
+      &,
+      &:hover,
+      &:focus {
+        #oui > .control-color(
+          @font-color: @oui-form-control-font-color_error,
+          @border-color: @oui-form-control-border-color_error,
+          @border-bottom-color: @oui-form-control-border-bottom-color_error,
+          @background-color: @oui-form-control-background-color_error,
+          @selection-font-color: @oui-form-selection-font-color_error,
+          @selection-background-color: @oui-form-selection-background-color_error,
+        );
+      }
+
+      &,
+      &:focus {
+        box-shadow: @oui-form-control-box-shadow;
+      }
+    }
+  }
+  
+  .input-group-lg &,
+  .input-group-sm & {
+    height: @oui-form-control-height;
+    line-height: @oui-form-control-line-height;
+    padding: @oui-form-control-padding;
+    font-size: @oui-form-control-font-size;
+    font-weight: @oui-form-control-font-weight;
+  }
+}
+
+// Inputs, Textarea
+textarea.form-control { resize: vertical; }
+
+input.form-control,
+textarea.form-control {
+  &,
+  &.input-lg,
+  &.input-sm,
+  .form-group-lg &,
+  .form-group-sm & {
+    #oui > .control-readonly();
+  }
+}
+
+// Select
+select.form-control {
+  // Dropdown Menu
+  option {
+    margin: 0;
+    padding: 0;
+    background: @oui-select-option-background-color;
+    color: @oui-select-option-font-color;
+    font-size: @oui-select-option-font-size;
+    font-style: normal;
+    font-weight: @oui-select-option-font-weight;
+
+    &:hover,
+    &:focus {
+      background: @oui-select-option-background-color_hover;
+      color: @oui-select-option-font-color_hover;
+    }
+
+    &:checked {
+      background: @oui-select-option-background-color_checked;
+      color: @oui-select-option-font-color_checked;
+    }
+  }
+
+  optgroup {
+    color: @oui-select-group-font-color;
+    font-size: @oui-select-group-font-size;
+    font-style: normal;
+    font-weight: @oui-select-group-font-weight;
+    background-color: @oui-select-group-background-color;
+  }
+
+  // Multiple variant
+  &[multiple] {
+    overflow: auto;
+    padding: @oui-select-list-padding;
+
+    // Dropdown Menu
+    option {
+      background: transparent;
+      color: @oui-select-option-font-color;
+
+      &:hover,
+      &:focus {
+        background: @oui-select-option-background-color_hover;
+        color: @oui-select-option-font-color_hover;
+      }
+
+      &:checked {
+        background: @oui-select-option-background-color_checked;
+        color: @oui-select-option-font-color_checked;
+      }
+    }
+
+    optgroup { background: transparent; }
+
+    // Use focus colors when select[multiple] is hovered
+    &:hover {
+      #oui > .control-color(
+        @font-color: @oui-select-font-color_focus,
+        @border-color: @oui-select-border-color_focus,
+        @border-bottom-color: @oui-select-border-bottom-color_focus,
+        @background-color: @oui-select-background-color_focus,
+      );
+    }
+  }
+}
+
+// Checkbox, Radio
+input[type="radio"],
+input[type="checkbox"] { margin: @padding-base-vertical 0 0 0; }
+
+.checkbox,
+.checkbox-inline,
+.radio,
+.radio-inline {
+  margin: @oui-choice-margin;
+  color: @oui-choice-font-color;
+
+  &.disabled {
+    opacity: 0.5;
+    color: @oui-choice-font-color_disabled;
+  }
+
+  label { color: inherit; }
+
+  // The bootstrap HTML structure doesn't allow
+  // To create a custom icons based on the existing input
+  // So the state color is apply on all the text
+  &.has-success {
+    &,
+    label { color: @oui-form-control-icon-color_success; }
+  }
+
+  &.has-warning {
+    &,
+    label { color: @oui-form-control-icon-color_warning; }
+  }
+
+  &.has-error {
+    &,
+    label { color: @oui-form-control-icon-color_error; }
+  }
+
+  .form-horizontal & { padding-top: 0; }
+}
+
+.checkbox label,
+.checkbox-inline,
+.radio label,
+.radio-inline {
+  line-height: @oui-choice-line-height;
+  padding-left: calc(@oui-choice-icon-size + @oui-checkbox-padding-left);
+  font-size: @oui-choice-font-size;
+  font-weight: @oui-choice-font-weight;
+}
+
+.checkbox,
+.radio {
+  & + & { margin-top: @oui-choice-spacing; }
+}
+
+.checkbox-inline,
+.radio-inline {
+  margin-right: @oui-choice-inline-spacing;
+}
+
+.checkbox-description,
+.radio-description {
+  display: block;
+  color: @oui-choice-font-color;
+  font-size: @oui-choice-description-font-size;
+  font-weight: @oui-choice-font-weight;
+}
+
+.checkbox,
+.checkbox-inline {
+  input[type="checkbox"] { margin-left: calc(-@oui-choice-font-size * 1.5); }
+}
+
+.radio,
+.radio-inline {
+  input[type="radio"] { margin-left: calc(-@oui-choice-font-size * 1.5); }
+}
+
+// Feedbacks
+.form-control-feedback {
+  width: @oui-input-overlay-size;
+  height: @oui-input-overlay-size;
+  line-height: @oui-input-overlay-size;
+  font-size: @oui-input-overlay-icon-size;
+  color: inherit;
+
+  &.glyphicon {
+    font-size: calc(@oui-input-overlay-icon-size * 0.75);
+  }
+}
+
+.has-feedback {
+  z-index: 0;
+
+  .form-control {
+    padding-right: @oui-input-overlay-size;
+  }
+
+  label ~ .form-control-feedback {
+    top: @base-line-height;
+    right: 0;
+    bottom: 0;
+  }
+
+  // Feedback Icon
+  #oui > .feedback-variant(@oui-input-overlay-font-color);
+
+  &.has-success {
+    #oui > .feedback-variant(@oui-input-overlay-font-color_success);
+  }
+
+  &.has-warning {
+    #oui > .feedback-variant(@oui-input-overlay-font-color_warning);
+  }
+
+  &.has-error {
+    #oui > .feedback-variant(@oui-input-overlay-font-color_error);
+  }
+}
+
+.input-lg,
+.input-sm,
+.input-group-lg,
+.input-group-sm,
+.form-group-lg .form-control,
+.form-group-sm .form-control {
+  + .form-control-feedback {
+    width: @oui-input-overlay-size;
+    height: @oui-input-overlay-size;
+    line-height: @oui-input-overlay-size;
+  }
+}
+
+// Help text
+.help-block {
+  margin-top: @oui-field-footer-spacing;
+  font-size: @oui-field-helper-font-size;
+  font-weight: @oui-field-helper-font-weight;
+  color: @oui-field-helper-font-color;
+}
+
+// Inline Forms
+.form-inline {
+  label {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+
+  .input-group { width: auto; }
+}
+
+// Horizontal Forms
+.form-horizontal {
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline {
+    padding-top: @padding-base-vertical;
+  }
+
+  .help-block { margin-bottom: 0; }
+
+  @media (min-width: @screen-sm-min) {
+    .control-label {
+      line-height: @oui-form-control-line-height;
+      margin-bottom: 0;
+      padding-top: calc(@oui-form-control-padding-y + @oui-form-control-border-width); // Padding + Border
+    }
+  }
+
+  .form-group-lg {
+    @media (min-width: @screen-sm-min) {
+      .control-label {
+        line-height: @oui-form-control-line-height;
+        padding-top: calc(@oui-form-control-padding-y + @oui-form-control-border-width); // Padding + Border
+        font-size: @oui-field-label-font-size;
+      }
+    }
+  }
+
+  .form-group-sm {
+    @media (min-width: @screen-sm-min) {
+      .control-label {
+        line-height: @oui-form-control-line-height;
+        padding-top: calc(@oui-form-control-padding-y + @oui-form-control-border-width); // Padding + Border
+        font-size: @oui-field-label-font-size;
+      }
+    }
+  }
+}
+
+// Mixins
+#oui {
+  .feedback-variant(
+      @feedback-color
+  ) {
+    .form-control-feedback { color: @feedback-color; }
+
+    .form-control {
+      & ~ .form-control-feedback { color: @feedback-color; }
+    }
+  }
+}

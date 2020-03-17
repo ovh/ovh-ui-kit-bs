@@ -1,0 +1,188 @@
+.nav {
+  > .dropdown {
+    &.open::after {
+      left: 0;
+      width: 100%;
+    }
+
+    > .dropdown-toggle {
+      padding-right: @oui-button-dropdown-padding-right;
+    }
+
+    > .dropdown-menu {
+      margin-top: 14px;
+
+      &::before,
+      &::after {
+        content: '';
+        height: 0;
+        width: 0;
+        position: absolute;
+        left: 22px;
+        bottom: 100%;
+        display: block;
+        pointer-events: none;
+        transform: translateX(-50%);
+        border: solid transparent;
+      }
+
+      &::before {
+        border: 10px transparent solid;
+        border-bottom-color: #bbbdbf;
+      }
+
+      &::after {
+        border: 8px transparent solid;
+        border-bottom-color: #fff;
+      }
+
+      &-right::before,
+      &-right::after {
+        left: auto;
+        right: 22px;
+        transform: translateX(50%);
+      }
+    }
+  }
+}
+
+// Tabs
+.nav.nav-tabs {
+  background-color: @oui-header-background-color;
+  padding-left: @oui-header-spacing-y;
+  padding-right: @oui-header-spacing-y;
+  border-bottom: @oui-header-tabs-border-bottom;
+
+  > li {
+    margin: 0;
+
+    &::after {
+      content: " ";
+      width: 0;
+      display: block;
+      left: 50%;
+      position: relative;
+      border-bottom: @oui-header-tabs-item-border-width solid @oui-header-tabs-item-border-color;
+    }
+
+    > a {
+      padding: @oui-header-tabs-item-padding;
+      margin-right: 0;
+      font-size: @oui-header-tabs-item-font-size;
+      font-weight: @oui-header-tabs-item-font-weight;
+      border: none;
+      color: @oui-header-tabs-item-font-color;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        border-color: transparent;
+        background-color: transparent;
+      }
+
+      &.dropdown-toggle {
+        padding: @oui-header-tabs-item-padding_dropdown;
+      }
+    }
+
+    &.active {
+      &::after {
+        left: 0;
+        width: 100%;
+      }
+
+      > a {
+        &,
+        &:hover,
+        &:focus {
+          background-color: transparent;
+          border: none;
+          color: @oui-header-tabs-item-font-color;
+          font-weight: @oui-header-tabs-item-font-weight;
+        }
+      }
+    }
+
+    &.disabled > a { color: @text-muted; }
+  }
+}
+
+.nav.nav-pills {
+  padding: @oui-chip-container-padding;
+  margin: @oui-chip-container-margin;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  border: @oui-chip-container-border-width solid @oui-chip-container-border-color;
+  background-color: @oui-chip-container-background-color;
+
+  > li {
+    display: inline-block;
+    margin: @oui-chip-container-item-spacing;
+
+    > a {
+      #oui > .animate();
+      #oui > .base-font(
+        @line-height: @oui-chip-height,
+        @font-color: @oui-chip-font-color,
+        @font-size: @oui-chip-font-size,
+        @font-weight: @oui-chip-font-weight
+      );
+      #oui > .text-ellipsis();
+
+      min-width: @oui-chip-height;
+      height: @oui-chip-height;
+      padding: @oui-chip-padding;
+      position: relative;
+      display: block;
+      text-align: left;
+      color: @oui-chip-font-color;
+      border: none;
+      border-radius: @oui-chip-border-radius;
+      background-color: @oui-chip-background-color;
+
+      &:hover {
+        cursor: pointer;
+        color: @oui-chip-font-color_hover;
+        background-color: @oui-chip-background-color_hover;
+      }
+
+      &:focus {
+        #oui > .outline-border(
+          @outline-radius: calc(@oui-chip-border-radius + @oui-a11y-outline-width + @oui-a11y-outline-offset);
+        );
+      }
+
+      &:active {
+        color: @oui-chip-font-color_active;
+        background-color: @oui-chip-background-color_active;
+      }
+    }
+
+    &.open > a,
+    &.active > a {
+      color: @oui-chip-font-color_active;
+      background-color: @oui-chip-background-color_active;
+
+      &:hover {
+        color: @oui-chip-font-color_hover;
+        background-color: @oui-chip-background-color_hover;
+      }
+    }
+
+    &.divider { display: none; }
+  }
+
+  &.nav-stacked {
+    flex-direction: column;
+    align-content: stretch;
+  }
+}
+
+.tab-content {
+  margin-top: @grid-gutter-width;
+  padding-left: @grid-gutter-width;
+  padding-right: @grid-gutter-width;
+}
