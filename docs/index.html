@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="en" class="no-js">
 
 <head>
     <meta charset="utf-8">
@@ -592,7 +592,7 @@
                     </div>
                     <div class="form-group">
                         <label class="control-label" for="multipleSelect">Multiple select</label>
-                        <select multiple class="form-control">
+                        <select multiple class="form-control" id="multipleSelect">
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -1471,19 +1471,19 @@
             </header>
             <nav role="navigation">
                 <ul class="nav nav-tabs" role="tablist">
-                    <li class="active">
-                        <a href="#tab-pane-a" data-toggle="tab">Section 1</a>
+                    <li role="presentation" class="active">
+                        <a href="#tab-pane-a" data-toggle="tab" role="tab">Section 1</a>
                     </li>
-                    <li>
-                        <a href="#tab-pane-b" data-toggle="tab">Section 2</a>
+                    <li role="presentation">
+                        <a href="#tab-pane-b" data-toggle="tab" role="tab">Section 2</a>
                     </li>
-                    <li>
-                        <a href="#tab-pane-c" data-toggle="tab">Section 3</a>
+                    <li role="presentation">
+                        <a href="#tab-pane-c" data-toggle="tab" role="tab">Section 3</a>
                     </li>
-                    <li>
-                        <a href="#tab-pane-d" data-toggle="tab">Section 4</a>
+                    <li role="presentation">
+                        <a href="#tab-pane-d" data-toggle="tab" role="tab">Section 4</a>
                     </li>
-                    <li class="dropdown">
+                    <li role="presentation" class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             Menu
                             <span class="caret"></span>
@@ -1517,7 +1517,7 @@
                 </ul>
             </nav>
             <div class="tab-content">
-                <div class="tab-pane active" id="tab-pane-a">
+                <div role="tabpanel" class="tab-pane active" id="tab-pane-a">
                     <h2>Section 1</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo assumenda non aspernatur qui ipsa nam
                         facere corrupti vel! Impedit ratione natus eligendi facere eaque illo tempore, voluptatum voluptas,
@@ -1534,7 +1534,7 @@
                         architecto autem, impedit natus laboriosam aliquam quaerat sunt ut qui iusto animi iure. Esse voluptates
                         a eaque nemo.</p>
                 </div>
-                <div class="tab-pane" id="tab-pane-b">
+                <div role="tabpanel" class="tab-pane" id="tab-pane-b">
                     <h2>Section 2</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit nesciunt voluptatem reprehenderit nulla
                         magnam autem, deleniti veritatis illum nihil ipsum qui explicabo in rerum officiis, perferendis.
@@ -1550,7 +1550,7 @@
                     <p>Adipisci rem a in odit ipsa? Unde atque harum molestias corrupti quidem, et beatae velit excepturi temporibus
                         amet dolorum placeat suscipit quas. At in dolorem sint assumenda eveniet optio eos.</p>
                 </div>
-                <div class="tab-pane" id="tab-pane-c">
+                <div role="tabpanel" class="tab-pane" id="tab-pane-c">
                     <h2>Section 3</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium asperiores quasi ipsum veniam cum
                         velit impedit ipsam officia obcaecati, accusamus modi, vitae fugiat, voluptates. Fugiat cum, omnis
@@ -1568,7 +1568,7 @@
                         voluptates culpa. Aliquam ea dolores voluptatem reiciendis officia autem tempora, corporis possimus
                         ad id voluptas facilis.</p>
                 </div>
-                <div class="tab-pane" id="tab-pane-d">
+                <div role="tabpanel" class="tab-pane" id="tab-pane-d">
                     <h2>Section 4</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, inventore velit doloremque soluta
                         quisquam, laboriosam incidunt quis eum mollitia, ipsum iure pariatur natus, deleniti? Quod perferendis
