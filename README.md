@@ -2,7 +2,7 @@
 
 ![githubbanner](https://user-images.githubusercontent.com/3379410/27423240-3f944bc4-5731-11e7-87bb-3ff603aff8a7.png)
 
-A [Bootstrap 3](https://github.com/twbs/bootstrap) theme for the OVH managers, based on [OVH UI](https://github.com/ovh-ux/ovh-ui-kit).
+A [Bootstrap 3](https://github.com/twbs/bootstrap) theme for the OVH managers, based on [OVH UI](https://github.com/ovh/ovh-ui-kit).
 
 [![npm version](https://badgen.net/npm/v/ovh-ui-kit-bs)](https://www.npmjs.com/package/ovh-ui-kit-bs)
 
@@ -22,7 +22,7 @@ yarn add ovh-ui-kit-bs
 
 ### Test page
 
-A test page is available [here](https://ovh-ux.github.io/ovh-ui-kit-bs/) for viewing all styles and component of our theme.
+A test page is available [here](https://ovh.github.io/ovh-ui-kit-bs/) for viewing all styles and component of our theme.
 
 ### Integration
 
@@ -46,7 +46,7 @@ A test page is available [here](https://ovh-ux.github.io/ovh-ui-kit-bs/) for vie
 1. Clone and install `ovh-ui-kit-bs`
 
 ```bash
-git clone https://github.com/ovh-ux/ovh-ui-kit-bs.git
+git clone https://github.com/ovh/ovh-ui-kit-bs.git
 cd ovh-ui-kit-bs
 yarn install
 ```
@@ -62,10 +62,10 @@ If you apply modifications on the source files, you'll need to rebuild the proje
 
 ## Related links
 
- * Contribute: [https://github.com/ovh-ux/ovh-ui-kit-bs/blob/master/CONTRIBUTING.md](https://github.com/ovh-ux/ovh-ui-kit-bs/blob/master/.github/CONTRIBUTING.md)
- * Report bugs: [https://github.com/ovh-ux/ovh-ui-kit-bs/issues](https://github.com/ovh-ux/ovh-ui-kit-bs/issues)
- * Get latest version: [https://github.com/ovh-ux/ovh-ui-kit-bs](https://github.com/ovh-ux/ovh-ui-kit-bs)
+ * Contribute: [https://github.com/ovh/ovh-ui-kit-bs/blob/master/CONTRIBUTING.md](https://github.com/ovh/ovh-ui-kit-bs/blob/master/.github/CONTRIBUTING.md)
+ * Report bugs: [https://github.com/ovh/ovh-ui-kit-bs/issues](https://github.com/ovh/ovh-ui-kit-bs/issues)
+ * Get latest version: [https://github.com/ovh/ovh-ui-kit-bs](https://github.com/ovh/ovh-ui-kit-bs)
 
 ## License
 
-See https://github.com/ovh-ux/ovh-ui-kit-bs/blob/master/LICENSE
+See https://github.com/ovh/ovh-ui-kit-bs/blob/master/LICENSE
