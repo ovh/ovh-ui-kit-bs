@@ -1,7 +1,5 @@
 # OVH UI for Bootstrap 3
 
-![githubbanner](https://user-images.githubusercontent.com/3379410/27423240-3f944bc4-5731-11e7-87bb-3ff603aff8a7.png)
-
 A [Bootstrap 3](https://github.com/twbs/bootstrap) theme for the OVH managers, based on [OVH UI](https://github.com/ovh/ovh-ui-kit).
 
 [![npm version](https://badgen.net/npm/v/ovh-ui-kit-bs)](https://www.npmjs.com/package/ovh-ui-kit-bs)
