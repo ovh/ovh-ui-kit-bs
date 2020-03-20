@@ -41,6 +41,6 @@
     "opn-cli": "^5.0.0",
     "rimraf": "^3.0.2",
     "stylelint": "^13.2.1",
-    "stylelint-config-standard": "^19.0.0"
+    "stylelint-config-standard": "^20.0.0"
   }
 }
