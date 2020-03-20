@@ -42,5 +42,8 @@
     "rimraf": "^3.0.2",
     "stylelint": "^13.2.1",
     "stylelint-config-standard": "^20.0.0"
+  },
+  "resolutions": {
+    "set-value": "^2.0.1"
   }
 }
