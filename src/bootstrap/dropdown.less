@@ -1,24 +1,25 @@
+@import "@{oui-path}/packages/oui-animation/_mixins";
 @import "@{oui-path}/packages/oui-icons/_mixins";
 @import "@{oui-path}/packages/oui-icons/_normalize";
 @import "@{oui-path}/packages/oui-dropdown/_variables";
 
 // Dropdowns
 .caret {
+    #oui > .icon-normalize();
+    #oui > .icon();
+    #oui > .icon-type();
+
     width: @oui-button-dropdown-icon-size;
     height: @oui-button-dropdown-icon-size;
     line-height: @oui-button-dropdown-icon-size;
     display: inline-block;
     margin-left: 0;
-    vertical-align: middle;
+    vertical-align: baseline;
     color: @oui-button-dropdown-icon-color;
     font-size: @oui-button-dropdown-icon-size;
     border: none;
 
     &::before {
-        #oui > .icon-normalize();
-        #oui > .icon();
-        #oui > .icon-type();
-
         content: @oui-icon-index-chevron-down;
         font-size: inherit;
         color: inherit;
@@ -41,7 +42,7 @@
         text-align: center;
         color: inherit;
         font-size: @oui-button-dropdown-icon-size;
-        vertical-align: middle;
+        vertical-align: baseline;
         cursor: pointer;
         pointer-events: none;
 

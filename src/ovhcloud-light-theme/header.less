@@ -1,0 +1,36 @@
+.page-header {
+    background: @background-color;
+
+    h1 {
+        font-size: 36px;
+        line-height: 45px;
+        color: @text-color;
+        font-weight: 400;
+    }
+}
+
+.nav.nav-tabs {
+    border-bottom: 1px solid rgb(230, 245, 252);
+    background: @background-color;
+
+    > li,
+    > li.active {
+        > a {
+            &,
+            &:hover,
+            &:focus {
+                color: @primary-color;
+                font-weight: 600;
+            }
+
+            .caret,
+            .oui-icon {
+                color: inherit;
+            }
+        }
+
+        &::after {
+            border-color: @primary-color;
+        }
+    }
+}

@@ -1,3 +1,5 @@
+@import "@{oui-path}/packages/oui-icons/_mixins";
+@import "@{oui-path}/packages/oui-icons/_normalize";
 @import "@{oui-path}/packages/oui-message/_normalize";
 @import "@{oui-path}/packages/oui-message/_variables";
 
@@ -20,6 +22,10 @@
     background-color: @oui-message-background-color;
 
     &::before {
+        #oui > .icon-normalize();
+        #oui > .icon();
+        #oui > .icon-type();
+
         display: block;
         position: absolute;
         top: @oui-message-success-icon-position-top;
@@ -28,48 +34,48 @@
 
     &.alert-info {
         #oui > .alert-variant(
-            @oui-message-info-padding;
-            @state-info-text;
-            @state-info-border;
-            @state-info-bg;
-            @oui-message-info-icon-size;
-            @oui-message-info-icon-color;
+            @oui-message-info-padding,
+            @state-info-text,
+            @state-info-border,
+            @state-info-bg,
+            @oui-message-info-icon-size,
+            @oui-message-info-icon-color,
             @oui-icon-index-info_circle
         );
     }
 
     &.alert-success {
         #oui > .alert-variant(
-            @oui-message-success-padding;
-            @state-success-text;
-            @state-success-border;
-            @state-success-bg;
-            @oui-message-success-icon-size;
-            @oui-message-success-icon-color;
+            @oui-message-success-padding,
+            @state-success-text,
+            @state-success-border,
+            @state-success-bg,
+            @oui-message-success-icon-size,
+            @oui-message-success-icon-color,
             @oui-icon-index-success_circle
         );
     }
 
     &.alert-warning {
         #oui > .alert-variant(
-            @oui-message-warning-padding;
-            @state-warning-text;
-            @state-warning-border;
-            @state-warning-bg;
-            @oui-message-warning-icon-size;
-            @oui-message-warning-icon-color;
+            @oui-message-warning-padding,
+            @state-warning-text,
+            @state-warning-border,
+            @state-warning-bg,
+            @oui-message-warning-icon-size,
+            @oui-message-warning-icon-color,
             @oui-icon-index-warning_circle
         );
     }
 
     &.alert-danger {
         #oui > .alert-variant(
-            @oui-message-error-padding;
-            @state-danger-text;
-            @state-danger-border;
-            @state-danger-bg;
-            @oui-message-error-icon-size;
-            @oui-message-error-icon-color;
+            @oui-message-error-padding,
+            @state-danger-text,
+            @state-danger-border,
+            @state-danger-bg,
+            @oui-message-error-icon-size,
+            @oui-message-error-icon-color,
             @oui-icon-index-error_circle
         );
     }
@@ -92,12 +98,12 @@
 // Mixins
 #oui {
     .alert-variant(
-        @padding;
-        @font-color;
-        @border-color;
-        @background-color;
-        @icon-size;
-        @icon-color;
+        @padding,
+        @font-color,
+        @border-color,
+        @background-color,
+        @icon-size,
+        @icon-color,
         @icon-content
     ) {
         padding: @padding;
@@ -106,11 +112,6 @@
         background-color: @background-color;
 
         &::before {
-            #oui > .icon-normalize();
-            #oui > .icon();
-            #oui > .icon-type();
-            #oui > .icon-bicolor();
-
             content: @icon-content;
             position: absolute;
             display: block;

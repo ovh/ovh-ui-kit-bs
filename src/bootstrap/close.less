@@ -1,6 +1,13 @@
+@import "@{oui-path}/packages/oui-animation/_mixins";
+@import "@{oui-path}/packages/oui-icons/_mixins";
+@import "@{oui-path}/packages/oui-icons/_normalize";
+
 // Close
 .close {
     #oui > .animate();
+    #oui > .icon-normalize();
+    #oui > .icon();
+    #oui > .icon-type();
 
     cursor: pointer;
     min-width: @close-font-size;
@@ -15,10 +22,6 @@
     [aria-hidden] { display: none; }
 
     &::before {
-        #oui > .icon-normalize();
-        #oui > .icon();
-        #oui > .icon-type();
-
         content: @oui-icon-index-close;
         font-size: inherit;
         color: @text-color;
