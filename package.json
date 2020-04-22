@@ -27,7 +27,7 @@
     "less:dist": "lessc --remcalc --clean-css \"src/_dist.less\" \"dist/ovh-ui-kit-bs.min.css\"",
     "less:olt": "lessc --remcalc --clean-css \"src/ovhcloud-light-theme.less\" \"dist/oui-bs3-olt.css\"",
     "less:vendor": "lessc --remcalc --clean-css \"src/_vendor.less\" \"assets/vendor.min.css\"",
-    "open": "opn index.html",
+    "open": "open-cli index.html",
     "start": "npm run open"
   },
   "devDependencies": {
