@@ -1,0 +1,39 @@
+.input-group {
+    > .form-control,
+    > .input-group-btn {
+        margin: 0 !important;
+    }
+
+    > .input-group-btn:first-child {
+        padding-right: 4px !important;
+    }
+
+    > .input-group-btn:last-child {
+        padding-left: 4px !important;
+    }
+}
+
+.input-group-btn {
+    border-radius: 0 !important;
+
+    > .btn,
+    > .btn-group {
+        margin: 0 !important;
+    }
+
+    > .btn,
+    > .btn-group > .btn,
+    > .dropdown-toggle {
+        border-radius: @border-radius-default !important;
+    }
+
+    > .btn,
+    > .btn-group,
+    > .dropdown-toggle {
+        + .btn,
+        + .btn-group,
+        + .dropdown-toggle {
+            margin-left: 4px !important;
+        }
+    }
+}
