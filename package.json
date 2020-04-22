@@ -12,35 +12,40 @@
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "main": "src/ovh-ui-kit-bs.less",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "npm run clean && npm run less && npm run copy",
+    "build": "run-s clean less copy",
     "clean": "rimraf dist",
-    "copy": "npm run copy:fonts && npm run copy:icons && npm run copy:glyphicons",
+    "copy": "run-p copy:*",
     "copy:fonts": "cpx \"node_modules/ovh-ui-kit/packages/oui-typography/fonts/**/*.{eot,svg,ttf,woff,woff2}\" \"assets/fonts\"",
     "copy:glyphicons": "cpx \"node_modules/bootstrap/fonts/*\" \"assets/fonts\"",
     "copy:icons": "cpx \"node_modules/ovh-ui-kit/dist/icons/*.{eot,svg,ttf,woff,woff2,html}\" \"assets/icons\"",
-    "less": "npm run less:dist && npm run less:debug && npm run less:vendor",
+    "less": "run-p less:*",
     "less:debug": "lessc --remcalc \"src/_dist.less\" \"dist/ovh-ui-kit-bs.css\"",
     "less:dist": "lessc --remcalc --clean-css \"src/_dist.less\" \"dist/ovh-ui-kit-bs.min.css\"",
+    "less:olt": "lessc --remcalc --clean-css \"src/ovhcloud-light-theme.less\" \"dist/oui-bs3-olt.css\"",
     "less:vendor": "lessc --remcalc --clean-css \"src/_vendor.less\" \"assets/vendor.min.css\"",
     "open": "opn index.html",
     "start": "npm run open"
   },
   "devDependencies": {
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "cpx": "^1.5.0",
-    "less": "^3.8.1",
+    "less": "^3.11.1",
     "less-plugin-clean-css": "^1.5.1",
     "less-plugin-remcalc": "^0.1.0",
-    "opn-cli": "^4.0.0",
-    "ovh-ui-kit": "~2.40.0",
-    "rimraf": "^2.6.2",
-    "stylelint": "^9.4.0",
-    "stylelint-config-ovh": "^0.1.0"
+    "npm-run-all": "^4.1.5",
+    "opn-cli": "^5.0.0",
+    "ovh-ui-kit": "~2.42.1",
+    "rimraf": "^3.0.2",
+    "stylelint": "^13.2.1",
+    "stylelint-config-standard": "^20.0.0"
   },
   "peerDependencies": {
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "less-plugin-remcalc": "^0.1.0",
-    "ovh-ui-kit": "~2.40.0"
+    "ovh-ui-kit": "~2.42.1"
   }
 }
