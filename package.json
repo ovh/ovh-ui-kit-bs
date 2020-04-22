@@ -13,7 +13,8 @@
   "author": "OVH SAS",
   "main": "dist/ovh-ui-kit-bs.css",
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "scripts": {
     "build": "run-s clean less copy",
