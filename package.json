@@ -13,6 +13,7 @@
   "author": "OVH SAS",
   "main": "dist/ovh-ui-kit-bs.css",
   "files": [
+    "assets",
     "dist",
     "src"
   ],
