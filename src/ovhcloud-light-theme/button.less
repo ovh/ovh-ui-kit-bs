@@ -46,3 +46,23 @@
       }
     }
   }
+
+.dropdown-toggle {
+    &.btn-default {
+        &:active,
+        &:focus {
+            border: 2px solid @primary-color;
+            background-color: rgb(239, 249, 253);
+        }
+    }
+
+    .open > &.btn-default {
+        &,
+        &.focus,
+        &:focus,
+        &:hover {
+            border: 2px solid @primary-color;
+            background-color: rgb(239, 249, 253);
+        }
+    }
+}

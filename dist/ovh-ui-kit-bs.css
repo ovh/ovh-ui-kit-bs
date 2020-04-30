@@ -7992,7 +7992,7 @@ oui-form-actions {
   display: inline-block;
   margin-left: 0;
   vertical-align: baseline;
-  color: #113f6d;
+  color: inherit;
   font-size: 0.625rem;
   border: none;
 }
