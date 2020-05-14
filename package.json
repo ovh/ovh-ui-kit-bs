@@ -43,6 +43,7 @@
     "stylelint-config-standard": "^20.0.0"
   },
   "resolutions": {
+    "clean-css": "^4.1.11",
     "set-value": "^2.0.1"
   }
 }
