@@ -1,12 +1,17 @@
 .popover {
-  background-color: @oui-popover-background-color;
-  box-shadow: @oui-popover-box-shadow;
-  border: @oui-popover-border-width solid @oui-popover-border-color;
-  border-radius: 0;
-  padding: @oui-popover-padding;
-  color: @oui-popover-font-color;
-  font-size: @oui-popover-font-size;
+  min-width: @oui-popover-min-width;
   max-width: @oui-popover-max-width;
+  line-height: @oui-popover-line-height;
+  box-sizing: border-box;
+  margin: 0;
+  padding: @oui-popover-padding;
+  font-size: @oui-popover-font-size;
+  font-weight: @oui-popover-font-weight;
+  color: @oui-popover-font-color;
+  box-shadow: @oui-popover-box-shadow;
+  border: solid @oui-popover-border-width @oui-popover-border-color;
+  border-radius: @oui-popover-border-radius;
+  background-color: @oui-popover-background-color;
 
   a,
   button {
@@ -49,4 +54,94 @@
 
   // When the popover is directly in the body
   body > & { z-index: @zindex-popover-body; }
+
+  // To get an arrow with a working box-shadow,
+  // we use a rotated square to create an arrow.
+  // Before, we need to do some calculation here.
+  @calc-shadow: rem-calc(6);
+  @calc-square-side: calc(@oui-tooltip-arrow-size / sqrt(2));
+  @calc-overflow-width: calc(@oui-tooltip-arrow-size + (@calc-shadow * 2));
+  @calc-overflow-height: calc(@calc-overflow-width / 2);
+  @calc-translate: calc(-@oui-tooltip-arrow-size / 2);
+  @calc-margin: calc((-@oui-tooltip-arrow-size - (@calc-shadow * 2)) / 2);
+
+  .arrow {
+    position: absolute;
+    overflow: hidden; // Allow to contain the box-shadow
+    border: none !important;
+    pointer-events: none;
+
+    &::after { display: none; }
+
+    &::before {
+      content: " ";
+      width: @calc-square-side;
+      height: @calc-square-side;
+      position: absolute;
+      transform-origin: 0 0;
+      border: @oui-tooltip-arrow-border-width solid @oui-tooltip-arrow-border-color;
+      box-shadow: @oui-tooltip-arrow-box-shadow;
+      background-color: @oui-tooltip-arrow-background-color;
+    }
+  }
+
+  &.bottom,
+  &.top {
+    .arrow {
+      width: @calc-overflow-width;
+      height: @calc-overflow-height;
+      left: 50%;
+      right: unset;
+      margin-left: @calc-margin;
+
+      &::before {
+        left: 50%;
+        transform: translateX(@calc-translate) rotate(-45deg);
+      }
+    }
+  }
+
+  &.top .arrow {
+    bottom: 0;
+    transform: translateY(100%);
+  }
+
+  &.bottom .arrow {
+    top: 0;
+    transform: translateY(-100%);
+
+    &::before {
+      top: 100%;
+    }
+  }
+
+  &.left,
+  &.right {
+    .arrow {
+      width: @calc-overflow-height;
+      height: @calc-overflow-width;
+      top: 50%;
+      bottom: unset;
+      margin-top: @calc-margin;
+
+      &::before {
+        top: 50%;
+        transform: translateY(@calc-translate) rotate(45deg);
+      }
+    }
+  }
+
+  &.left .arrow {
+    right: 0;
+    transform: translateX(100%);
+  }
+
+  &.right .arrow {
+    left: 0;
+    transform: translateX(-100%);
+
+    &::before {
+      left: 100%;
+    }
+  }
 }
