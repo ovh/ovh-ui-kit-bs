@@ -62,7 +62,7 @@
 // Unit-less `line-height` for use in components like buttons.
 @line-height-base:        @base-line-height;
 // Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-@line-height-computed:    @base-line-height;
+@line-height-computed:    (@font-size-base * @base-line-height);
 
 // By default, this inherits from the `<body>`.
 @headings-font-family:    inherit;
@@ -498,17 +498,17 @@
 //##
 
 // Tooltip max width
-@tooltip-max-width:           200px;
+@tooltip-max-width:           @oui-tooltip-max-width;
 // Tooltip text color
-@tooltip-color:               #fff;
+@tooltip-color:               @oui-tooltip-font-color;
 // Tooltip background color
-@tooltip-bg:                  #000;
-@tooltip-opacity:             0.9;
+@tooltip-bg:                  @oui-tooltip-background-color;
+@tooltip-opacity:             1;
 
 // Tooltip arrow width
-@tooltip-arrow-width:         5px;
+@tooltip-arrow-width:         @oui-tooltip-arrow-size;
 // Tooltip arrow color
-@tooltip-arrow-color:         @tooltip-bg;
+@tooltip-arrow-color:         @oui-tooltip-arrow-background-color;
 
 //== Popovers
 //
@@ -633,19 +633,19 @@
 // Success progress bar color
 @progress-bar-success-bg:     @oui-progress-background-color;
 @progress-bar-success-fg:     @oui-progress-success-foreground-color;
-@progress-bar-success-text:   @oui-progress-bar-text-color;
+@progress-bar-success-text:   @oui-progress-label-color;
 // Warning progress bar color
 @progress-bar-warning-bg:     @oui-progress-background-color;
 @progress-bar-warning-fg:     @oui-progress-warning-foreground-color;
-@progress-bar-warning-text:   @oui-progress-bar-text-color;
+@progress-bar-warning-text:   @oui-progress-label-color;
 // Danger progress bar color
 @progress-bar-danger-bg:      @oui-progress-background-color;
 @progress-bar-danger-fg:      @oui-progress-error-foreground-color;
-@progress-bar-danger-text:    @oui-progress-bar-text-color;
+@progress-bar-danger-text:    @oui-progress-label-color;
 // Info progress bar color
 @progress-bar-info-bg:        @oui-progress-background-color;
 @progress-bar-info-fg:        @oui-progress-info-foreground-color;
-@progress-bar-info-text:      @oui-progress-bar-text-color;
+@progress-bar-info-text:      @oui-progress-label-color;
 
 //== List group
 //

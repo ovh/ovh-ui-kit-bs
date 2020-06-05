@@ -147,12 +147,14 @@
   min-width: @oui-dropdown-menu-min-width;
   max-width: @oui-dropdown-menu-max-width;
   display: none;
-  margin: 0;
+  padding: 0;
+  margin: @oui-dropdown-menu-margin;
   position: absolute;
   list-style: none;
   text-align: initial;
   box-shadow: @oui-dropdown-menu-box-shadow;
   border: @oui-dropdown-menu-border-width @oui-dropdown-menu-border-color solid;
+  border-radius: @oui-dropdown-menu-border-radius;
   background-color: @oui-dropdown-menu-background-color;
   z-index: @oui-dropdown-menu-z-index;
 
@@ -196,8 +198,10 @@
       }
 
       &:disabled {
+        color: @oui-dropdown-item-font-color;
         background-color: @oui-dropdown-item-background-color;
-        color: @oui-dropdown-item-font-color_disabled;
+        opacity: 0.5;
+        cursor: not-allowed;
       }
 
       .oui-icon {
@@ -207,18 +211,39 @@
       }
     }
 
+    &.disabled > a,
+    &.disabled > button {
+      &,
+      &:hover,
+      &:focus {
+        color: @oui-dropdown-item-font-color;
+        background-color: @oui-dropdown-item-background-color;
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+
+    &:first-child a,
+    &:first-child button {
+      border-top-left-radius: @oui-dropdown-menu-border-radius;
+      border-top-right-radius: @oui-dropdown-menu-border-radius;
+    }
+
+    &:last-child a,
+    &:last-child button {
+      border-bottom-left-radius: @oui-dropdown-menu-border-radius;
+      border-bottom-right-radius: @oui-dropdown-menu-border-radius;
+    }
+
     &.divider {
-      height: @oui-dropdown-menu-border-width;
-      margin: @oui-dropdown-menu-spacing 0;
+      height: @oui-dropdown-divider-height;
+      margin: @oui-dropdown-divider-margin;
       display: block;
-      background-color: @oui-dropdown-menu-border-color;
+      background-color: @oui-dropdown-divider-color;
     }
 
     &.dropdown-divider {
-      padding-top: 4px;
-      border-top: 1px solid @oui-dropdown-menu-border-color;
+      border-top: 1px solid @oui-dropdown-divider-color;
     }
-
-    & + .dropdown-divider { margin-top: 4px; }
   }
 }

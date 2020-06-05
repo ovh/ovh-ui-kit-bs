@@ -3,12 +3,12 @@
   width: 100%;
   max-width: 100%;
   min-height: @oui-message-min-height;
-  line-height: @oui-message-line-height;
+  line-height: @oui-message-body-line-height;
   position: relative;
   padding: @oui-message-padding;
   margin: @oui-message-margin;
-  font-size: @oui-message-font-size;
-  font-weight: @oui-message-font-weight;
+  font-size: @oui-message-body-font-size;
+  font-weight: @oui-message-body-font-weight;
 
   &::before {
     display: block;
@@ -53,9 +53,10 @@
 .alert-dismissable,
 .alert-dismissible {
   .close {
+    #oui > .animate();
+
     cursor: pointer;
     position: absolute;
-    float: none;
     top: @oui-message-close-button-top;
     right: @oui-message-close-button-right;
     min-width: @oui-message-close-button-width;
@@ -66,7 +67,6 @@
     background-color: @oui-message-close-button-background-color;
     opacity: @oui-message-close-button-opacity;
     color: @oui-message-close-button-color;
-    font-weight: 600;
     font-size: @oui-message-close-button-font-size;
     line-height: 0;
     text-align: center;
@@ -78,8 +78,11 @@
     &:hover,
     &:focus,
     &:active {
+      #oui > .animate();
+
       outline: none;
       opacity: @oui-message-close-button-opacity_hover;
+      color: @oui-message-close-button-color_hover;
     }
   }
 }

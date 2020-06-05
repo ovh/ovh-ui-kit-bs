@@ -11,6 +11,7 @@
 
     > .dropdown-menu {
       margin-top: 14px;
+      border-radius: @oui-dropdown-menu-border-radius;
 
       &::before,
       &::after {
@@ -27,13 +28,13 @@
       }
 
       &::before {
-        border: 10px transparent solid;
-        border-bottom-color: #bbbdbf;
+        border: @oui-dropdown-arrow-size transparent solid;
+        border-bottom-color: @oui-dropdown-menu-border-color;
       }
 
       &::after {
-        border: 8px transparent solid;
-        border-bottom-color: #fff;
+        border: @oui-dropdown-arrow-inner-size transparent solid;
+        border-bottom-color: @oui-dropdown-menu-background-color;
       }
 
       &-right::before,
