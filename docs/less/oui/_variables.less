@@ -1,0 +1,44 @@
+/* Core */
+@import './variables/core/accessibility';
+@import './variables/core/animations';
+@import './variables/core/colors';
+@import './variables/core/status';
+
+/* Content */
+@import './variables/content/headings';
+@import './variables/content/labels';
+@import './variables/content/links';
+
+/* Shared */
+@import './variables/shared/choice';
+@import './variables/shared/form';
+@import './variables/shared/tooltip';
+
+/* Components */
+@import './variables/components/badge';
+@import './variables/components/box';
+@import './variables/components/button';
+@import './variables/components/checkbox';
+@import './variables/components/chips';
+@import './variables/components/datagrid';
+@import './variables/components/dropdown';
+@import './variables/components/field';
+@import './variables/components/header';
+@import './variables/components/input';
+@import './variables/components/message';
+@import './variables/components/modal';
+@import './variables/components/pagination';
+@import './variables/components/popover';
+@import './variables/components/progress';
+@import './variables/components/radio';
+@import './variables/components/select';
+@import './variables/components/tile';
+
+// Icons
+@oui-icon-path-chevron-down: 'M17.293 9.293a1 1 0 0 1 1.414 1.414L12 17.414l-6.707-6.707a1 1 0 0 1 1.414-1.414L12 14.586l5.293-5.293z';
+@oui-icon-path-chevron-up: 'M6.707 15.121a1 1 0 0 1-1.414-1.414L12 7l6.707 6.707a1 1 0 0 1-1.414 1.414L12 9.828l-5.293 5.293z';
+@oui-icon-path-close: 'M7.05 5.636l4.95 4.95 4.95-4.95a1 1 0 1 1 1.414 1.414L13.414 12l4.95 4.95a1 1 0 1 1-1.414 1.414L12 13.414l-4.95 4.95a1 1 0 0 1-1.414-1.414l4.95-4.95-4.95-4.95A1 1 0 0 1 7.05 5.636z';
+@oui-icon-path-error-circle: 'M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1zm0 2a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM8.363 6.96l.094.083 3.548 3.548 3.55-3.548a1 1 0 0 1 1.414 1.414l-3.549 3.548 3.55 3.55a1 1 0 0 1 .083 1.32l-.083.095a1 1 0 0 1-1.32.083l-.095-.083-3.55-3.55-3.548 3.549a1 1 0 1 1-1.414-1.414l3.548-3.55-3.548-3.548a1 1 0 0 1-.083-1.32l.083-.094a1 1 0 0 1 1.32-.083z';
+@oui-icon-path-info-circle: 'M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1zm0 2a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm0 8a1 1 0 0 1 1 1v3a1 1 0 0 1-2 0v-3a1 1 0 0 1 1-1zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2z';
+@oui-icon-path-success-circle: 'M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1zm0 2a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm5.889 5.293a1 1 0 0 1 .083 1.32l-.083.094-7 7a.995.995 0 0 1-.53.277l-.118.014h-.118a.996.996 0 0 1-.554-.208l-.094-.083-3.182-3.182a1 1 0 0 1 1.32-1.497l.094.083 2.474 2.474 6.294-6.292a1 1 0 0 1 1.414 0z';
+@oui-icon-path-warning-circle: 'M13.014 3.248a2 2 0 0 1 .71.71l8.251 14.028A2 2 0 0 1 20.252 21H3.748a2 2 0 0 1-1.723-3.014l8.251-14.028a2 2 0 0 1 2.738-.71zM12 4.972L3.748 19h16.504L12 4.972zm.068 12.025h.017a1.006 1.006 0 0 1-.052.002L12 17l.068-.003zM12 17a1.018 1.018 0 0 1-.367-.07l-.056-.024a1.016 1.016 0 0 1-.198-.122l-.088-.079-.05-.056.048.055-.05-.055-.026-.032-.022-.029a1.045 1.045 0 0 1-.154-.318.959.959 0 0 1-.025-.116l-.008-.069L11 16a1.018 1.018 0 0 1 .037-.27l.012-.04a.96.96 0 0 1 .067-.158l.034-.059a1.05 1.05 0 0 1 .063-.09l.078-.088.064-.059.011-.01.001-.001.001-.001.05-.038a1.042 1.042 0 0 1 .32-.151.933.933 0 0 1 .112-.024l.067-.008L12 15h.02a1.006 1.006 0 0 1 .183.02l.058.014a1.069 1.069 0 0 1 .106.035l.056.025a1.016 1.016 0 0 1 .194.119l.09.08a1.008 1.008 0 0 1 .219.329l.025.07a1.11 1.11 0 0 1 .037.154l.008.068.002.069v-.043l.001.028v.066l-.003.051a.985.985 0 0 1-.033.185l-.012.04a.96.96 0 0 1-.164.307l-.08.09a1.008 1.008 0 0 1-.447.259l-.056.013a1.099 1.099 0 0 1-.056.01l-.066.007h-.002l-.005.001h-.007l.011-.001L12 17zm-.634-1.774l-.01.01-.063.057.06-.056.013-.011zm.553-.224l-.002.001-.006.001.008-.002zM12 15l-.069.002h.015L11.98 15H12zm0-6a1 1 0 0 1 1 1v3a1 1 0 0 1-2 0v-3a1 1 0 0 1 1-1zm-.622 6.217l-.01.007v.001l.01-.008z';
