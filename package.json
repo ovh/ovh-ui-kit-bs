@@ -27,7 +27,7 @@
     "dist": "run-p dist:*",
     "dist:less": "lessc --remcalc --clean-css \"src/index.less\" \"dist/css/oui-bs3.css\"",
     "dist:copy": "yarn copy",
-    "docs": "cpx \"dist/**/*\" \"docs/\"",
+    "docs": "cpx \"dist/{css,fonts,js}/*\" \"docs/\"",
     "preversion": "yarn test",
     "version": "yarn build && git add .",
     "start": "open-cli docs/index.html",
