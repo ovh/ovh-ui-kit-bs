@@ -265,14 +265,14 @@
 //
 // Note: These variables are not generated into the Customizer.
 
-@zindex-navbar:            1000;
-@zindex-dropdown:          1000;
-@zindex-popover:           1010;
-@zindex-popover-body:      1060;
-@zindex-tooltip:           1070;
-@zindex-navbar-fixed:      1030;
-@zindex-modal-background:  1040;
-@zindex-modal:             1050;
+@zindex-navbar:            @base-z-index-navbar;
+@zindex-dropdown:          @base-z-index-menu;
+@zindex-popover:           @base-z-index-popover;
+@zindex-popover-body:      @base-z-index-popover;
+@zindex-tooltip:           @base-z-index-tooltip;
+@zindex-navbar-fixed:      @base-z-index-navbar-fixed;
+@zindex-modal-background:  @base-z-index-modal-backdrop;
+@zindex-modal:             @base-z-index-modal;
 
 //== Media queries breakpoints
 //
@@ -584,7 +584,7 @@
 // Modal backdrop background color
 @modal-backdrop-bg:           @oui-modal-backdrop-color;
 // Modal backdrop opacity
-@modal-backdrop-opacity:      1;
+@modal-backdrop-opacity:      @oui-modal-backdrop-opacity;
 // Modal header border color
 @modal-header-border-color:   none;
 // Modal footer border color
