@@ -103,7 +103,7 @@
     bottom: 0;
   }
 
-  .oui-icon {
+  &:not(.oui-button) .oui-icon {
     width: @oui-button-dropdown-icon-size;
     height: @oui-button-dropdown-icon-size;
     line-height: @oui-button-dropdown-icon-size;
@@ -117,7 +117,7 @@
   }
 
   .caret,
-  .oui-icon {
+  &:not(.oui-button) .oui-icon {
     margin-left: @oui-button-dropdown-padding-x;
 
     .btn-group &,
