@@ -1,1 +1,9 @@
-*    @antleblanc @AxelPeter @cbourgois @FredericEspiau @frenautvh @ganeshkumar1989 @JeremyDec @Jisay @jleveugle @lizardK @marie-j @radireddy @varun257
+# Global
+* @ovh/team-manager
+
+# Components
+/src/ @ovh/team-manager-dev
+
+# Documentation
+*.md @ovh/team-manager-documentation
+/docs/ @ovh/team-manager-documentation
