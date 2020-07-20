@@ -29,7 +29,8 @@
     "dist:copy": "yarn copy",
     "docs": "cpx \"dist/{css,fonts,js}/*\" \"docs/\"",
     "preversion": "yarn test",
-    "version": "yarn build && git add .",
+    "version": "yarn build && npx conventional-changelog-cli -p angular -i CHANGELOG.md -s && git add .",
+    "postversion": "git push && git push --tags",
     "start": "open-cli docs/index.html",
     "test": "stylelint \"src/**/*.less\""
   },
