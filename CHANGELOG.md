@@ -1,3 +1,12 @@
+## [4.1.8](https://github.com/ovh/ovh-ui-kit-bs/compare/v4.1.7...v4.1.8) (2020-07-23)
+
+
+### Bug Fixes
+
+* **variables:** use hover text decoration for hovered links ([#108](https://github.com/ovh/ovh-ui-kit-bs/issues/108)) ([93614c8](https://github.com/ovh/ovh-ui-kit-bs/commit/93614c8b4a24826a0a4a4499fa12afe536dea065))
+
+
+
 ## [4.1.7](https://github.com/ovh/ovh-ui-kit-bs/compare/v4.1.6...v4.1.7) (2020-07-23)
 
 
