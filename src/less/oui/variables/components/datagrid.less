@@ -8,7 +8,6 @@
 @oui-datagrid-arrow-size: rem-calc(16);
 @oui-datagrid-arrow-spacing: rem-calc(8);
 
-@oui-datagrid-row-outline-offset: -@oui-a11y-outline-width;
 @oui-datagrid-row-background-color_even: @p-000;
 @oui-datagrid-row-background-color_odd: @p-000;
 
@@ -55,13 +54,16 @@
 @oui-datagrid-empty-placeholder-font-weight: @jupiter-font-weight;
 
 // Datagrid - Parameters
-@oui-datagrid-parameters-button-width: rem-calc(32);
-@oui-datagrid-parameters-button-line-height: rem-calc(32);
-@oui-datagrid-parameters-button-padding: 0;
-@oui-datagrid-parameters-button-font-color: @p-500;
-@oui-datagrid-parameters-button-font-color_hover: @p-800;
-@oui-datagrid-parameters-button-icon-size: rem-calc(24);
-@oui-datagrid-parameters-button-border: none;
 @oui-datagrid-parameters-button-background-color: transparent;
+@oui-datagrid-parameters-button-box-shadow: none;
 
 @oui-datagrid-parameters-body-padding: rem-calc(8) rem-calc(16);
+
+// Datagrid - Embed in oui-tile
+@oui-datagrid-tile-margin: 0;
+@oui-datagrid-tile-border-color: @g-100;
+@oui-datagrid-tile-border-width: 1px;
+
+@oui-datagrid-tile-cell-padding-x: rem-calc(8);
+@oui-datagrid-tile-cell-padding-y: rem-calc(8);
+@oui-datagrid-tile-cell-padding: @oui-datagrid-tile-cell-padding-y @oui-datagrid-tile-cell-padding-x;
