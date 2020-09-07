@@ -1,3 +1,12 @@
+# [4.2.0](https://github.com/ovh/ovh-ui-kit-bs/compare/v4.1.8...v4.2.0) (2020-09-07)
+
+
+### Features
+
+* **variables:** apply ODS style from batch 3 ([deb71f8](https://github.com/ovh/ovh-ui-kit-bs/commit/deb71f8edb83262b4dc744d036f7ec22fc2fedc7))
+
+
+
 ## [4.1.8](https://github.com/ovh/ovh-ui-kit-bs/compare/v4.1.7...v4.1.8) (2020-07-23)
 
 
