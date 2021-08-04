@@ -50,6 +50,7 @@
     "clean-css": "^4.1.11",
     "glob-parent": "^6.0.1",
     "set-value": "^2.0.1",
-    "trim-newlines": "^3.0.1"
+    "trim-newlines": "^3.0.1",
+    "yargs-parser": "^20.2.9"
   }
 }
